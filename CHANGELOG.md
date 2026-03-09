@@ -11,6 +11,6 @@ Kurzfassung:
 - Minor Version: 0.1.0 (Neue Funktionen)
 - Major Version: 1.0.0 (Breaking Changes)
 
-## 0.0.1
+## 0.1.0
 
 - Erstveröffentlichung

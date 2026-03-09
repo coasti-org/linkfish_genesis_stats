@@ -1,0 +1,47 @@
+defaults:
+    # Optionen für pystatis, siehe
+    # https://correlaid.github.io/pystatis/pystatis.html#pystatis.table.Table.get_data
+    prettify: true
+    language: "de"
+    quality: "off"
+    startyear: null
+    endyear: null
+    regionalkey: "DG,010,01056*,01060*,01062*" # RKMerkmal
+
+tables:
+    - id: "11111-0002"
+      output: "11111_0002_gebietsflaeche" # Basename der CSV
+      description: "Gebietsflächen" # Beschreibung, endet im Header der CSV
+      # Außerdem können pro Tabelle die default Einstellungen überschrieben werden
+
+    - id: "12411-02-03-5"
+      output: "12411_02_03_5_anzahl_einwohner_gemeinde"
+      description: "Bevölkerungsstatistik Schleswig-Holstein"
+
+    - id: "12411-07-01-4"
+      output: "12411_07_01_4_durchschnittsalter_kreis"
+      description: "Durchschnittsalter der Bevölkerung nach Kreisen und kreisfreien Städten"
+
+    - id: "12411-07-01-5"
+      output: "12411_07_01_5_durchschnittsalter_gemeinde"
+      description: "Durchschnittsalter der Bevölkerung nach Gemeinden"
+
+    - id: "12411-08-01-4"
+      output: "12411_08_01_4_jugend_altenquotient_kreis"
+      description: "Anzahl der Personen nach Altersklassen"
+
+    - id: "12411-10-01-4"
+      output: "12411_10_01_4_medianalter_kreis"
+      description: "Medianalter"
+
+    - id: "12612-01-01-4"
+      output: "12612_01_01_4_lebendgeburten_kreis"
+      description: "Anzahl der Lebendgeburten von Einwohner:innen pro Jahr, Zahl der Sterbefälle sowie deren Saldo"
+
+    - id: "12613-01-01-4"
+      output: "12613_01_01_4_sterbefaelle_kreis"
+      description: "Sterbefälle pro Jahr je 1.000 Einwohner:innen"
+
+    - id: "12711-01-03-4"
+      output: "12711_01_03_4_wanderungen_kreis"
+      description: "Zahl der Zuzüge/Wegzüge ins/aus dem Kreisgebiet und deren Saldo"

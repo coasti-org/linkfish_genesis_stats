@@ -1,4 +1,7 @@
 # Metadaten und Infos, die zur Installation via Coasti benötigt werden
 
-# reverse-DNS style, inspired by UTI https://en.wikipedia.org/wiki/Uniform_Type_Identifier
+# UTI (reverse-DNS style): region.company.product
 id: eu.linkfish.genesis_stats
+
+version: 0.0.1
+# should match the versions specified in dbt_project.yml and pyproject.toml

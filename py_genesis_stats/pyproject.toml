@@ -1,0 +1,49 @@
+[project]
+name = "linkfish-genesis-stats"
+version = "0.1.0"
+description = "Python Projekt für Coasti Demo-Content-Paket: Statistik"
+readme = "README.md"
+authors = [
+    { name = "F. Paul Spitzner", email = "paul.spitzner@linkfish.eu" }
+]
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "pystatis>=0.5.2",
+    "lf-dbt @ git+https://github.com/linkFISH-Consulting/python-dbt-stack",
+    # brings main dependencies, like dbt and typer
+]
+
+# Tools for python code quality
+[dependency-groups]
+dev = [
+    { include-group = "lint" },
+    { include-group = "test" },
+    { include-group = "docs" },
+    { include-group = "typed" },
+    "pre-commit>=4.5.1",
+]
+lint = ["ruff>=0.14.14"]
+typed = ["mypy>=1.19.1", "types-PyYAML"]
+docs = []
+test = ["pytest>=9.0.2", "pytest-cov>=7.0.0"]
+
+[tool.ruff]
+include = ["pyproject.toml", "src/**/*.py", "tests/**/*.py"]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E",   # pycodestyle
+    "F",   # pyflakes
+    "I",   # isort
+    "ISC", # flake8-implicit-str-concat
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "PTH", # Use pathlib instead of os.path
+    "W",   # pycodestyle
+]
+
+[tool.mypy]
+check_untyped_defs = true
+disallow_untyped_decorators = true
+allow_redefinition = true

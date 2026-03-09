@@ -16,11 +16,13 @@ answers_file: config/install_answers.yml
 skip_if_exists:
     - config/.env
 
-
+# Mache Inhalt von coasti.yml in copier verfügbar, siehe _message_after_copy
+_external_data:
+    coasti: "coasti.yml"
 
 _message_after_copy: |
 
-    Installiert nach "{{ _copier_conf.dst_path }}"
+    "{{_external_data.coasti.id}}" installiert nach "{{ _copier_conf.dst_path }}"
 
     Nächste Schritte
     ================
