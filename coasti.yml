@@ -1,0 +1,4 @@
+# Metadaten und Infos, die zur Installation via Coasti benötigt werden
+
+# reverse-DNS style, inspired by UTI https://en.wikipedia.org/wiki/Uniform_Type_Identifier
+id: eu.linkfish.genesis_stats

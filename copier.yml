@@ -1,0 +1,28 @@
+
+_min_copier_version: 9.11.3
+
+_exclude_templates:
+    - .env
+    - .git
+    - .gitignore
+    - .gitattributes
+    - .gitkeep
+    - copier.yml
+
+answers_file: config/install_answers.yml
+
+# Updates sollten nicht bereits getroffene Einstellungen überschreiben.
+# V.a. da .env Dateien nie in der Versions-Kontrolle landen sollen!
+skip_if_exists:
+    - config/.env
+
+
+
+_message_after_copy: |
+
+    Installiert nach "{{ _copier_conf.dst_path }}"
+
+    Nächste Schritte
+    ================
+
+    - Kurzer Blick in die Readme :)

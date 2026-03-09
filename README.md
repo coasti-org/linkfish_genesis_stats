@@ -1,2 +1,3 @@
-# coasti_demo_content_statistics
-Beispiel eines Coasti Content-Pakets das Statistik-Daten von Genesis nutzt
+# Coasti Demo-Content-Paket: Statistik
+Beispiel eines Contentpakets für Coasti das Statistikdaten von Genesis nutzt
+
