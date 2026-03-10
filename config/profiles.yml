@@ -1,0 +1,12 @@
+
+
+duckdb:
+  target: prod
+  outputs:
+    prod:
+      type: duckdb
+      path: "{{ env_var('GENESIS_STATS__DUCKDB_DATAMART_PATH') }}"
+      threads: 1
+      settings:
+        memory_limit: '4GB'
+        preserve_insertion_order: false

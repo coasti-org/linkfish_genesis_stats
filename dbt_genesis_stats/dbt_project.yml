@@ -1,0 +1,40 @@
+
+
+name: 'linkfish_genesis_stats' # cannot contain dots
+version: '0.1.0'
+
+profile: 'duckdb'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+
+# settings for model folders
+models:
+  linkfish_genesis_stats:
+    +materialized: table
+
+    stg:
+      huh:
+        +schema: stg_huh
+      board:
+        +schema: stg_board
+    int:
+      huh:
+        +schema: int_huh
+    mart:
+      +schema: mart
+    plmart:
+      sup:
+        +schema: plmart_sup
+
+seeds:
+  +schema: seed_gns # all these seeds come from genesis
