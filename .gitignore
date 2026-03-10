@@ -22,3 +22,12 @@ crash.*.log
 
 # TODO: decide if we want to include them
 dbt_genesis_stats/seeds
+
+# this is a dbt artifact you do not want
+config/.user.yml
+
+data/*
+!data/.gitkeep
+
+logs/*
+!logs/.gitkeep
