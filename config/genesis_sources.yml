@@ -45,3 +45,68 @@ tables:
     - id: "12711-01-03-4"
       output: "12711_01_03_4_wanderungen_kreis"
       description: "Zahl der Zuzüge/Wegzüge ins/aus dem Kreisgebiet und deren Saldo"
+
+# die Genesis daten sind etwas clunky_benannt, aber Spaltennamen finden sich
+# mitunter in verschiedenen Tabellen wieder
+columns:
+    - api: Stichtag # Spaltenname aus der API
+      dbt: code_stichtag # Spaltenname in unserem DBT Projekt
+      dtype: varchar(50) # dtype ist optional, varchar(50) ist der default.
+
+    - api: Amtlicher Gemeindeschlüssel (AGS)__Code
+      dbt: code_gemeinde
+
+    - api: Amtlicher Gemeindeschlüssel (AGS)
+      dbt: desc_gemeinde
+
+    - api: Gebietsfläche__qkm
+      dbt: fact_flaeche
+      dtype: float
+
+    - api: Geschlecht
+      dbt: code_geschlecht # aber enthällt Werte wie "Insgesamt" | "männlich"
+
+    # Alter
+    - api: Altersgruppen (unter 3 bis 75 u. m.)
+      dbt: code_altersgruppe_3_75 # aber enthällt Werte wie "6 bis unter 10 Jahre"
+
+    - api: Altersgruppen (unter 18 bis 65 u. m.)
+      dbt: code_altersgruppe_18_65
+
+    - api: Durchschnittsalter der Bevölkerung__Jahre
+      dbt: fact_alter_durchschnit
+      dtype: float
+
+    - api: Medianalter__Jahre
+      dbt: fact_alter_median
+      dtype: float
+
+    # Quotienten
+    - api: Altenquotient__Quotient
+      dbt: fact_altenquotient
+      dtype: float
+
+    - api: Jugendquotient__Quotient
+      dbt: fact_jugendquotient
+      dtype: float
+
+    # Anzahl Metriken
+    - api: Bevölkerungsstand__Anzahl
+      dbt: fact_count_bevoelkerungsstand
+      dtype: int
+
+    - api: Lebendgeborene__Anzahl
+      dbt: fact_count_lebendgeborene
+      dtype: int
+
+    - api: Gestorbene__Anzahl
+      dbt: fact_count_gestorbene
+      dtype: int
+
+    - api: Fortzüge über die Gemeindegrenzen__Anzahl
+      dbt: fact_count_fortzuege
+      dtype: int
+
+    - api: Zuzüge über die Gemeindegrenzen__Anzahl
+      dbt: fact_count_zuzuege
+      dtype: int

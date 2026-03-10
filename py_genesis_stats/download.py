@@ -1,19 +1,17 @@
-from copy import deepcopy
 import logging
 import os
-from pathlib import Path
 import time
+from copy import deepcopy
+from pathlib import Path
 from typing import Annotated, Any
+
 import dotenv
-import pystatis
-
 import typer
-
+from pystatis import Table, db, setup_credentials
 from ruamel.yaml import YAML, CommentedMap
 
 app = typer.Typer()
 log = logging.getLogger("genesis_stats_download")
-logging.basicConfig(level="INFO", format="%(levelname)s: %(message)s")
 
 
 @app.command()
@@ -74,20 +72,26 @@ def download(
     """
 
     if verbose:
-        log.setLevel("DEBUG")
+        logging.basicConfig(level="DEBUG", format="%(levelname)-8s %(message)s [%(name)s]")
+    else:
+        logging.basicConfig(level="WARNING", format="%(message)s")
+        log.setLevel("INFO")
+
 
     if dotenv_path is not None:
         dotenv.load_dotenv(dotenv_path)
 
     # check authentication (uses environment variables, or prompts if not found)
-    pystatis.setup_credentials()
+    setup_credentials()
 
     config = _load_config(config_path)
     _tables: list[dict[str, Any]] = config.get("tables", [])
     tables = {t["id"]: t for t in _tables}
 
     # check for existing files first, so we dont error after downloading a bunch
-    csv_paths = {id: csv_path / f"{tables[id]['output']}.csv" for id in tables.keys()}
+    csv_paths = {
+        id: csv_path / f"seed__{tables[id]['output']}.csv" for id in tables.keys()
+    }
     if not overwrite and any([p.exists() for p in csv_paths.values()]):
         raise ValueError(
             "Some target csv files already exists. Consider passing --overwrite"
@@ -103,7 +107,7 @@ def download(
             )
         except Exception as e:
             log.error(f"Failed to download {id=}: {e}")
-            raise e
+
 
 def _load_config(yaml_path: Path) -> CommentedMap:
     """Load the configuration from YAML file."""
@@ -139,36 +143,98 @@ def _download_table(
 
     _tables: list[dict[str, Any]] = config.get("tables", [])
     tables = {t["id"]: t for t in _tables}
+    table = tables[id]
 
     if csv_path.exists() and not overwrite:
         log.info(f"File already exists, skipping {id} at {str(csv_path)}")
         return  # no need to download if we wont save, so return early.
 
     params = deepcopy(defaults)
-    params.update(tables[id])
+    params.update(table)
     for key in ["id", "output", "description"]:
         params.pop(key, None)  # strip out custom fields, they dont work in the api
 
-    # Main Download
-    log.info(f"Downloading {tables[id]['output']}")
+    try:
+        db_name = db.select_db_by_credentials(db.identify_db_matches(id))
+    except Exception:
+        db_name = "unknown"  # only used for logging and header
+
+    log.info(f"Downloading {table['output']} from {db_name}")
     start_time = time.time()
-    table_download = pystatis.Table(name=id)
+    table_download = Table(name=id)
     table_download.get_data(**params)
     download_duration = time.time() - start_time
 
     log.debug(
         f"Downloaded {len(table_download.data):,} rows "
         f"× {len(table_download.data.columns)} columns "
-        f"in {download_duration:.2f} seconds"
+        f"in {download_duration:.1f} seconds"
     )
+
+    # column renaming, from api_convention to dict that has everything
+    config_columns = {c["api"]: c for c in config.get("columns", [])}
 
     table_download.data.to_csv(
         csv_path,
         index=False,
         sep="|",
         mode="w",
-        header=tables[id].get("description", "No description provided"),
+        header=[
+            # list of labels to use, with right length and order
+            config_columns.get(c_api, {}).get("dbt", c_api)
+            for c_api in table_download.data.columns
+        ],
     )
+    _write_seeds_yaml(
+        config_columns=config_columns,
+        table=table,
+        table_download=table_download,
+        yaml_path=csv_path.with_suffix(".yml"),
+        db_name=db_name,
+    )
+
+
+def _write_seeds_yaml(
+    config_columns: dict[str, dict[str, str]],
+    table: dict[str, Any],
+    table_download: Table,
+    yaml_path: Path,
+    db_name: str,
+):
+    """
+    Zusätzlich zur csv brauchen wir auch eine yml, die für dbt die Spalten Typen
+    (und ein paar Metadaten) setzt.
+    Oft packt man diese in eine gesammelte `_schema.yml`, aber auch mehrere
+    einzelne yml Dateien sind kein Problem.
+    """
+
+    yaml = YAML()
+    yaml_path = yaml_path.absolute()
+
+    seed_col_types: dict[str, str] = {}
+    for c_api in table_download.data.columns:
+        label = config_columns.get(c_api, {}).get("dbt", str(c_api))
+        dtype = config_columns.get(c_api, {}).get("dtype", "varchar(50)")
+        seed_col_types[label] = dtype
+
+    seeds_entry = {
+        "version": 2,
+        "seeds": [
+            {
+                "name": f"seed__{table['output']}",
+                "description": (
+                    f"{db_name} dataset {table['id']}: {table.get('description', '')}"
+                ),
+                "config": {
+                    "delimiter": "|",
+                    "column_types": seed_col_types,
+                },
+            }
+        ],
+    }
+
+    with yaml_path.open("w") as f:
+        yaml.dump(seeds_entry, f)
 
 
 if __name__ == "__main__":

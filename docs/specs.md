@@ -24,3 +24,17 @@ the idea is that these are present in all coasti products, so that users feel at
 - `copier.yml` Coasti uses copier under the hood to deploy content packages.
 - `{{ _copier_conf.answers_file }}.jinja` Needed by copier.
 - `config/.env.jinja` template for a .env file, which should hold configuration details.
+
+
+# Decisions
+- Id Usage:
+    - [ ] Ids are UTI (reverse DNS)
+    - [ ] same id for python package name?
+    - [ ] same id for dbt project?
+    - [ ] profile naming: do we need the id?
+    - [ ] maybe a prefix / **short_id** that we set in coasti.yml? 3 - 4 alphanumeric acronym (no symbols, no char limit but keep it short. here: `gstat`)
+    - [ ] env var prefixes
+    - [ ] output name for duckdb file
+    - [ ] seed schema, currently use vorsystem (huh seeds have a source, but i feel they are more attached to _our_ software, so should use our id shorthand. but, in the demo: import seeds in staging?)
+
+- fact or fakt
