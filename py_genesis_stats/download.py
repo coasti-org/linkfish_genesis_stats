@@ -82,7 +82,8 @@ def download(
         dotenv.load_dotenv(dotenv_path)
 
     # check authentication (uses environment variables, or prompts if not found)
-    setup_credentials()
+    # We do not grab data from zensus, so no account needed there
+    setup_credentials("genesis", "regio")
 
     config = _load_config(config_path)
     _tables: list[dict[str, Any]] = config.get("tables", [])

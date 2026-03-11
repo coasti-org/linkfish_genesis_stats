@@ -8,7 +8,7 @@ authors = [
 ]
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    "pystatis>=0.5.2",
+    "pystatis>=0.5.5",
     "lf-dbt @ git+https://github.com/linkFISH-Consulting/python-dbt-stack",
     # brings main dependencies, like dbt and typer
 ]

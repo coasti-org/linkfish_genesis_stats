@@ -5,6 +5,7 @@ duckdb:
   outputs:
     prod:
       type: duckdb
+      schema: prod
       path: "{{ env_var('GENESIS_STATS__DUCKDB_DATAMART_PATH') }}"
       threads: 1
       settings:
