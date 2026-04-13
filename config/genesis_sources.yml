@@ -4,47 +4,58 @@ defaults:
     prettify: true
     language: "de"
     quality: "off"
-    startyear: null
-    endyear: null
-    regionalkey: "DG,010,01056*,01060*,01062*" # RKMerkmal
+    startyear: 2020
+    endyear: 2025
+    regionalkey: "*" # RKMerkmal
+    # Mit dem Regionalkey kann der Download auf ein Subset an Kreisen oder Gemeinden
+    # beschränkt werden.
+    # Note: Die Downloads können in verschiedenen Zeilen verschiedene Entitäten enthalten,
+    # wodurch sich die Bedeutung in den Spalten von
+    # Zeile zu Zeile unterscheiden kann, z.b. 12411-10-01-4
+    #
+    # Ids die zweistellig sind, zb 11111-0002 kommen aus Destatis,
+    # Mehrstellige z.b. 12411-02-03-5 aus der Regionaldatenbank (wo einzelne Ziffern
+    # für Teilbereiche stehen, z.b. 12 - Bevölkerung, 4 - Bev. Stand, 11 - Fortschreibung)
 
 tables:
+    # Nachschlagen der Ids für mehr Details unter
+    # https://www-genesis.destatis.de/datenbank/online/
     - id: "11111-0002"
       output: "11111_0002_gebietsflaeche" # Basename der CSV
-      description: "Gebietsflächen" # Beschreibung, endet im Header der CSV
+      description: "Gebietsflächen Kreisebene" # Beschreibung, endet in der yaml für dbt seeds
       # Außerdem können pro Tabelle die default Einstellungen überschrieben werden
 
-    - id: "12411-02-03-5"
-      output: "12411_02_03_5_anzahl_einwohner_gemeinde"
-      description: "Bevölkerungsstatistik Schleswig-Holstein"
+    # Nachschlagen der Ids für mehr Details unter
+    # https://www-genesis.destatis.de/datenbank/online/
+    # Ziffern die in -4 -> Kreisebene, -5 enden -> Gemeinde-Ebene
+    - id: "12411-02-03-4"
+      output: "12411_02_03_4_anzahl_einwohner_kreis"
+      description: "Bevölkerung nach Geschlecht und Altersgruppen"
 
-    - id: "12411-07-01-4"
-      output: "12411_07_01_4_durchschnittsalter_kreis"
-      description: "Durchschnittsalter der Bevölkerung nach Kreisen und kreisfreien Städten"
-
-    - id: "12411-07-01-5"
-      output: "12411_07_01_5_durchschnittsalter_gemeinde"
-      description: "Durchschnittsalter der Bevölkerung nach Gemeinden"
-
-    - id: "12411-08-01-4"
-      output: "12411_08_01_4_jugend_altenquotient_kreis"
-      description: "Anzahl der Personen nach Altersklassen"
-
-    - id: "12411-10-01-4"
-      output: "12411_10_01_4_medianalter_kreis"
-      description: "Medianalter"
-
-    - id: "12612-01-01-4"
-      output: "12612_01_01_4_lebendgeburten_kreis"
-      description: "Anzahl der Lebendgeburten von Einwohner:innen pro Jahr, Zahl der Sterbefälle sowie deren Saldo"
+    - id: "12711-01-03-4"
+      output: "12711_01_03_4_wanderungen_kreis"
+      description: "Zahl der Zuzüge/Wegzüge ins/aus dem Kreisgebiet und deren Saldo"
 
     - id: "12613-01-01-4"
       output: "12613_01_01_4_sterbefaelle_kreis"
       description: "Sterbefälle pro Jahr je 1.000 Einwohner:innen"
 
-    - id: "12711-01-03-4"
-      output: "12711_01_03_4_wanderungen_kreis"
-      description: "Zahl der Zuzüge/Wegzüge ins/aus dem Kreisgebiet und deren Saldo"
+    - id: "12612-01-01-4"
+      output: "12612_01_01_4_lebendgeburten_kreis"
+      description: "Anzahl der Lebendgeburten von Einwohner:innen pro Jahr, Zahl der Sterbefälle sowie deren Saldo"
+
+    # Alter
+    - id: "12411-10-01-4"
+      output: "12411_10_01_4_medianalter_kreis"
+      description: "Medianalter"
+
+    - id: "12411-07-01-4"
+      output: "12411_07_01_4_durchschnittsalter_kreis"
+      description: "Durchschnittsalter der Bevölkerung nach Kreis"
+
+
+
+
 
 # die Genesis daten sind etwas clunky_benannt, aber Spaltennamen finden sich
 # mitunter in verschiedenen Tabellen wieder

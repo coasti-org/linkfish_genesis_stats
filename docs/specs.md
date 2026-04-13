@@ -36,5 +36,7 @@ the idea is that these are present in all coasti products, so that users feel at
     - [ ] env var prefixes
     - [ ] output name for duckdb file
     - [ ] seed schema, currently use vorsystem (huh seeds have a source, but i feel they are more attached to _our_ software, so should use our id shorthand. but, in the demo: import seeds in staging?)
+- Platzhalter für Missing Dimensions in One-big-Table für Superset:
+    - [x] Null im Backend, und falls im Frontend nötig, ganz am Ende ersetzen, via Variable
 
-- fact or fakt
+- [x] fact als prefix und Ordner name, nicht fakt (mit MB und JH entschieden)
