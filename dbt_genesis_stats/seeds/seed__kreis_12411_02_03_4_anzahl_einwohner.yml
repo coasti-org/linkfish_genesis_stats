@@ -1,0 +1,13 @@
+version: 2
+seeds:
+- name: seed__kreis_12411_02_03_4_anzahl_einwohner
+  description: 'regio dataset 12411-02-03-4: Bevölkerung nach Geschlecht und Altersgruppen'
+  config:
+    delimiter: '|'
+    column_types:
+      code_stichtag: varchar(50)
+      code_ags: varchar(50)
+      desc_ags: varchar(50)
+      code_geschlecht: varchar(50)
+      code_altersgruppe_3_75: varchar(50)
+      fact_count_bevoelkerungsstand: int

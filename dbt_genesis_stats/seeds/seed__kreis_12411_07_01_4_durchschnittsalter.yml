@@ -1,0 +1,13 @@
+version: 2
+seeds:
+- name: seed__kreis_12411_07_01_4_durchschnittsalter
+  description: 'regio dataset 12411-07-01-4: Durchschnittsalter der Bevölkerung nach
+    Kreis'
+  config:
+    delimiter: '|'
+    column_types:
+      code_stichtag: varchar(50)
+      code_ags: varchar(50)
+      desc_ags: varchar(50)
+      code_geschlecht: varchar(50)
+      fact_alter_durchschnit: float

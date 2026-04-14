@@ -1,0 +1,12 @@
+version: 2
+seeds:
+- name: seed__kreis_12613_01_01_4_sterbefaelle
+  description: 'regio dataset 12613-01-01-4: Sterbefälle pro Jahr je 1.000 Einwohner:innen'
+  config:
+    delimiter: '|'
+    column_types:
+      Jahr: varchar(50)
+      code_ags: varchar(50)
+      desc_ags: varchar(50)
+      code_geschlecht: varchar(50)
+      fact_count_gestorbene: int

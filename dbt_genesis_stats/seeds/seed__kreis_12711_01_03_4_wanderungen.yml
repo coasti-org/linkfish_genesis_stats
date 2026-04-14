@@ -1,0 +1,15 @@
+version: 2
+seeds:
+- name: seed__kreis_12711_01_03_4_wanderungen
+  description: 'regio dataset 12711-01-03-4: Zahl der Zuzüge/Wegzüge ins/aus dem Kreisgebiet
+    und deren Saldo'
+  config:
+    delimiter: '|'
+    column_types:
+      Jahr: varchar(50)
+      code_ags: varchar(50)
+      desc_ags: varchar(50)
+      code_geschlecht: varchar(50)
+      code_altersgruppe_18_65: varchar(50)
+      fact_count_fortzuege: int
+      fact_count_zuzuege: int

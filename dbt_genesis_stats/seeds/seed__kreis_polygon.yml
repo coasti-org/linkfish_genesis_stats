@@ -1,0 +1,21 @@
+version: 2
+seeds:
+- name: seed__kreis_polygon
+  description: 'GeoJSON Polygone als CSV'
+  config:
+    delimiter: '|'
+    column_types:
+      # diese Spalten wollen wir am ende in der mart__dim_kreis
+      # Müssen wir mal sehen, ob wir alles herbekommen
+
+      # diese infos aus destatis oder whatever
+      code_ags: varchar(50)
+      code_kreis: varchar(50)
+      desc_kreis: varchar(255)
+      code_bundesland: varchar(50)
+      desc_bundesland: varchar(255)
+
+      # diese info aus der geojson
+      fact_longitude: float
+      fact_latitude: float
+      fact_polygon: varchar(8000) # Note: wir brauchen einen `"fillColor": "#CCCCCC"}}]}` dummy in der json als workaround für superset

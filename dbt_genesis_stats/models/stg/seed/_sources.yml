@@ -1,0 +1,8 @@
+# In einem normalen DBT Projekt würden hier die Ingestion-Quelle definiert werden (raw).
+# An diesem Beispiel haben wir nur Seeds, daher wird in den Staging-Modellen direkt
+# referenziert.
+
+# DBT schlägt vor, die Modell Präfixe (wie hier auch gemacht) nach der Datenquelle
+# zu benennen. Da hier `seed` die Datenquelle ist, findet die sich auch so wieder,
+# was in anderen Beispielen wahrscheinlich so nicht zu finden ist.
+
