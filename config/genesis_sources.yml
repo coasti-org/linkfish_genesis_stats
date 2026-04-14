@@ -65,10 +65,10 @@ columns:
       dtype: varchar(50) # dtype ist optional, varchar(50) ist der default.
 
     - api: Amtlicher Gemeindeschlüssel (AGS)__Code
-      dbt: code_gemeinde
+      dbt: code_kreis
 
     - api: Amtlicher Gemeindeschlüssel (AGS)
-      dbt: desc_gemeinde
+      dbt: desc_kreis
 
     - api: Gebietsfläche__qkm
       dbt: fact_flaeche
