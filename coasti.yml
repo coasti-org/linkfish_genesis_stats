@@ -1,7 +1,10 @@
 # Metadaten und Infos, die zur Installation via Coasti benötigt werden
 
-# UTI (reverse-DNS style): region.company.product
-id: eu.linkfish.genesis_stats
+# unique id region.company.product
+id: linkfish_genesis_stats
+id_shorthand: lfgs
 
 version: 0.0.1
 # should match the versions specified in dbt_project.yml and pyproject.toml
+
+entrypoint: some way to launch... shell|python|whatever

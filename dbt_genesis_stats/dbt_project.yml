@@ -37,4 +37,8 @@ models:
         +schema: plmart_sup
 
 seeds:
-  +schema: seed_gns # all these seeds come from genesis
+  +schema: seed_gstat
+  # seeds have our shorthand, because we define (and ship them).
+  # Another good convention you might want to follow is to use the actual source
+  # here (`genesis` or `regio`) but then you need to do more book-keeping.
+

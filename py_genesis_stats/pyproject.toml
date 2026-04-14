@@ -8,9 +8,13 @@ authors = [
 ]
 requires-python = ">=3.12,<3.13"
 dependencies = [
+    # ingestion for this example, can be other things in your package
     "pystatis>=0.5.5",
+
+    # you have to ensure the .venv that is created provided the full runtime
+    # for your ETL -> here, this is DBT and comes with our stack
+    # along with tools needed for orchestration
     "lf-dbt @ git+https://github.com/linkFISH-Consulting/python-dbt-stack",
-    # brings main dependencies, like dbt and typer
 ]
 
 # Tools for python code quality

@@ -3,7 +3,7 @@
 
 ## Relevanz
 
-- Stell DBT und Python runtime bereit
+- Stellt DBT und Python runtime bereit
 - Downloader für Statistik-Daten von Genesis
 - Erzeugen von Seeds für DBT aus den geladenen Genesis Daten
 
@@ -11,12 +11,10 @@
 ## Install
 
 ```bash
-uv venv --python 3.12
-
-uv sync --project ./py_genesis_stats
+UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./py_genesis_stats
 
 # for full dev setup
-uv sync --project ./py_genesis_stats --all-groups --all-extras
+UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./py_genesis_stats --all-groups --all-extras
 
 # activate environment
 source ./py_genesis_stats/.venv/bin/activate # (linux)
