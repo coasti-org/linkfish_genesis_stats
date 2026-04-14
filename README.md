@@ -89,3 +89,62 @@ Das erfordert mitunter, dass Metriken wo dies nicht der Fall ist, mit einem Plat
         - fact_wert_anteilig_vorjahr
     - Extra Spalten für
 
+
+## Model Plan
+
+    - 
+- stg / seed
+    - referenz auf seeds (.yaml)
+    - spalten-renaming ist schon vorbereitet
+    - ggf filtern (unter Umständen)
+
+
+
+- mart?
+
+- presentation: 
+
+- int: 
+    - Daten um Polygone und Kreisbezeichnung ergänzen, 
+    - Vorjahresvergleich, 
+    - berechnete Kennzahlen, 
+    - data tests
+
+    - Zu entscheiden: 
+        - 1 unified model mit Kreis Jahr Kennzahl Wert ODER
+        - je Kennzahl separat 1 model ODER
+        - andere Konvention
+
+
+**Folder Structure**
+
+- plmart/superset/: ds_*
+
+
+./dbt_genesis_stats/models
+├── int
+│   └── genesis
+├── mart
+│   ├── _dim
+│   └── _fact
+├── plmart
+│   └── sup
+└── stg
+    └── gns
+
+{% macro get_default_regio_columns() -%}
+  Stichtag
+, Geschlecht
+, Altersgruppe
+, "Kreis Code"
+, "Kreis Bezeichnung"
+, "Kreis"
+, "Planungsraum Code"
+, "Planungsraum Bezeichnung"
+, "Planungsraum"
+, "Gemeinde Code"
+, "Gemeinde Bezeichnung"
+, "Gemeinde"
+, polygon
+, Auswertungsebene
+{%- endmacro %}

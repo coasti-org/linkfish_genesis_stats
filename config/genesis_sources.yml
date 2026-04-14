@@ -21,7 +21,7 @@ tables:
     # Nachschlagen der Ids für mehr Details unter
     # https://www-genesis.destatis.de/datenbank/online/
     - id: "11111-0002"
-      output: "11111_0002_gebietsflaeche" # Basename der CSV
+      output: "kreis_11111_0002_gebietsflaeche" # Basename der CSV
       description: "Gebietsflächen Kreisebene" # Beschreibung, endet in der yaml für dbt seeds
       # Außerdem können pro Tabelle die default Einstellungen überschrieben werden
 
@@ -29,28 +29,28 @@ tables:
     # https://www-genesis.destatis.de/datenbank/online/
     # Ziffern die in -4 -> Kreisebene, -5 enden -> Gemeinde-Ebene
     - id: "12411-02-03-4"
-      output: "12411_02_03_4_anzahl_einwohner_kreis"
+      output: "kreis_12411_02_03_4_anzahl_einwohner"
       description: "Bevölkerung nach Geschlecht und Altersgruppen"
 
     - id: "12711-01-03-4"
-      output: "12711_01_03_4_wanderungen_kreis"
+      output: "kreis_12711_01_03_4_wanderungen"
       description: "Zahl der Zuzüge/Wegzüge ins/aus dem Kreisgebiet und deren Saldo"
 
     - id: "12613-01-01-4"
-      output: "12613_01_01_4_sterbefaelle_kreis"
+      output: "kreis_12613_01_01_4_sterbefaelle"
       description: "Sterbefälle pro Jahr je 1.000 Einwohner:innen"
 
     - id: "12612-01-01-4"
-      output: "12612_01_01_4_lebendgeburten_kreis"
+      output: "kreis_12612_01_01_4_lebendgeburten"
       description: "Anzahl der Lebendgeburten von Einwohner:innen pro Jahr, Zahl der Sterbefälle sowie deren Saldo"
 
     # Alter
     - id: "12411-10-01-4"
-      output: "12411_10_01_4_medianalter_kreis"
+      output: "kreis_12411_10_01_4_medianalter"
       description: "Medianalter"
 
     - id: "12411-07-01-4"
-      output: "12411_07_01_4_durchschnittsalter_kreis"
+      output: "kreis_12411_07_01_4_durchschnittsalter"
       description: "Durchschnittsalter der Bevölkerung nach Kreis"
 
 
@@ -65,10 +65,10 @@ columns:
       dtype: varchar(50) # dtype ist optional, varchar(50) ist der default.
 
     - api: Amtlicher Gemeindeschlüssel (AGS)__Code
-      dbt: code_kreis
+      dbt: code_ags # AGS gilt für Kreise und Gemeinden, und wird im Staging umbenannt
 
     - api: Amtlicher Gemeindeschlüssel (AGS)
-      dbt: desc_kreis
+      dbt: desc_ags
 
     - api: Gebietsfläche__qkm
       dbt: fact_flaeche
