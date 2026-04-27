@@ -1,3 +1,9 @@
+{{
+  config(
+    enabled=false
+  )
+}}
+
 with
 
 kennz_basis as(

@@ -3,6 +3,7 @@ seeds:
 - name: seed__kreis_polygon
   description: 'GeoJSON Polygone als CSV'
   config:
+    enabled: False
     delimiter: '|'
     column_types:
       # diese Spalten wollen wir am ende in der mart__dim_kreis

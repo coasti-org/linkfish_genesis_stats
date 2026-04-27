@@ -26,8 +26,8 @@ tables:
       # Außerdem können pro Tabelle die default Einstellungen überschrieben werden
 
     # Nachschlagen der Ids für mehr Details unter
-    # https://www-genesis.destatis.de/datenbank/online/
-    # Ziffern die in -4 -> Kreisebene, -5 enden -> Gemeinde-Ebene
+    # https://www.regionalstatistik.de/genesis/online
+    # Ziffern die in -4 enden -> Kreisebene, -5 -> Gemeinde-Ebene
     - id: "12411-02-03-4"
       output: "kreis_12411_02_03_4_anzahl_einwohner"
       description: "Bevölkerung nach Geschlecht und Altersgruppen"
