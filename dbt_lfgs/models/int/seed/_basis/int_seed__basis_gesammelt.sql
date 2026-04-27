@@ -1,8 +1,14 @@
 -- Hier ermitteln wir die Kennzahlen inklusive ihrer Vorjahreswerte
 -- und ergänzen sie um die Stammdaten aus kreis_polygon
 
+{{
+  config(
+    enabled=false
+  )
+}}
+
 {% set kennzahlen = [
-    "int_seed__kreis_gebietsflaeche",
+    "int_seed__basis_kreis_gebietsflaeche",
 ] %}
 
 {# Make 1 - N into CTEs #}

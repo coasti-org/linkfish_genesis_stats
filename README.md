@@ -7,6 +7,32 @@ Beispiel eines Contentpakets für Coasti das Statistikdaten von Genesis nutzt
     - Bisher Fokus nur Kreisebene
 
 
+## Getting Started
+
+- Installation via
+
+```bash
+UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./py_lfgs
+```
+
+- Ausführen via
+
+```bash
+# activate environment
+source ./.venv/bin/activate # (linux)
+.\.venv\Scripts\activate # (Windows)
+
+# run everything in orchestration
+python ./py_lfgs/orchestration.py run --env-file ./config/.env -s all
+
+# or selected steps
+python ./py_lfgs/orchestration.py run --env-file ./config/.env -s dbt_seed
+
+# or get help
+python ./py_lfgs/orchestration.py --help
+python ./py_lfgs/orchestration.py run --help
+```
+
 ## Datenquellen
 
 - Download Statistik Data from Destatis und Regionalanalyse
