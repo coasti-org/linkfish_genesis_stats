@@ -4,7 +4,7 @@ lfgs_duckdb:
     prod:
       type: duckdb
       schema: prod
-      path: "{{ env_var('LFGS__DUCKDB_DATAMART_PATH') }}"
+      path: "{{ env_var('LFGS_DUCKDB_DATAMART_PATH') }}"
       threads: 1
       settings:
         memory_limit: "4GB"

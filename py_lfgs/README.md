@@ -10,13 +10,28 @@
 
 ## Install
 
-```bash
-UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./py_genesis_stats
 
-# for full dev setup
-UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./py_genesis_stats --all-groups --all-extras
+- [ ] Noch zu entscheiden: wo das .venv hinlegen
+
+Option 1: ins project base dir
+
+```bash
+UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./py_lfgs
+# diese env var dann via .env setzen
 
 # activate environment
-source ./py_genesis_stats/.venv/bin/activate # (linux)
-.\py_genesis_stats\.venv\Scripts\activate # (Windows)
+source ./.venv/bin/activate # (linux)
+.\.venv\Scripts\activate # (Windows)
+```
+
+Option 2: in den python ordner `py_lfgs`
+
+```bash
+cd py_lfgs
+uv sync
+cd ..
+
+
+source ./py_lfgs/.venv/bin/activate # (linux)
+.\py_lfgs\.venv\Scripts\activate # (Windows)
 ```

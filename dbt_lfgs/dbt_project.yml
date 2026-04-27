@@ -1,4 +1,4 @@
-name: "linkfish-genesis-stats" # cannot contain dots
+name: "linkfish_genesis_stats" # cannot contain dots
 version: "0.1.0" # should match coasti.yml and pyproject.toml
 
 profile: "lfgs_duckdb" # needs to be found in `config/profiles.yml`

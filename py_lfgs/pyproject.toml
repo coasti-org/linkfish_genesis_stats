@@ -14,7 +14,7 @@ dependencies = [
     # you have to ensure the .venv that is created provided the full runtime
     # for your ETL -> here, this is DBT and comes with our stack
     # along with tools needed for orchestration
-    "lf-dbt @ git+https://github.com/linkFISH-Consulting/python-dbt-stack",
+    "lf-py-stack @ git+https://github.com/linkFISH-Consulting/python-dbt-stack",
 ]
 
 # Tools for python code quality

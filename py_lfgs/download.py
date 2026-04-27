@@ -11,7 +11,7 @@ from pystatis import Table, db, setup_credentials
 from ruamel.yaml import YAML, CommentedMap
 
 app = typer.Typer()
-log = logging.getLogger("genesis_stats_download")
+log = logging.getLogger("lfgs_download")
 
 
 @app.command()
@@ -21,7 +21,7 @@ def download(
         typer.Option(
             help="Path to genesis_sources.yml config, defines which tables to download",
             # fill the value from env var, if env var is set and option is not given
-            envvar="GS_CONFIG_YAML",
+            envvar="LFGS_CONFIG_YAML",
             # check input, even applies to the default we give below
             exists=True,
             file_okay=True,
@@ -34,14 +34,14 @@ def download(
         Path,
         typer.Option(
             help="Where to place the downloaded csv files?",
-            envvar="GS_CSV_PATH",
+            envvar="LFGS_CSV_PATH",
             exists=True,
             file_okay=False,
             dir_okay=True,
             writable=True,
             resolve_path=True,
         ),
-    ] = Path.cwd() / "dbt_genesis_stats" / "seeds",
+    ] = Path.cwd() / "dbt_lfgs" / "seeds",
     dotenv_path: Annotated[
         Path | None,
         typer.Option(
@@ -72,11 +72,12 @@ def download(
     """
 
     if verbose:
-        logging.basicConfig(level="DEBUG", format="%(levelname)-8s %(message)s [%(name)s]")
+        logging.basicConfig(
+            level="DEBUG", format="%(levelname)-8s %(message)s [%(name)s]"
+        )
     else:
         logging.basicConfig(level="WARNING", format="%(message)s")
         log.setLevel("INFO")
-
 
     if dotenv_path is not None:
         dotenv.load_dotenv(dotenv_path)
