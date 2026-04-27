@@ -1,3 +1,126 @@
-# Entrypoint
+"""
+Entrypoint to run the whole Content Package after installation
 
-# lets call this orchestration.sample.py and have copier optionally make a copy
+see
+python ./py_lfgs/orchestration.py --help
+
+This example uses the following environment variables:
+
+LFGS_DUCKDB_DATAMART_PATH
+
+LFPY_LOG_LEVEL
+LFPY_LOG_FILE
+
+TODO: lets call this orchestration.sample.py and have copier optionally make a copy
+"""
+
+import os
+import sys
+from pathlib import Path
+
+from lf_py_stack.orchestration import (
+    StepResult,
+    cli_app,
+    config,
+    get_logger,
+    log_dbt_versions,
+    run_cli_command,
+    shrink_duckdb,
+    truncate,
+)
+
+
+def dbt_deps() -> StepResult:
+    """(Re-) install dbt packages"""
+
+    code, msg = run_cli_command("dbt deps", log=get_logger())
+    return StepResult("PASS" if code == 0 else "FAIL", truncate(msg, 1, 1))
+
+
+def list_versions(dbt_deps: StepResult) -> StepResult:
+    """List versions of installed dependencies"""
+
+    msg = log_dbt_versions()
+    try:
+        import pystatis
+
+        msg += f"\npystatis {pystatis.__version__}"
+    except Exception as e:
+        msg += "\npystatis not found"
+    log = get_logger()
+    log.info(msg)
+    return StepResult("PASS", msg)
+
+
+def download_seeds(list_versions: StepResult) -> StepResult:
+    """Use pystatis to (re-) download seeds"""
+
+    # we want to use the same python runtime and launch a script that sits next to this
+    python = sys.executable
+    script = Path(__file__).parent / "download.py"
+    code, msg = run_cli_command(f"{python} {script}", log=get_logger())
+    return StepResult("PASS" if code == 0 else "FAIL", truncate(msg, 5, 5))
+
+
+def dbt_seed(download_seeds: StepResult) -> StepResult:
+    """Load prepared seeds from csv into dbt"""
+
+    if download_seeds.status == "FAIL":
+        return StepResult("FAIL", "Aborting due to error in previous step.")
+    code, msg = run_cli_command("dbt seed", log=get_logger())
+    return StepResult("PASS" if code == 0 else "FAIL", truncate(msg, 2, 1))
+
+
+def dbt_run(dbt_seed: StepResult) -> StepResult:
+    """Run dbt models"""
+
+    log = get_logger()
+    args = config.get_step_args()
+    code, msg = run_cli_command(f"dbt run {args}", log=log)
+    return StepResult("PASS" if code == 0 else "FAIL", truncate(msg, 2, 1))
+
+
+def dbt_test(dbt_run: StepResult) -> StepResult:
+    """Run dbt tests"""
+
+    log = get_logger()
+    args = config.get_step_args()
+    code, msg = run_cli_command(f"dbt test {args}", log=log)
+    return StepResult("PASS" if code == 0 else "FAIL", truncate(msg, 2, 1))
+
+
+def minimize_duckdb(dbt_run: StepResult, dbt_test: StepResult) -> StepResult:
+    """Reduce the duckdb by limiting to mart schemata"""
+
+    log = get_logger()
+
+    if dbt_run.status == "FAIL" or dbt_test.status == "FAIL":
+        # This is effectively the step that deploys to the frontend.
+        # If tests or the run fail, we **do not** want to update the frontend.
+        # In real deployments, you would likely add another step to copy
+        # the database, and do the check there.
+        # log.warning("Aborting due to error in previous step.")
+        # return StepResult("FAIL", "Aborting due to error in previous step.")
+        pass
+
+    try:
+        input = Path(os.environ["LFGS_DUCKDB_DATAMART_PATH"])
+        output = input.parent / f"{input.stem}_mini.db"
+        shrink_duckdb(
+            input_file=input,
+            output_file=output,
+            schemas=["mart", "plmart"],
+        )
+        return StepResult(
+            "PASS",
+            f"Reduced size of {str(input)}, saved to {str(output)}",
+        )
+    except Exception as e:
+        log.error(e)
+
+        return StepResult("FAIL", str(e))
+
+
+if __name__ == "__main__":
+    # the app handles the cli interface and log file setup for us
+    cli_app()
