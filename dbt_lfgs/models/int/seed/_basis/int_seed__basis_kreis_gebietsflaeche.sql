@@ -2,14 +2,13 @@
 
 Kennzahl Gebietsfläche
 
-Je Zeile: Kreis, Dimensionen, Polygon, und Gebietsfläche
+Je Zeile: Kreis, Dimensionen, und Gebietsfläche
 
 Alle Tabellen der Kennzahlen sollen später aneinander gereiht werden (union).
 Daher müssen immer die selben Spalten vorhanden sein, aber können Null enthalten.
 
 Hier wird nicht mehr gecastet, das sollte komplett im Staging passieren.
 
-TODO: @JB Entscheiden ob wir _kennzahl brauchen
 #}
 
 
@@ -23,7 +22,7 @@ with
             code_stichtag,
             null as code_geschlecht,
             null as code_altersgruppe,
-            fact_flaeche as Wert
+            fact_flaeche as fact_kennzahl
         from
             kreis_gebietsflaeche
     )
