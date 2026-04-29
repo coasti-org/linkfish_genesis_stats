@@ -5,7 +5,7 @@ seeds:
   config:
     delimiter: '|'
     column_types:
-      Jahr: varchar(50)
+      code_jahr: varchar(50)
       code_ags: varchar(50)
       desc_ags: varchar(50)
       code_geschlecht: varchar(50)

@@ -58,7 +58,8 @@ def download_seeds(list_versions: StepResult) -> StepResult:
     # we want to use the same python runtime and launch a script that sits next to this
     python = sys.executable
     script = Path(__file__).parent / "download.py"
-    code, msg = run_cli_command(f"{python} {script}", log=get_logger())
+    args = config.get_step_args()
+    code, msg = run_cli_command(f"{python} {script} {args}", log=get_logger())
     return StepResult("PASS" if code == 0 else "FAIL", truncate(msg, 5, 5))
 
 

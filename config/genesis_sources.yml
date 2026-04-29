@@ -64,6 +64,12 @@ columns:
       dbt: code_stichtag # Spaltenname in unserem DBT Projekt
       dtype: varchar(50) # dtype ist optional, varchar(50) ist der default.
 
+    - api: Jahr
+      dbt: Jahr
+      dtype: varchar(50)
+      # Jahre sind zwar integers, aber wir nutzen oft die Konvention, dass codes
+      # immer als varchars definiert sind, da oft auch numerische Werte gepadded werden
+
     - api: Amtlicher Gemeindeschlüssel (AGS)__Code
       dbt: code_ags # AGS gilt für Kreise und Gemeinden, und wird im Staging umbenannt
 
