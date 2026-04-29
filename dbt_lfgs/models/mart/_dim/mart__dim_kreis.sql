@@ -1,5 +1,27 @@
+
+{#
+
+injection of values to plot in superset happens later.
+they have to go into the `properties` field of the fact_geojson
+
+SELECT REPLACE(
+    fact_geojson,
+    'properties: { }',
+    'properties: {'
+        + CASE
+            WHEN foo_col IS NOT NULL
+            THEN ' foo: ' + CAST(foo_col AS VARCHAR)
+            ELSE ''
+          END
+    + ' }'
+)
+FROM your_table;
+
+#}
+
 with
     kreis_gebietsflaeche as (select * from {{ ref("stg_seed__kreis_gebietsflaeche") }}),
+    kreis_geojson        as (select * from {{ ref("seed__kreis_geojson") }}),
 
     {# lets make sure descriptions are unique per kreis. if multiple, take latest year #}
     kreis_ranked as (
@@ -41,7 +63,7 @@ with
     ),
 
     {# cleaning and edge cases#}
-    final as (
+    clean as (
         select
             code_kreis,
             desc_kreis,
@@ -70,6 +92,19 @@ with
             end as desc_kreis_art,
         from
             split
+    ),
+
+    {# join geojson and filter #}
+    final as (
+        select
+            clean.*,
+            kreis_geojson.fact_geojson
+        from
+            clean
+        inner join
+            {# inner join, because Eisenach from 2022 part of Wartburgkreis #}
+            kreis_geojson
+            on kreis_geojson.code_kreis = clean.code_kreis
     )
 
 select *
