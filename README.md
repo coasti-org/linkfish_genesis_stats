@@ -15,6 +15,10 @@ Beispiel eines Contentpakets für Coasti das Statistikdaten von Genesis nutzt
 UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./py_lfgs
 ```
 
+```powershell
+$env:UV_PROJECT_ENVIRONMENT="../.venv"; uv sync --project ./py_lfgs
+```
+
 - Ausführen via
 
 ```bash
