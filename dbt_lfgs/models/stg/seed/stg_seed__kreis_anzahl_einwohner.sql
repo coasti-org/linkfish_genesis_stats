@@ -33,6 +33,8 @@ final as (
         casted
     where
         lower(code_geschlecht) != 'insgesamt'
+        /* wir haben bereits die einzelnen Altersgruppierungen, daher wird "insgesamt" herausgefiltert: */
+        and lower(code_altersgruppe_3_75) != 'insgesamt' 
         {# Standardmäßig ist in allen SQL Backends Collation aus, sodass string-Vergleiche
         case-insensitive sind. Good practice ist aber, sicherzugehen. #}
         and len(code_ags) == 5

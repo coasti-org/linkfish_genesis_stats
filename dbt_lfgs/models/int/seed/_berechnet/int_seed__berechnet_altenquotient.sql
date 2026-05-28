@@ -1,42 +1,59 @@
-{{
-  config(
-    enabled=false
-  )
-}}
-
 with
 
 kennz_basis as(
   select *
-  from {{ ref("int_regio__kennz_basis") }}
+  from {{ ref("int_seed__basis_gesammelt") }}
 ),
 
 einwohner_18_64 as(
   select *
   from kennz_basis
-  where kennzahl = 'Anzahl Einwohner:innen (Excel)'
-  and "Altersgruppe2 Code" LIKE '18-64%'
+  where code_kennzahl = 'Anzahl Einwohner (Kreis)'
+  and code_altersgruppe_2 = '18-64'
 ),
 
 einwohner_65plus as(
   select *
   from kennz_basis
-  where kennzahl = 'Anzahl Einwohner:innen (Excel)'
-  and "Altersgruppe2 Code" LIKE '65+%'
+  where code_kennzahl = 'Anzahl Einwohner (Kreis)'
+  and code_altersgruppe_2 = '65+'
 ),
 
 kennzahl as(
-    select
-      sum(einwohner_65plus.Wert)
-      /
-      nullif(sum(einwohner_18_64.Wert), 0)
-    ) * 100 as Wert
-     from einwohner_65plus
+  select
+  'Altenquotient (Kreis)' as code_kennzahl,
+  einwohner_65plus.code_kreis,
+  einwohner_65plus.code_stichtag,
+  einwohner_65plus.code_geschlecht,
+  /* wir betrachten nur die aggregierten Werte für 18-64 und 65+, daher keine AG */
+  null as code_altersgruppe,
+  null as code_altersgruppe_1,
+  null as code_altersgruppe_2,
+  sum(einwohner_65plus.fact_kennzahl)
+  /
+  nullif(sum(einwohner_18_64.fact_kennzahl), 0)
+  * 100 as fact_kennzahl
+  from einwohner_65plus
   inner join einwohner_18_64
-    on einwohner_65plus.Stichtag = einwohner_18_64.Stichtag
-    and einwohner_65plus."Gemeinde Code" = einwohner_18_64."Gemeinde Code"
-    and einwohner_65plus.Geschlecht = einwohner_18_64.Geschlecht
+    on einwohner_65plus.code_stichtag = einwohner_18_64.code_stichtag 
+    and einwohner_65plus.code_kreis = einwohner_18_64.code_kreis
+    and einwohner_65plus.code_geschlecht = einwohner_18_64.code_geschlecht
+  group by all
+),
+
+kennzahl_lag as (
+    select *,
+        lag(fact_kennzahl) over (
+            partition by
+                code_kennzahl,
+                code_kreis,
+                code_geschlecht,
+                code_altersgruppe
+            order by
+                code_stichtag
+        ) as fact_kennzahl_vorjahr
+      from kennzahl
 )
 
 select *
-from kennzahl
+from kennzahl_lag

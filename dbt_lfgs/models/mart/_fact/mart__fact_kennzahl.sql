@@ -3,8 +3,5 @@
 -- (code_kennzahl, code_kreis, code_stichtag, code_geschlecht, code_altersgruppe) natural key -> test unique
 --
 
-{{
-  config(
-    enabled=false
-  )
-}}
+select *
+from {{ ref("int_seed__berechnet_gesammelt") }}

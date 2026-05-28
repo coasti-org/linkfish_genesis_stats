@@ -2,6 +2,7 @@
 -- und ergänzen sie um die Stammdaten aus kreis_polygon
 
 {% set models_to_combine = [
+    "int_seed__basis_kreis_anzahl_einwohner",
     "int_seed__basis_kreis_durchschnittsalter",
     "int_seed__basis_kreis_gebietsflaeche",
     "int_seed__basis_kreis_lebendgeburten",
@@ -39,36 +40,29 @@ with
     Lag ist am linken Rand auch okay, da wird der Vorjahreswert dann null #}
     basis_lag as (
         select *,
-            lag(fact_wert) over (
+            lag(fact_kennzahl) over (
                 partition by
                     code_kennzahl,
                     code_kreis,
                     code_geschlecht,
                     code_altersgruppe
                 order by
-                    stichtag
+                    code_stichtag
             ) as fact_kennzahl_vorjahr
         from basis_union
+    ),
+
+    {# 3. Altersgruppen konsistent schalten #}
+    base_w_dimensions as (
+        select
+            basis_lag.*,
+            code_altersgruppe_1,
+            code_altersgruppe_2
+        from basis_lag
+        left join
+            {{ ref("stg_seed__altersgruppen") }} altersgruppen
+            on basis_lag.code_altersgruppe = altersgruppen.code_altersgruppe_statistik
     )
 
-    {# 3. join polygon -> PS 2026-04-29 probably not here, lets use kreis dim table #}
-
-    {# left join
-        {{ ref("kreis_polygon") }} kreis_polygon #}
-
-    {# 4. Altersgruppen konsistent schalten #}
-    {# base_w_dimensions as (
-        select
-            base.*,
-            case
-                when altersgruppen.altersgruppe1 is not null
-                then concat(altersgruppen.altersgruppe1, {{ trailing_whitespace }})
-            end as "Altersgruppe1 Code"
-        from base
-        left join
-            {{ ref("stg_xls__stat_altersgruppen") }} altersgruppen
-            on base.altersgruppe = altersgruppen.alterstatistik
-    ) #}
-
 select *
-from basis_union
+from base_w_dimensions

@@ -1,0 +1,18 @@
+{# deck.gl GeoJson unterstützt derzeit leider noch keine Aggregationen.
+Daher wird plmart_sup__ds_kennzahl hier voraggregiert #}
+
+ select 
+    Kennzahl
+  , Stichtag
+  , "Kreis Code"
+  , "Kreis Beschreibung"
+  , "Kreis"
+  , sum("Wert") as Wert
+  , sum(case when lower(Geschlecht)='männlich' then 1 else 0 end) as "Wert männlich"
+  , sum(case when lower(Geschlecht)='weiblich' then 1 else 0 end) as "Wert weiblich"
+  , sum("Wert Vorjahr") as "Wert Vorjahr"
+  -- in superset benötigt für farbl. Darstellung:
+  , sum("Wert") * 100 / nullif(sum(sum("Wert")) over(partition by "Kennzahl", "Stichtag"), 0) AS wert_anteilig
+  , "Kreis GeoJson" as polygon
+  from {{ ref("plmart_sup__ds_kennzahl") }}
+  group by Kennzahl, "Kreis Code", "Kreis Beschreibung", "Kreis", "Kreis GeoJson", Stichtag
