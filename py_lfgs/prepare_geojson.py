@@ -67,9 +67,11 @@ def geosjon_to_superset_csv(
             # codes for e.g. hamburg '02000' was incorrectly saved to '02'
             code_kreis = f"{code_kreis:05}"
 
-            # strip properties, we want to set them later in DBT via SQL
-            collection["features"][0]["properties"] = {}
+            # Add static property "fillColor" to the feature's properties (to be used 
+            # in superset for coloring the shapes)
+            collection["features"][0]["properties"]["fillColor"] = "#CCCCCC"
             collection["features"][0].pop("id", None)
+            # collection["features"][0]["properties"] = {}
 
             f.write(f'{code_kreis}|{desc_kreis}|{json.dumps(collection)}\n')
 
