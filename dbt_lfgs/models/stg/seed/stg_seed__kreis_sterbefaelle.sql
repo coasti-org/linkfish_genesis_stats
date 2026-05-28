@@ -1,6 +1,6 @@
 with casted as (
     select
-        cast(code_jahr             as {{ dbt.type_string() }}) as code_jahr,
+        cast(jahr                  as {{ dbt.type_string() }}) as code_jahr,
         cast(code_ags              as {{ dbt.type_string() }}) as code_ags,
         cast(desc_ags              as {{ dbt.type_string() }}) as desc_ags,
         cast(code_geschlecht       as {{ dbt.type_string() }}) as code_geschlecht,
