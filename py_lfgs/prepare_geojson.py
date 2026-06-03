@@ -69,7 +69,7 @@ def geosjon_to_superset_csv(
 
             # Add static property "fillColor" to the feature's properties (to be used 
             # in superset for coloring the shapes)
-            collection["features"][0]["properties"]["fillColor"] = "#CCCCCC"
+            collection["features"][0]["properties"]["fillColor"] = "#REPLACE_ME"
             collection["features"][0].pop("id", None)
             # collection["features"][0]["properties"] = {}
 
