@@ -7,7 +7,7 @@ Je Zeile: Kreis, Dimensionen, und Durchschnittsalter.
 #}
 
 with
-    kreis_durchschnittsalter as (select * from {{ ref('stg_seed__kreis_durchschnittsalter') }}),
+    kreis_durchschnittsalter as (select * from {{ ref('stg_pystatis__kreis_durchschnittsalter') }}),
 
     final as (
         select

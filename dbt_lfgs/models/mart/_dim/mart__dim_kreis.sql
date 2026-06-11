@@ -20,7 +20,7 @@ FROM your_table;
 #}
 
 with
-    kreis_gebietsflaeche as (select * from {{ ref("stg_seed__kreis_gebietsflaeche") }}),
+    kreis_gebietsflaeche as (select * from {{ ref("stg_pystatis__kreis_gebietsflaeche") }}),
     kreis_geojson        as (select * from {{ ref("seed__kreis_geojson") }}),
 
     {# lets make sure descriptions are unique per kreis. if multiple, take latest year #}

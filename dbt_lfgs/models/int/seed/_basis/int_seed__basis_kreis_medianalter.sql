@@ -7,7 +7,7 @@ Je Zeile: Kreis, Dimensionen, und eine Kennzahl.
 #}
 
 with
-    kreis_medianalter as (select * from {{ ref('stg_seed__kreis_medianalter') }}),
+    kreis_medianalter as (select * from {{ ref('stg_pystatis__kreis_medianalter') }}),
 
     final as (
         select

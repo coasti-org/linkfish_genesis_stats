@@ -1,6 +1,6 @@
 version: 2
 seeds:
-- name: seed_altersgruppen
+- name: seed__altersgruppen
   description: 'Altersgruppierungen'
   config:
     enabled: True

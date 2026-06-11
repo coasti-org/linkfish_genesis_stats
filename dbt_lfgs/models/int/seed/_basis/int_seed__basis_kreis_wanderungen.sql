@@ -9,7 +9,7 @@ Je Zeile: Kreis, Dimensionen, und eine Wanderungskennzahl.
 with
     kreis_wanderungen as (
         select *
-        from {{ ref('stg_seed__kreis_wanderungen') }}
+        from {{ ref('stg_pystatis__kreis_wanderungen') }}
         where code_altersgruppe_18_65 = 'Insgesamt'
     ),
 

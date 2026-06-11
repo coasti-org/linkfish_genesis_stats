@@ -60,7 +60,7 @@ with
             code_altersgruppe_2
         from basis_lag
         left join
-            {{ ref("stg_seed__altersgruppen") }} altersgruppen
+            {{ ref("seed__altersgruppen") }} altersgruppen
             on basis_lag.code_altersgruppe = altersgruppen.code_altersgruppe_statistik
     )
 

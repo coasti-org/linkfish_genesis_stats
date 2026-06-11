@@ -2,8 +2,9 @@ version: 2
 seeds:
 - name: seed__kreis_geojson
   description: 'GeoJSON Polygone als CSV'
-  # Zum erstellen unser python script nutzen
   # GeoJSON Kann geladen werden unter https://regionalatlas.statistikportal.de
+  # Dann zum Erstellen der CSV unser Python-Script nutzen:
+  # python ./python/prepare_geojson.py -i ~/Downloads/kreise-2026-04-29_raw.geojson -o ./dbt/seeds/seed__kreis_geojson.csv
   config:
     delimiter: '|'
     column_types:

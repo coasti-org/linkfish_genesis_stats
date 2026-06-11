@@ -8,7 +8,7 @@ with casted as (
         cast(fact_count_fortzuege    as {{ dbt.type_int() }})    as fact_count_fortzuege,
         cast(fact_count_zuzuege      as {{ dbt.type_int() }})    as fact_count_zuzuege
     from
-        {{ ref("seed__kreis_12711_01_03_4_wanderungen") }}
+        {{ ref("seed_pystatis__kreis_12711_01_03_4_wanderungen") }}
 ),
 
 final as (

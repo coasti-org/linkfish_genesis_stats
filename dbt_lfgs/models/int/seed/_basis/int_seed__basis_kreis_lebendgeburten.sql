@@ -7,7 +7,7 @@ Je Zeile: Kreis, Dimensionen, und Anzahl Lebendgeburten.
 #}
 
 with
-    kreis_lebendgeburten as (select * from {{ ref('stg_seed__kreis_lebendgeburten') }}),
+    kreis_lebendgeburten as (select * from {{ ref('stg_pystatis__kreis_lebendgeburten') }}),
 
     final as (
         select

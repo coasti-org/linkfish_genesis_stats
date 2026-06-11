@@ -6,7 +6,7 @@ with casted as (
         cast(code_geschlecht        as {{ dbt.type_string() }}) as code_geschlecht,
         cast(fact_alter_durchschnit as {{ dbt.type_float() }})  as fact_alter_durchschnitt
     from
-        {{ ref("seed__kreis_12411_07_01_4_durchschnittsalter") }}
+        {{ ref("seed_pystatis__kreis_12411_07_01_4_durchschnittsalter") }}
 ),
 
 final as (

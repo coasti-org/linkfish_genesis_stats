@@ -41,7 +41,7 @@ def download(
             writable=True,
             resolve_path=True,
         ),
-    ] = Path.cwd() / "dbt_lfgs" / "seeds",
+    ] = Path.cwd() / "dbt_lfgs" / "seeds" / "pystatis",
     dotenv_path: Annotated[
         Path | None,
         typer.Option(
@@ -91,7 +91,8 @@ def download(
 
     # check for existing files first, so we dont error after downloading a bunch
     csv_paths = {
-        id: csv_path / f"seed__{tables[id]['output']}.csv" for id in tables.keys()
+        id: csv_path / f"seed_pystatis__{tables[id]['output']}.csv"
+        for id in tables.keys()
     }
     if not overwrite and any([p.exists() for p in csv_paths.values()]):
         raise ValueError(
@@ -222,7 +223,7 @@ def _write_seeds_yaml(
         "version": 2,
         "seeds": [
             {
-                "name": f"seed__{table['output']}",
+                "name": f"seed_pystatis__{table['output']}",
                 "description": (
                     f"{db_name} dataset {table['id']}: {table.get('description', '')}"
                 ),

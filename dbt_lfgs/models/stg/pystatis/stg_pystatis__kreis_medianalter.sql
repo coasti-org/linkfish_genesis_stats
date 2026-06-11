@@ -7,7 +7,7 @@ with casted as (
         cast(fact_altenquotient as {{ dbt.type_float() }})  as fact_altenquotient,
         cast(fact_alter_median  as {{ dbt.type_float() }})  as fact_alter_median
     from
-        {{ ref("seed__kreis_12411_10_01_4_medianalter") }}
+        {{ ref("seed_pystatis__kreis_12411_10_01_4_medianalter") }}
 ),
 
 final as (

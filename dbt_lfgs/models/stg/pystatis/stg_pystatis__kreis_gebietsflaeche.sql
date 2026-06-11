@@ -5,7 +5,7 @@ with casted as (
         cast(desc_ags      as {{ dbt.type_string() }}) as desc_ags,
         cast(fact_flaeche  as {{ dbt.type_float() }})  as fact_flaeche
     from
-        {{ ref("seed__kreis_11111_0002_gebietsflaeche") }}
+        {{ ref("seed_pystatis__kreis_11111_0002_gebietsflaeche") }}
 ),
 
 final as (

@@ -13,7 +13,7 @@ Hier wird nicht mehr gecastet, das sollte komplett im Staging passieren.
 
 
 with
-    kreis_gebietsflaeche as (select * from {{ ref('stg_seed__kreis_gebietsflaeche') }}),
+    kreis_gebietsflaeche as (select * from {{ ref('stg_pystatis__kreis_gebietsflaeche') }}),
 
     final as (
         select

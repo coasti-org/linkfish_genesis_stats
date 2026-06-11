@@ -7,7 +7,7 @@ Je Zeile: Kreis, Dimensionen, und Anzahl Sterbefaelle.
 #}
 
 with
-    kreis_sterbefaelle as (select * from {{ ref('stg_seed__kreis_sterbefaelle') }}),
+    kreis_sterbefaelle as (select * from {{ ref('stg_pystatis__kreis_sterbefaelle') }}),
 
     final as (
         select

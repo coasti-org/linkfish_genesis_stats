@@ -1,6 +1,6 @@
 version: 2
 seeds:
-- name: seed__kreis_12411_02_03_4_anzahl_einwohner
+- name: seed_pystatis__kreis_12411_02_03_4_anzahl_einwohner
   description: 'regio dataset 12411-02-03-4: Bevölkerung nach Geschlecht und Altersgruppen'
   config:
     delimiter: '|'

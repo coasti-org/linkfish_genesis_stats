@@ -6,7 +6,7 @@ with casted as (
         cast(code_geschlecht           as {{ dbt.type_string() }}) as code_geschlecht,
         cast(fact_count_lebendgeborene as {{ dbt.type_int() }})    as fact_count_lebendgeborene
     from
-        {{ ref("seed__kreis_12612_01_01_4_lebendgeburten") }}
+        {{ ref("seed_pystatis__kreis_12612_01_01_4_lebendgeburten") }}
 ),
 
 final as (

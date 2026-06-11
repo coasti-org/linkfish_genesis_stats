@@ -1,6 +1,6 @@
 version: 2
 seeds:
-- name: seed__kreis_12711_01_03_4_wanderungen
+- name: seed_pystatis__kreis_12711_01_03_4_wanderungen
   description: 'regio dataset 12711-01-03-4: Zahl der Zuzüge/Wegzüge ins/aus dem Kreisgebiet
     und deren Saldo'
   config:

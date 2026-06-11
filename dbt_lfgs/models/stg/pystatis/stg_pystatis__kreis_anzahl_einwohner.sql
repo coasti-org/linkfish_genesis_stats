@@ -16,7 +16,7 @@ with casted as (
         cast(code_altersgruppe_3_75        as {{ dbt.type_string() }}) as code_altersgruppe_3_75,
         cast(fact_count_bevoelkerungsstand as {{ dbt.type_int() }})    as fact_count_bevoelkerungsstand
     from
-        {{ ref("seed__kreis_12411_02_03_4_anzahl_einwohner") }}
+        {{ ref("seed_pystatis__kreis_12411_02_03_4_anzahl_einwohner") }}
 ),
 
 {# Renaming, leiche transformationen und filter erfolgen nach dem Casting #}
@@ -34,7 +34,7 @@ final as (
     where
         lower(code_geschlecht) != 'insgesamt'
         /* wir haben bereits die einzelnen Altersgruppierungen, daher wird "insgesamt" herausgefiltert: */
-        and lower(code_altersgruppe_3_75) != 'insgesamt' 
+        and lower(code_altersgruppe_3_75) != 'insgesamt'
         {# Standardmäßig ist in allen SQL Backends Collation aus, sodass string-Vergleiche
         case-insensitive sind. Good practice ist aber, sicherzugehen. #}
         and len(code_ags) == 5

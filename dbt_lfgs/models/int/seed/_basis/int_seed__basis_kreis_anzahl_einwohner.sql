@@ -7,7 +7,7 @@ Je Zeile: Kreis, Dimensionen, und Anzahl Einwohner.
 #}
 
 with
-    kreis_einwohner as (select * from {{ ref('stg_seed__kreis_anzahl_einwohner') }}),
+    kreis_einwohner as (select * from {{ ref('stg_pystatis__kreis_anzahl_einwohner') }}),
 
     final as (
         select
