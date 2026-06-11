@@ -2,7 +2,7 @@
 Entrypoint to run the whole Content Package after installation
 
 see
-python ./py_lfgs/orchestration.py --help
+python ./python/orchestration.py --help
 
 This example uses the following environment variables:
 

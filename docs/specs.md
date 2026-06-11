@@ -47,7 +47,7 @@ the idea is that these are present in all coasti products, so that users feel at
 # Design Choices
 
 - [ ] Wo das Python .venv hinlegen?
-  - in py_lfgs (konsistent mit "nur relevant für Content Pakete, die eigene Python-tools haben, und DBT eigentlich zentral verfügbar)
+  - in python (konsistent mit "nur relevant für Content Pakete, die eigene Python-tools haben, und DBT eigentlich zentral verfügbar)
   - in basis (konsistent mit jedes Projekt hat sein eigenes DBT)
 - [ ] Which python dependencies on the coasti host?
     - to run orchestrate.py, we need _some_ python on the host

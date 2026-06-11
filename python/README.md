@@ -16,7 +16,7 @@
 Option 1: ins project base dir
 
 ```bash
-UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./py_lfgs
+UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./python
 # diese env var dann via .env setzen
 
 # activate environment
@@ -24,14 +24,14 @@ source ./.venv/bin/activate # (linux)
 .\.venv\Scripts\activate # (Windows)
 ```
 
-Option 2: in den python ordner `py_lfgs`
+Option 2: in den python ordner `python`
 
 ```bash
-cd py_lfgs
+cd python
 uv sync
 cd ..
 
 
-source ./py_lfgs/.venv/bin/activate # (linux)
-.\py_lfgs\.venv\Scripts\activate # (Windows)
+source ./python/.venv/bin/activate # (linux)
+.\python\.venv\Scripts\activate # (Windows)
 ```

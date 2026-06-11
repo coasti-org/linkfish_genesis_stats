@@ -57,7 +57,7 @@ An unserem Beispiel:
   - Als Präfix für Environemnt_variablen, z.b. `LFGS_DUCKDB_DATAMART_PATH` in `config/.env`
   - Als Präfix für DBT Profile, z.b. `lfgs_duckdb` in `config/profiles.yml`
   - Im Schema der Seeds `seed_lfgs`
-  - Ordnernamen für Software-spezifische Teile, z.b. `dbt_lfgs` und `py_lfgs` für unsere DBT und Python Codes. Obwohl diese Ordnername frei gewählt werden können, lohnt es sich diese nicht einfach `dbt` und `python` zu nennen (um Paket-Namenskonventionen zu folgen), und das ID-Kürzel zu nehmen, um die Namen kurz zu halten.
+  - Ordnernamen für Software-spezifische Teile, z.b. `dbt` und `python` für unsere DBT und Python Codes. Obwohl diese Ordnername frei gewählt werden können, lohnt es sich diese nicht einfach `dbt` und `python` zu nennen (um Paket-Namenskonventionen zu folgen), und das ID-Kürzel zu nehmen, um die Namen kurz zu halten.
 
 ## Kurze ID (Präfix)
 - eine __short_id__ als Präfix vorschlagen, alphanumerisches Akronym (keine Symbole, keine Zeichenbegrenzung, aber kurz halten. hier: `gstat`)

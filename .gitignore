@@ -33,4 +33,4 @@ logs/*
 !logs/.gitkeep
 
 # TODO: remap logs to right directory via .env
-dbt_lfgs/logs/*
+dbt/logs/*

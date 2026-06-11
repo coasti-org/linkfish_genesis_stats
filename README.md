@@ -12,11 +12,11 @@ Beispiel eines Contentpakets für Coasti das Statistikdaten von Genesis nutzt
 - Installation via
 
 ```bash
-UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./py_lfgs
+UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./python
 ```
 
 ```powershell
-$env:UV_PROJECT_ENVIRONMENT="../.venv"; uv sync --project ./py_lfgs
+$env:UV_PROJECT_ENVIRONMENT="../.venv"; uv sync --project ./python
 ```
 
 - Ausführen via
@@ -27,14 +27,14 @@ source ./.venv/bin/activate # (linux)
 .\.venv\Scripts\activate # (Windows)
 
 # run everything in orchestration
-python ./py_lfgs/orchestration.py run --env-file ./config/.env -s all
+python ./python/orchestration.py run --env-file ./config/.env -s all
 
 # or selected steps
-python ./py_lfgs/orchestration.py run --env-file ./config/.env -s dbt_seed
+python ./python/orchestration.py run --env-file ./config/.env -s dbt_seed
 
 # or get help
-python ./py_lfgs/orchestration.py --help
-python ./py_lfgs/orchestration.py run --help
+python ./python/orchestration.py --help
+python ./python/orchestration.py run --help
 ```
 
 ## Datenquellen
@@ -122,7 +122,7 @@ Das erfordert mitunter, dass Metriken wo dies nicht der Fall ist, mit einem Plat
 
 ## Model Plan
 
-    - 
+    -
 - stg / seed
     - referenz auf seeds (.yaml)
     - spalten-renaming ist schon vorbereitet
@@ -132,15 +132,15 @@ Das erfordert mitunter, dass Metriken wo dies nicht der Fall ist, mit einem Plat
 
 - mart?
 
-- presentation: 
+- presentation:
 
-- int: 
-    - Daten um Polygone und Kreisbezeichnung ergänzen, 
-    - Vorjahresvergleich, 
-    - berechnete Kennzahlen, 
+- int:
+    - Daten um Polygone und Kreisbezeichnung ergänzen,
+    - Vorjahresvergleich,
+    - berechnete Kennzahlen,
     - data tests
 
-    - Zu entscheiden: 
+    - Zu entscheiden:
         - 1 unified model mit Kreis Jahr Kennzahl Wert ODER
         - je Kennzahl separat 1 model ODER
         - andere Konvention

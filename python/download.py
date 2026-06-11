@@ -41,7 +41,7 @@ def download(
             writable=True,
             resolve_path=True,
         ),
-    ] = Path.cwd() / "dbt_lfgs" / "seeds" / "pystatis",
+    ] = Path.cwd() / "dbt" / "seeds" / "pystatis",
     dotenv_path: Annotated[
         Path | None,
         typer.Option(
