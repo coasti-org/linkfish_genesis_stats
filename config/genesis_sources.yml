@@ -1,0 +1,129 @@
+defaults:
+    # Optionen für pystatis, siehe
+    # https://correlaid.github.io/pystatis/pystatis.html#pystatis.table.Table.get_data
+    prettify: true
+    language: "de"
+    quality: "off"
+    startyear: 2020
+    endyear: 2025
+    regionalkey: "*" # RKMerkmal
+    # Mit dem Regionalkey kann der Download auf ein Subset an Kreisen oder Gemeinden
+    # beschränkt werden.
+    # Note: Die Downloads können in verschiedenen Zeilen verschiedene Entitäten enthalten,
+    # wodurch sich die Bedeutung in den Spalten von
+    # Zeile zu Zeile unterscheiden kann, z.b. 12411-10-01-4
+    #
+    # Ids die zweistellig sind, zb 11111-0002 kommen aus Destatis,
+    # Mehrstellige z.b. 12411-02-03-5 aus der Regionaldatenbank (wo einzelne Ziffern
+    # für Teilbereiche stehen, z.b. 12 - Bevölkerung, 4 - Bev. Stand, 11 - Fortschreibung)
+
+tables:
+    # Nachschlagen der Ids für mehr Details unter
+    # https://www-genesis.destatis.de/datenbank/online/
+    - id: "11111-0002"
+      output: "kreis_11111_0002_gebietsflaeche" # Basename der CSV
+      description: "Gebietsflächen Kreisebene" # Beschreibung, endet in der yaml für dbt seeds
+      # Außerdem können pro Tabelle die default Einstellungen überschrieben werden
+
+    # Nachschlagen der Ids für mehr Details unter
+    # https://www.regionalstatistik.de/genesis/online
+    # Ziffern die in -4 enden -> Kreisebene, -5 -> Gemeinde-Ebene
+    - id: "12411-02-03-4"
+      output: "kreis_12411_02_03_4_anzahl_einwohner"
+      description: "Bevölkerung nach Geschlecht und Altersgruppen"
+
+    - id: "12711-01-03-4"
+      output: "kreis_12711_01_03_4_wanderungen"
+      description: "Zahl der Zuzüge/Wegzüge ins/aus dem Kreisgebiet und deren Saldo"
+
+    - id: "12613-01-01-4"
+      output: "kreis_12613_01_01_4_sterbefaelle"
+      description: "Sterbefälle pro Jahr je 1.000 Einwohner:innen"
+
+    - id: "12612-01-01-4"
+      output: "kreis_12612_01_01_4_lebendgeburten"
+      description: "Anzahl der Lebendgeburten von Einwohner:innen pro Jahr, Zahl der Sterbefälle sowie deren Saldo"
+
+    # Alter
+    - id: "12411-10-01-4"
+      output: "kreis_12411_10_01_4_medianalter"
+      description: "Medianalter"
+
+    - id: "12411-07-01-4"
+      output: "kreis_12411_07_01_4_durchschnittsalter"
+      description: "Durchschnittsalter der Bevölkerung nach Kreis"
+
+
+
+
+
+# die Genesis daten sind etwas clunky_benannt, aber Spaltennamen finden sich
+# mitunter in verschiedenen Tabellen wieder
+columns:
+    - api: Stichtag # Spaltenname aus der API
+      dbt: code_stichtag # Spaltenname in unserem DBT Projekt
+      dtype: varchar(50) # dtype ist optional, varchar(50) ist der default.
+
+    - api: Jahr
+      dbt: code_jahr
+      dtype: varchar(50)
+      # Jahre sind zwar integers, aber wir nutzen oft die Konvention, dass codes
+      # immer als varchars definiert sind, da oft auch numerische Werte gepadded werden
+
+    - api: Amtlicher Gemeindeschlüssel (AGS)__Code
+      dbt: code_ags # AGS gilt für Kreise und Gemeinden, und wird im Staging umbenannt
+
+    - api: Amtlicher Gemeindeschlüssel (AGS)
+      dbt: desc_ags
+
+    - api: Gebietsfläche__qkm
+      dbt: fact_flaeche
+      dtype: float
+
+    - api: Geschlecht
+      dbt: code_geschlecht # aber enthällt Werte wie "Insgesamt" | "männlich"
+
+    # Alter
+    - api: Altersgruppen (unter 3 bis 75 u. m.)
+      dbt: code_altersgruppe_3_75 # aber enthällt Werte wie "6 bis unter 10 Jahre"
+
+    - api: Altersgruppen (unter 18 bis 65 u. m.)
+      dbt: code_altersgruppe_18_65
+
+    - api: Durchschnittsalter der Bevölkerung__Jahre
+      dbt: fact_alter_durchschnit
+      dtype: float
+
+    - api: Medianalter__Jahre
+      dbt: fact_alter_median
+      dtype: float
+
+    # Quotienten
+    - api: Altenquotient__Quotient
+      dbt: fact_altenquotient
+      dtype: float
+
+    - api: Jugendquotient__Quotient
+      dbt: fact_jugendquotient
+      dtype: float
+
+    # Anzahl Metriken
+    - api: Bevölkerungsstand__Anzahl
+      dbt: fact_count_bevoelkerungsstand
+      dtype: int
+
+    - api: Lebendgeborene__Anzahl
+      dbt: fact_count_lebendgeborene
+      dtype: int
+
+    - api: Gestorbene__Anzahl
+      dbt: fact_count_gestorbene
+      dtype: int
+
+    - api: Fortzüge über die Gemeindegrenzen__Anzahl
+      dbt: fact_count_fortzuege
+      dtype: int
+
+    - api: Zuzüge über die Gemeindegrenzen__Anzahl
+      dbt: fact_count_zuzuege
+      dtype: int

@@ -1,0 +1,36 @@
+target/
+.venv
+.env
+.env-local
+.credentials
+__pycache__
+venv/
+*.egg-info/
+build/
+dist/
+
+
+# Crash log files
+crash.log
+crash.*.log
+
+# Environment files
+.env
+*.auto.tfvars
+
+.vscode
+
+# TODO: decide if we want to include them
+# dbt_genesis_stats/seeds
+
+# this is a dbt artifact you do not want
+config/.user.yml
+
+data/*
+!data/.gitkeep
+
+logs/*
+!logs/.gitkeep
+
+# TODO: remap logs to right directory via .env
+dbt/logs/*

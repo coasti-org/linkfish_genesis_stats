@@ -1,0 +1,38 @@
+{
+    "folders": [
+        {
+            "path": ".."
+        }
+    ],
+    "settings": {
+        // tell dbt power user and python where the default .env file is
+        "python.envFile": "${workspaceFolder}/config/.env",
+        // optionally, set default python interpreter
+        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python",
+        "python.terminal.activateEnvironment": true,
+        "python.terminal.activateEnvInCurrentTerminal": true,
+        // some sensible dbt power user settings
+        "dbt.queryLimit": 500,
+        "dbt.enableNewLineagePanel": true,
+        "dbt.lineage.defaultExpansion": 2,
+        "dbt.enableCollaboration": false,
+        "dbt.enableNotebooks": false,
+        "dbt.installDepsOnProjectInitialization": false,
+        "editor.formatOnSave": false,
+        // you might want to copy the following to your user settings
+        "files.associations": {
+            ".env*": "env",
+            ".credentials*": "env"
+        },
+        "github.copilot.enable": {
+            "*": false,
+            "env": false
+        },
+        "[sql]": {
+            "editor.detectIndentation": false,
+            "editor.insertSpaces": false,
+            "editor.tabSize": 4,
+            "editor.indentSize": 4
+        }
+    }
+}

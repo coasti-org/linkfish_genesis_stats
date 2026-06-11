@@ -1,0 +1,11 @@
+version: 2
+seeds:
+- name: seed_pystatis__kreis_11111_0002_gebietsflaeche
+  description: 'genesis dataset 11111-0002: Gebietsflächen Kreisebene'
+  config:
+    delimiter: '|'
+    column_types:
+      code_stichtag: varchar(50)
+      code_ags: varchar(50)
+      desc_ags: varchar(50)
+      fact_flaeche: float

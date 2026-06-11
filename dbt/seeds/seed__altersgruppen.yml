@@ -1,0 +1,13 @@
+version: 2
+seeds:
+- name: seed__altersgruppen
+  description: 'Altersgruppierungen'
+  config:
+    enabled: True
+    delimiter: '|'
+    column_types:
+
+      # diese Infos wurden einmalig manuell gepflegt:
+      code_altersgruppe_statistik: varchar(50)
+      code_altersgruppe_1: varchar(50)
+      code_altersgruppe_2: varchar(50)

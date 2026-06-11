@@ -1,0 +1,11 @@
+lfgs_duckdb:
+  target: prod
+  outputs:
+    prod:
+      type: duckdb
+      schema: prod
+      path: "{{ env_var('LFGS_DUCKDB_DATAMART_PATH') }}"
+      threads: 1
+      settings:
+        memory_limit: "4GB"
+        preserve_insertion_order: false
