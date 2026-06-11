@@ -65,7 +65,7 @@ columns:
       dtype: varchar(50) # dtype ist optional, varchar(50) ist der default.
 
     - api: Jahr
-      dbt: Jahr
+      dbt: code_jahr
       dtype: varchar(50)
       # Jahre sind zwar integers, aber wir nutzen oft die Konvention, dass codes
       # immer als varchars definiert sind, da oft auch numerische Werte gepadded werden

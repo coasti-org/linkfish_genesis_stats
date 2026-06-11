@@ -87,8 +87,7 @@ def download(
     setup_credentials("genesis", "regio")
 
     config = _load_config(config_path)
-    _tables: list[dict[str, Any]] = config.get("tables", [])
-    tables = {t["id"]: t for t in _tables}
+    tables = {t["id"]: t for t in config.get("tables", [])}
 
     # check for existing files first, so we dont error after downloading a bunch
     csv_paths = {

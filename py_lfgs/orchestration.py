@@ -47,6 +47,7 @@ def list_versions(dbt_deps: StepResult) -> StepResult:
         msg += f"\npystatis {pystatis.__version__}"
     except Exception as e:
         msg += "\npystatis not found"
+
     log = get_logger()
     log.info(msg)
     return StepResult("PASS", msg)
@@ -68,7 +69,9 @@ def dbt_seed(download_seeds: StepResult) -> StepResult:
 
     if download_seeds.status == "FAIL":
         return StepResult("FAIL", "Aborting due to error in previous step.")
-    code, msg = run_cli_command("dbt seed", log=get_logger())
+
+    args = config.get_step_args()
+    code, msg = run_cli_command(f"dbt seed --full-refresh {args}", log=get_logger())
     return StepResult("PASS" if code == 0 else "FAIL", truncate(msg, 2, 1))
 
 
@@ -110,7 +113,7 @@ def minimize_duckdb(dbt_run: StepResult, dbt_test: StepResult) -> StepResult:
         shrink_duckdb(
             input_file=input,
             output_file=output,
-            schemas=["mart", "plmart"],
+            schemas=["plmart"],
         )
         return StepResult(
             "PASS",
