@@ -2,13 +2,13 @@
 -- und ergänzen sie um die Stammdaten aus kreis_polygon
 
 {% set models_to_combine = [
-    "int_seed__basis_kreis_anzahl_einwohner",
-    "int_seed__basis_kreis_durchschnittsalter",
-    "int_seed__basis_kreis_gebietsflaeche",
-    "int_seed__basis_kreis_lebendgeburten",
-    "int_seed__basis_kreis_medianalter",
-    "int_seed__basis_kreis_sterbefaelle",
-    "int_seed__basis_kreis_wanderungen",
+    "int_pystatis__basis_kreis_anzahl_einwohner",
+    "int_pystatis__basis_kreis_durchschnittsalter",
+    "int_pystatis__basis_kreis_gebietsflaeche",
+    "int_pystatis__basis_kreis_lebendgeburten",
+    "int_pystatis__basis_kreis_medianalter",
+    "int_pystatis__basis_kreis_sterbefaelle",
+    "int_pystatis__basis_kreis_wanderungen",
 ] %}
 
 {# Make 1 - N into CTEs #}

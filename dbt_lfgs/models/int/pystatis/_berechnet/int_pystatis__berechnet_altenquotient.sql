@@ -2,7 +2,7 @@ with
 
 kennz_basis as(
   select *
-  from {{ ref("int_seed__basis_gesammelt") }}
+  from {{ ref("int_pystatis__basis_gesammelt") }}
 ),
 
 einwohner_18_64 as(
@@ -35,7 +35,7 @@ kennzahl as(
   * 100 as fact_kennzahl
   from einwohner_65plus
   inner join einwohner_18_64
-    on einwohner_65plus.code_stichtag = einwohner_18_64.code_stichtag 
+    on einwohner_65plus.code_stichtag = einwohner_18_64.code_stichtag
     and einwohner_65plus.code_kreis = einwohner_18_64.code_kreis
     and einwohner_65plus.code_geschlecht = einwohner_18_64.code_geschlecht
   group by all

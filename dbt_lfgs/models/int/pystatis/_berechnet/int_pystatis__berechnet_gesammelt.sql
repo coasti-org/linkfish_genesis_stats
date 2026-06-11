@@ -5,8 +5,8 @@
 -- und ergänzen sie um die Stammdaten aus kreis_polygon
 
 {% set models_to_combine = [
-    "int_seed__basis_gesammelt",
-    "int_seed__berechnet_altenquotient",
+    "int_pystatis__basis_gesammelt",
+    "int_pystatis__berechnet_altenquotient",
 ] %}
 
 {# Make 1 - N into CTEs #}
