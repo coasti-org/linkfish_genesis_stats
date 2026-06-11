@@ -1,14 +1,17 @@
 {# testdocs --------------------------------------------------------------------
 
-Prüfe, dass alle basis kennzahlen nach aufspannenden Dimensionen (combined key)
-die gesamte Jahres-Reichweite enthalten (2020-2025)
+Prüfe, dass für jede Dimensonskombination die vorhandenen Jahre lückenlos
+aufsteigend sind (keine Lücken innerhalb des beobachteten Jahresbereichs).
 
 Nötig, da wir eine einfache lag-Funktion nutzen um Vorjahresvergleiche zu berechnen
+
+Beispiel: [2022, 2023, 2025] → FEHLER (2024 fehlt)
+          [2020, 2021, 2022] → OK (auch wenn 2023-2025 fehlen)
 
 ----------------------------------------------------------------- endtestdocs #}
 
 with
-    basis_gesammelt as (select * from {{ ref("int_seed__basis_gesammelt") }}),
+    basis_gesammelt as (select * from {{ ref("int_pystatis__basis_gesammelt") }}),
 
     observed as (
         select distinct
@@ -21,57 +24,38 @@ with
             basis_gesammelt
     ),
 
-    {# all dimensions, except the years #}
-    combos as (
-        select distinct
+    {# min/max year and distinct count per dimension combo #}
+    year_stats as (
+        select
+            code_kennzahl,
+            code_kreis,
+            code_geschlecht,
+            code_altersgruppe,
+            min(code_jahr) as min_jahr,
+            max(code_jahr) as max_jahr,
+            count(distinct code_jahr) as distinct_count
+        from observed
+        group by
             code_kennzahl,
             code_kreis,
             code_geschlecht,
             code_altersgruppe
-        from
-            observed
     ),
 
-    years as (
-        select 2020 as code_jahr
-        union all
-        select 2021 as code_jahr
-        union all
-        select 2022 as code_jahr
-        union all
-        select 2023 as code_jahr
-        union all
-        select 2024 as code_jahr
-        union all
-        select 2025 as code_jahr
-    ),
-
-    final as (
+    {# gaps: where observed distinct count < expected consecutive range #}
+    gaps as (
         select
-            combos.code_kennzahl,
-            combos.code_kreis,
-            years.code_jahr as code_jahr_requested,
-            observed.code_jahr as code_jahr_observed,
-            combos.code_geschlecht,
-            combos.code_altersgruppe
-        from
-            combos
-            {# cross join to get all combinations of dimensions and years #}
-            cross join years
-
-            left join observed
-                {# left join so that years not found are null #}
-                on years.code_jahr = observed.code_jahr
-                {# join on all other dims #}
-                and combos.code_kennzahl = observed.code_kennzahl
-                and combos.code_kreis = observed.code_kreis
-                {# we use `is not distinct from` to also get a match for null=null  #}
-                and combos.code_geschlecht is not distinct from observed.code_geschlecht
-                and combos.code_altersgruppe is not distinct from observed.code_altersgruppe
-        where
-            observed.code_jahr is null
+            code_kennzahl,
+            code_kreis,
+            code_geschlecht,
+            code_altersgruppe,
+            min_jahr,
+            max_jahr,
+            distinct_count,
+            (max_jahr - min_jahr + 1) as expected_count
+        from year_stats
+        where distinct_count != (max_jahr - min_jahr + 1)
     )
 
 select *
-from final
-
+from gaps
