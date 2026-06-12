@@ -1,0 +1,21 @@
+database_name: linkfish_genesis_stats
+sqlalchemy_uri: duckdb:////data/linkfish_genesis_stats.duckdb
+cache_timeout: 0
+expose_in_sqllab: true
+allow_run_async: false
+allow_ctas: false
+allow_cvas: false
+allow_dml: false
+allow_csv_upload: false
+extra:
+  allows_virtual_table_explore: true
+  engine_params:
+    connect_args:
+      read_only: true
+  metadata_cache_timeout:
+    table_cache_timeout: 0
+    schema_cache_timeout: 0
+impersonate_user: false
+configuration_method: sqlalchemy_form
+uuid: 188c2a4a-4fda-4480-aaef-2cbfff70b0f8
+version: 1.0.0
