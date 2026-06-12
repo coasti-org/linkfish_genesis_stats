@@ -1,8 +1,8 @@
 {#
 
-Kennzahl Anzahl Einwohner (Kreis)
+Kennzahl Anzahl Einwohner:innen (Kreis)
 
-Je Zeile: Kreis, Dimensionen, und Anzahl Einwohner.
+Je Zeile: Kreis, Dimensionen, und Anzahl Einwohner:innen.
 
 #}
 
@@ -11,7 +11,7 @@ with
 
     final as (
         select
-            'Anzahl Einwohner (Kreis)' as code_kennzahl,
+            'Anzahl Einwohner:innen (Kreis)' as code_kennzahl,
             code_kreis,
             code_stichtag,
             code_geschlecht,

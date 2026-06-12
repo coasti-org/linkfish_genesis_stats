@@ -2,7 +2,12 @@
 
 # Einzigartige ID, sollte company_my_product folgen, keine Sonderzeichen außer _
 id: linkfish_genesis_stats
+
+# Shorthands sind z.b. Präfixe für Environment-Variablen und Frontend-Datasets
 id_shorthand: lfgs
+
+# Der Name taucht z.b. im Frontend Dashboard auf (muss manuell konsistent gehalten werden)
+name: Genesis Statistik
 
 # Version folgt SemVer und muss in dbt_project.yml und pyproject.toml gespiegelt sein
 # Dies muss manuell erfolgen.
