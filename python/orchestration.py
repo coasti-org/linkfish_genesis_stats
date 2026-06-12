@@ -15,6 +15,7 @@ TODO: lets call this orchestration.sample.py and have copier optionally make a c
 """
 
 import os
+import shutil
 import sys
 from pathlib import Path
 
@@ -113,7 +114,7 @@ def minimize_duckdb(dbt_run: StepResult, dbt_test: StepResult) -> StepResult:
         shrink_duckdb(
             input_file=input,
             output_file=output,
-            schemas=["plmart"],
+            schemas=["plmart_sup"],
         )
         return StepResult(
             "PASS",
@@ -122,6 +123,29 @@ def minimize_duckdb(dbt_run: StepResult, dbt_test: StepResult) -> StepResult:
     except Exception as e:
         log.error(e)
 
+        return StepResult("FAIL", str(e))
+
+
+def deploy_to_frontend(minimize_duckdb: StepResult) -> StepResult:
+    """Copy the duckdb into supersets data folder"""
+
+    input = Path(os.environ["LFGS_DUCKDB_DATAMART_PATH"])
+    mini = input.parent / f"{input.stem}_mini.db"
+
+    _output = os.getenv("LFGS_DUCKDB_FRONTEND_PATH")
+    if _output is None:
+        return StepResult(
+            "SKIP",
+            "Skipped copying. Set the env var LFGS_DUCKDB_FRONTEND_PATH to the "
+            "file path needed by superset. "
+            "Likely /coasti/products/superset_docker/data/linkfish_genesis_stats.duckdb"
+        )
+    output = Path(_output)
+
+    try:
+        shutil.copy(mini, output)
+        return StepResult("PASS", f"Copied duckdb to {str(output)}")
+    except Exception as e:
         return StepResult("FAIL", str(e))
 
 
