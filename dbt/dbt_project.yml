@@ -20,21 +20,26 @@ models:
     +materialized: table
 
     stg:
-      huh:
-        +schema: stg_huh
-      board:
-        +schema: stg_board
+      pystatis:
+        +schema: stg_pystatis
     int:
-      huh:
-        +schema: int_huh
+      pystatis:
+        +schema: int_pystatis
+
     mart:
       +schema: mart
+
     plmart:
       sup:
         +schema: plmart_sup
 
 seeds:
-  +schema: seed_lfgs
+    linkfish_genesis_stats:
+        +schema: seed
+
+        pystatis:
+            +schema: seed_pystatis
+
   # seeds have our shorthand, because we define (and ship them).
   # Another good convention you might want to follow is to use the actual source
   # here (`genesis` or `regio`) but then you need to do more book-keeping.
