@@ -1,10 +1,10 @@
 import json
 import logging
-from dataclasses import dataclass
 from pathlib import Path
 from typing import Annotated, Any
 
 import typer
+from pyproj import Transformer
 from shapely.geometry import LineString
 
 app = typer.Typer()
@@ -49,6 +49,14 @@ def geosjon_to_superset_csv(
     data = json.loads(input_geojson.read_text(encoding="utf-8"))
     data = simplify_geojson(data, tolerance=tolerance)
 
+    # Deck.GL expects lon/lat (EPSG:4326), while the source file is EPSG:25832.
+    data = transform_coordinates(
+        data,
+        src_crs="EPSG:25832",
+        tar_crs="EPSG:4326",
+        num_decimals=4,  # 4 digits ~ 10 meters, 5 would be ~ 1 meter
+    )
+
     # one collection (with one feature) per landkreis, for one row in the csv
     collections = split_feature_collection(data)
 
@@ -67,13 +75,13 @@ def geosjon_to_superset_csv(
             # codes for e.g. hamburg '02000' was incorrectly saved to '02'
             code_kreis = f"{code_kreis:05}"
 
-            # Add static property "fillColor" to the feature's properties (to be used 
+            # Add static property "fillColor" to the feature's properties (to be used
             # in superset for coloring the shapes)
             collection["features"][0]["properties"]["fillColor"] = "#REPLACE_ME"
             collection["features"][0].pop("id", None)
             # collection["features"][0]["properties"] = {}
 
-            f.write(f'{code_kreis}|{desc_kreis}|{json.dumps(collection)}\n')
+            f.write(f"{code_kreis}|{desc_kreis}|{json.dumps(collection)}\n")
 
 
 def split_feature_collection(geojson: dict[str, Any]) -> list[dict[str, Any]]:
@@ -196,6 +204,57 @@ def split_feature_collection(geojson: dict[str, Any]) -> list[dict[str, Any]]:
         {"type": "FeatureCollection", "features": [feature]}
         for feature in geojson["features"]
     ]
+
+
+def transform_coordinates(
+    geojson: dict[str, Any],
+    src_crs: str = "EPSG:25832",
+    tar_crs: str = "EPSG:4326",
+    num_decimals: int | None = None,
+) -> dict[str, Any]:
+    """Transform all feature geometries from one coordinate system to another.
+
+    Needed because Supersets deck gl needs WSG84 (lon/lat) but we get
+    units of projected meters from the download.
+    """
+
+    if "features" not in geojson:
+        return geojson
+
+    transformer = Transformer.from_crs(src_crs, tar_crs, always_xy=True)
+
+    def transform(coordinates: Any) -> Any:
+        if (
+            isinstance(coordinates, (list, tuple))
+            and len(coordinates) >= 2
+            and isinstance(coordinates[0], (int, float))
+            and isinstance(coordinates[1], (int, float))
+        ):
+            longitude, latitude = transformer.transform(coordinates[0], coordinates[1])
+            if num_decimals is not None:
+                return [round(longitude, num_decimals), round(latitude, num_decimals)]
+            else:
+                return [longitude, latitude]
+
+        if isinstance(coordinates, (list, tuple)):
+            return [transform(item) for item in coordinates]
+
+        return coordinates
+
+    transformed_geojson = geojson.copy()
+    transformed_features = []
+
+    for src_feat in transformed_geojson["features"]:
+        tar_feat = src_feat.copy()
+        src_geom = tar_feat.get("geometry")
+        if src_geom and "coordinates" in src_geom:
+            tar_geom = src_geom.copy()
+            tar_geom["coordinates"] = transform(src_geom["coordinates"])
+            tar_feat["geometry"] = tar_geom
+        transformed_features.append(tar_feat)
+
+    transformed_geojson["features"] = transformed_features
+    return transformed_geojson
 
 
 def simplify_geojson(geojson: dict[str, Any], tolerance=0.009):

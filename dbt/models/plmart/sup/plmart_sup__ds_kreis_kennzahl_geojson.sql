@@ -37,5 +37,8 @@ select
     ) as "Wert anteilig"
 
 from {{ ref("plmart_sup__ds_kreis_kennzahl") }}
+where "Kreis GeoJson" is not null
+-- the null filter is important! deck.gl setting `Ignore null locations` is not working
+-- and we get a cryptic parsing error if any json is just null.
 group by
     {{ dim_cols | join(', ') }},
