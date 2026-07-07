@@ -17,6 +17,7 @@ with
             dim_kreis.desc_kreis_name                  as "Kreis Bezeichnung",
             concat(dim_kreis.code_kreis, ' ', dim_kreis.desc_kreis_name) as "Kreis",
             dim_kreis.fact_geojson                     as "Kreis GeoJson",
+            -- TODO: deck.gl polygon Chart type might have issues with null as GeoJson
             fact_kennzahl.fact_kennzahl                as "Wert",
             fact_kennzahl.fact_kennzahl_vorjahr        as "Wert Vorjahr",
         from
