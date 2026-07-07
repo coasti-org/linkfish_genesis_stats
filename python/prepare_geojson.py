@@ -81,7 +81,11 @@ def geosjon_to_superset_csv(
             collection["features"][0].pop("id", None)
             # collection["features"][0]["properties"] = {}
 
-            f.write(f"{code_kreis}|{desc_kreis}|{json.dumps(collection)}\n")
+            # supersets deck.gl **polygon** chart type cannot handle featurecollections,
+            # but the non-polygon geojson chart type can handle both. so we unpack.
+            data = collection["features"][0]
+
+            f.write(f"{code_kreis}|{desc_kreis}|{json.dumps(data)}\n")
 
 
 def split_feature_collection(geojson: dict[str, Any]) -> list[dict[str, Any]]:
