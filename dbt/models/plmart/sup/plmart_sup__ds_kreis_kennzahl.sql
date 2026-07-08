@@ -1,5 +1,21 @@
 {# baut auf fact_kennzahl auf und macht nur leichte renames der spalten namen und enthaltenen werte #}
 -- und joint die dim_kreis mit polygonen zu one-big-table
+
+{%
+    set kennzahlen = [
+        "Gebietsfläche",
+        "Anzahl Einwohner:innen",
+        "Durchschnittsalter",
+        "Altenquotient",
+        "Sterbefälle",
+        "Lebendgeburten",
+        "Fortzüge",
+        "Zuzüge",
+        "Wanderung",
+    ]
+%}
+{{ log_debug('Kennzahlen für non-pivot:\n\t' ~kennzahlen | join('\n\t')) }}
+
 with
     dim_kreis     as ( select * from {{ ref("mart__dim_kreis") }} ),
     fact_kennzahl as ( select * from {{ ref("mart__fact_kennzahl") }} ),
@@ -24,6 +40,8 @@ with
             fact_kennzahl
         left join
             dim_kreis on fact_kennzahl.code_kreis = dim_kreis.code_kreis
+        where
+            code_kennzahl  in ({{ "'" ~ (kennzahlen | join("', '")) ~ "'" }})
     ),
 
     time_cols as (

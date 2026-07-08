@@ -2,15 +2,30 @@
 -- jede Kennzahl wird zu zwei Spalten: _Wert und _Wert_Vorjahr
 -- joint die dim_kreis mit Polygonen zu one-big-table
 
+
 {%
-    set kennzahlen = dbt_utils.get_column_values(
-        ref('int_pystatis__berechnet_gesammelt'), 'code_kennzahl'
-    )
+    set kennzahlen = [
+        "Gebietsfläche",
+        "Anzahl Einwohner:innen",
+        "Durchschnittsalter",
+        "[sys] Durchschnittsalter (Zähler)",
+        "[sys] Durchschnittsalter (Nenner)",
+        "Medianalter",
+        "Altenquotient",
+        "Sterbefälle",
+        "Lebendgeburten",
+        "Fortzüge",
+        "Zuzüge",
+        "Wanderung",
+    ]
 %}
+{{ log_debug('Kennzahlen für pivot:\n\t' ~kennzahlen | join('\n\t')) }}
+{# we could use dbt_utils.get_column_values(), but this is more readable #}
+
 
 with
     dim_kreis as ( select * from {{ ref("mart__dim_kreis") }} ),
-    fact_kennzahl as ( select * from {{ ref("int_pystatis__berechnet_gesammelt") }} ),
+    fact_kennzahl as ( select * from {{ ref("mart__fact_kennzahl") }} ),
 
     pivot_human_readable as (
         select
@@ -25,11 +40,14 @@ with
 
             -- Kennzahlen pivot, damit wir berechnete Kennzahlen als Metriken
             -- im Frontend darstellen können
+            -- null als else_value ist wichtig, da wir sonst im Frontend Non-Sum
+            -- Aggregations-Metriken falsch berechnen.
             {{ dbt_utils.pivot(
                 column='code_kennzahl',
                 values=kennzahlen,
                 agg='sum',
                 then_value='fact_kennzahl',
+                else_value='null',
                 prefix='',
                 suffix='',
                 alias=True,
@@ -41,6 +59,7 @@ with
                 values=kennzahlen,
                 agg='sum',
                 then_value='fact_kennzahl_vorjahr',
+                else_value='null',
                 prefix='',
                 suffix=' (Vorjahr)',
                 alias=True,

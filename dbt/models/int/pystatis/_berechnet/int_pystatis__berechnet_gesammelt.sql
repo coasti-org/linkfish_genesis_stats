@@ -8,6 +8,7 @@
     "int_pystatis__basis_gesammelt",
     "int_pystatis__berechnet_altenquotient",
     "int_pystatis__berechnet_wanderungen",
+    "int_pystatis__sys_durchschnittsalter_helfer",
 ] %}
 
 {# Make 1 - N into CTEs #}
