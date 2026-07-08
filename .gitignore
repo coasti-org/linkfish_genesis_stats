@@ -9,6 +9,7 @@ venv/
 build/
 dist/
 
+dbt_packages/
 
 # Crash log files
 crash.log

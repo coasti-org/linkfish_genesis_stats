@@ -10,4 +10,4 @@ seeds:
       code_ags: varchar(50)
       desc_ags: varchar(50)
       code_geschlecht: varchar(50)
-      fact_alter_durchschnit: float
+      fact_alter_durchschnitt: float

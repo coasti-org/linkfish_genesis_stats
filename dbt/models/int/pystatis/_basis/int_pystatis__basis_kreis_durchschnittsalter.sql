@@ -11,7 +11,7 @@ with
 
     final as (
         select
-            'Durchschnittsalter (Kreis)' as code_kennzahl,
+            'Durchschnittsalter' as code_kennzahl,
             code_kreis,
             code_stichtag,
             code_geschlecht,

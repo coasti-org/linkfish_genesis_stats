@@ -15,10 +15,11 @@ with
 
     final as (
         select
-            'Fortzüge (Kreis)' as code_kennzahl,
+            'Fortzüge' as code_kennzahl,
             code_kreis,
             code_stichtag,
             code_geschlecht,
+            {# for now we do not treat age groups for this metric #}
             {# code_altersgruppe_18_65 as code_altersgruppe, #}
             null as code_altersgruppe,
             fact_count_fortzuege as fact_kennzahl
@@ -28,7 +29,7 @@ with
         union all
 
         select
-            'Zuzüge (Kreis)' as code_kennzahl,
+            'Zuzüge' as code_kennzahl,
             code_kreis,
             code_stichtag,
             code_geschlecht,

@@ -12,12 +12,12 @@ with
     einwohner_65plus as (
         select *
         from kennz_basis
-        where code_kennzahl = 'Anzahl Einwohner:innen (Kreis)' and code_altersgruppe_2 = '65+'
+        where code_kennzahl = 'Anzahl Einwohner:innen' and code_altersgruppe_2 = '65+'
     ),
 
     kennzahl as (
         select
-            'Altenquotient (Kreis)' as code_kennzahl,
+            'Altenquotient' as code_kennzahl,
             einwohner_65plus.code_kreis,
             einwohner_65plus.code_stichtag,
             einwohner_65plus.code_geschlecht,

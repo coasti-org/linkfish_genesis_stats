@@ -11,7 +11,7 @@ with
 
     final as (
         select
-            'Medianalter (Kreis)' as code_kennzahl,
+            'Medianalter' as code_kennzahl,
             code_kreis,
             code_stichtag,
             code_geschlecht,
@@ -23,7 +23,7 @@ with
         union all
 
         select
-            'Altenquotient (Kreis)' as code_kennzahl,
+            'Altenquotient' as code_kennzahl,
             code_kreis,
             code_stichtag,
             code_geschlecht,

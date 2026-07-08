@@ -7,7 +7,7 @@
 {% set models_to_combine = [
     "int_pystatis__basis_gesammelt",
     "int_pystatis__berechnet_altenquotient",
-    "int_pystatis__berechnet_wanderung",
+    "int_pystatis__berechnet_wanderungen",
 ] %}
 
 {# Make 1 - N into CTEs #}

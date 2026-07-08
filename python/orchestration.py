@@ -41,7 +41,7 @@ def dbt_deps() -> StepResult:
 def list_versions(dbt_deps: StepResult) -> StepResult:
     """List versions of installed dependencies"""
 
-    msg = log_dbt_versions()
+    msg = log_dbt_versions(print_to_stdout=False)
     try:
         import pystatis
 

@@ -11,7 +11,7 @@ with
 
     final as (
         select
-            'Anzahl Einwohner:innen (Kreis)' as code_kennzahl,
+            'Anzahl Einwohner:innen' as code_kennzahl,
             code_kreis,
             code_stichtag,
             code_geschlecht,

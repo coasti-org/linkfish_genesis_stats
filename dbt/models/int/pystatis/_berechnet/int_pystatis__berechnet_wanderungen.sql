@@ -14,18 +14,18 @@ with
     zuzuege as (
         select *
         from kennz_basis
-        where code_kennzahl = 'Zuzüge (Kreis)'
+        where code_kennzahl = 'Zuzüge'
     ),
 
     fortzuege as (
         select *
         from kennz_basis
-        where code_kennzahl = 'Fortzüge (Kreis)'
+        where code_kennzahl = 'Fortzüge'
     ),
 
     kennzahl as (
         select
-            'Wanderung (Kreis)' as code_kennzahl,
+            'Wanderung' as code_kennzahl,
             zuzuege.code_kreis,
             zuzuege.code_stichtag,
             zuzuege.code_geschlecht,

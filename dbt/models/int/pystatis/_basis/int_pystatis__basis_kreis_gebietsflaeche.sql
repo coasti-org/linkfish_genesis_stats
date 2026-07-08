@@ -17,7 +17,7 @@ with
 
     final as (
         select
-            'Gebietsfläche (Kreis)' as code_kennzahl,
+            'Gebietsfläche' as code_kennzahl,
             code_kreis,
             code_stichtag,
             null as code_geschlecht,
