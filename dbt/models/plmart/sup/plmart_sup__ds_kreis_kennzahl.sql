@@ -1,12 +1,11 @@
 {# baut auf fact_kennzahl auf und macht nur leichte renames der spalten namen und enthaltenen werte #}
 -- und joint die dim_kreis mit polygonen zu one-big-table
+-- hier nehmen wir nur Kennzahlen mit, die direkt summiert werden können
 
 {%
     set kennzahlen = [
         "Gebietsfläche",
         "Anzahl Einwohner:innen",
-        "Durchschnittsalter",
-        "Altenquotient",
         "Sterbefälle",
         "Lebendgeburten",
         "Fortzüge",
@@ -26,9 +25,8 @@ with
             cast(fact_kennzahl.code_stichtag as date)  as "Stichtag",
             -- Das casting zu Date erlaubt bessere Formattierung in Superset
             fact_kennzahl.code_geschlecht              as "Geschlecht",
-            fact_kennzahl.code_altersgruppe            as "Altersgruppe",
-            fact_kennzahl.code_altersgruppe_1          as "Altersgruppe 1",
-            fact_kennzahl.code_altersgruppe_2          as "Altersgruppe 2",
+            fact_kennzahl.code_altersgruppe_18_65      as "Altersgruppe",
+            fact_kennzahl.code_altersgruppe_grob       as "Altersgruppe grob",
             dim_kreis.code_kreis                       as "Kreis Code",
             dim_kreis.desc_kreis_name                  as "Kreis Bezeichnung",
             concat(dim_kreis.code_kreis, ' ', dim_kreis.desc_kreis_name) as "Kreis",

@@ -7,7 +7,6 @@
 {% set models_to_combine = [
     "int_pystatis__basis_gesammelt",
     "int_pystatis__berechnet_altenquotient",
-    "int_pystatis__berechnet_wanderungen",
     "int_pystatis__sys_durchschnittsalter_helfer",
 ] %}
 
@@ -22,9 +21,8 @@ with
                 code_kreis,
                 code_stichtag,
                 code_geschlecht,
-                code_altersgruppe,
-                code_altersgruppe_1,
-                code_altersgruppe_2,
+                code_altersgruppe_18_65,
+                code_altersgruppe_grob,
                 fact_kennzahl,
                 fact_kennzahl_vorjahr,
             from

@@ -22,7 +22,7 @@ with
         from kennz_basis
         where
             code_kennzahl = 'Anzahl Einwohner:innen'
-            and code_altersgruppe is not null
+            and code_altersgruppe_18_65 is not null
         group by
             code_kreis,
             code_stichtag,
@@ -46,9 +46,8 @@ with
             durchschnittsalter.code_kreis,
             durchschnittsalter.code_stichtag,
             durchschnittsalter.code_geschlecht,
-            null as code_altersgruppe,
-            null as code_altersgruppe_1,
-            null as code_altersgruppe_2,
+            null as code_altersgruppe_18_65,
+            null as code_altersgruppe_grob,
             durchschnittsalter.fact_durchschnittsalter * einwohner_je_geschlecht.fact_einwohner as fact_kennzahl,
             durchschnittsalter.fact_durchschnittsalter_vorjahr * einwohner_je_geschlecht.fact_einwohner_vorjahr as fact_kennzahl_vorjahr
         from durchschnittsalter
@@ -65,9 +64,8 @@ with
             code_kreis,
             code_stichtag,
             code_geschlecht,
-            null as code_altersgruppe,
-            null as code_altersgruppe_1,
-            null as code_altersgruppe_2,
+            null as code_altersgruppe_18_65,
+            null as code_altersgruppe_grob,
             fact_einwohner as fact_kennzahl,
             fact_einwohner_vorjahr as fact_kennzahl_vorjahr
         from einwohner_je_geschlecht
@@ -75,6 +73,8 @@ with
 
 select *
 from helper_Zähler
+
 union all
+
 select *
 from helper_nenner

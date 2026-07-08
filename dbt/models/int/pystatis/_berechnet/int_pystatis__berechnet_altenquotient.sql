@@ -6,13 +6,13 @@ with
         select *
         from kennz_basis
         where
-            code_kennzahl = 'Anzahl Einwohner:innen (Kreis)' and code_altersgruppe_2 = '18-64'
+            code_kennzahl = 'Anzahl Einwohner:innen (Kreis)' and code_altersgruppe_grob = '18-64'
     ),
 
     einwohner_65plus as (
         select *
         from kennz_basis
-        where code_kennzahl = 'Anzahl Einwohner:innen' and code_altersgruppe_2 = '65+'
+        where code_kennzahl = 'Anzahl Einwohner:innen' and code_altersgruppe_grob = '65+'
     ),
 
     kennzahl as (
@@ -22,9 +22,8 @@ with
             einwohner_65plus.code_stichtag,
             einwohner_65plus.code_geschlecht,
             /* wir betrachten nur die aggregierten Werte für 18-64 und 65+, daher keine AG */
-            null as code_altersgruppe,
-            null as code_altersgruppe_1,
-            null as code_altersgruppe_2,
+            null as code_altersgruppe_18_65,
+            null as code_altersgruppe_grob,
             sum(einwohner_65plus.fact_kennzahl)
             / nullif(sum(einwohner_18_64.fact_kennzahl), 0)
             * 100 as fact_kennzahl
@@ -42,7 +41,7 @@ with
             *,
             lag(fact_kennzahl) over (
                 partition by
-                    code_kennzahl, code_kreis, code_geschlecht, code_altersgruppe
+                    code_kennzahl, code_kreis, code_geschlecht, code_altersgruppe_18_65
                 order by code_stichtag
             ) as fact_kennzahl_vorjahr
         from kennzahl

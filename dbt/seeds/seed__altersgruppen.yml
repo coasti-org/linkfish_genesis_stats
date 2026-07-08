@@ -8,6 +8,6 @@ seeds:
     column_types:
 
       # diese Infos wurden einmalig manuell gepflegt:
-      code_altersgruppe_statistik: varchar(50)
-      code_altersgruppe_1: varchar(50)
-      code_altersgruppe_2: varchar(50)
+      code_altersgruppe_3_75: varchar(50) # e.g. Anz. Einwohner:innen, feinste Staffelung
+      code_altersgruppe_18_65: varchar(50) # e.g. aus Wanderungen, unser default, kleinster Nenner
+      code_altersgruppe_grob: varchar(50) # eigene Gruppen, oft gewünscht, und für Berechnungen genutzt

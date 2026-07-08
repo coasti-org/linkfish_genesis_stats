@@ -7,11 +7,7 @@ Je Zeile: Kreis, Dimensionen, und eine Wanderungskennzahl.
 #}
 
 with
-    kreis_wanderungen as (
-        select *
-        from {{ ref('stg_pystatis__kreis_wanderungen') }}
-        where code_altersgruppe_18_65 = 'Insgesamt'
-    ),
+    kreis_wanderungen as (select * from {{ ref('stg_pystatis__kreis_wanderungen') }}),
 
     final as (
         select
@@ -19,9 +15,7 @@ with
             code_kreis,
             code_stichtag,
             code_geschlecht,
-            {# for now we do not treat age groups for this metric #}
-            {# code_altersgruppe_18_65 as code_altersgruppe, #}
-            null as code_altersgruppe,
+            code_altersgruppe_18_65,
             fact_count_fortzuege as fact_kennzahl
         from
             kreis_wanderungen
@@ -33,9 +27,20 @@ with
             code_kreis,
             code_stichtag,
             code_geschlecht,
-            {# code_altersgruppe_18_65 as code_altersgruppe, #}
-            null as code_altersgruppe,
+            code_altersgruppe_18_65,
             fact_count_zuzuege as fact_kennzahl
+        from
+            kreis_wanderungen
+
+        union all
+
+        select
+            'Wanderung' as code_kennzahl,
+            code_kreis,
+            code_stichtag,
+            code_geschlecht,
+            code_altersgruppe_18_65,
+            fact_count_zuzuege - fact_count_fortzuege as fact_kennzahl
         from
             kreis_wanderungen
     )

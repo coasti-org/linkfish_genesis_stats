@@ -14,6 +14,15 @@
 {# Make 1 - N into CTEs #}
 
 with
+    {# Wir haben Duplikate in code_altersgruppe_18_65, aber wollen ab hier unique  #}
+    altersgruppen as (
+        select
+            code_altersgruppe_18_65,
+            min(code_altersgruppe_grob) as code_altersgruppe_grob
+        from {{ ref("seed__altersgruppen") }}
+        group by code_altersgruppe_18_65
+    ),
+
     {# 1. union alle basis kennzahlen #}
     basis_union as (
         {% for model in models_to_combine %}
@@ -22,7 +31,7 @@ with
                 code_kreis,
                 code_stichtag,
                 code_geschlecht,
-                code_altersgruppe,
+                code_altersgruppe_18_65,
                 fact_kennzahl
             from
                 {{ ref( model ) }}
@@ -45,23 +54,22 @@ with
                     code_kennzahl,
                     code_kreis,
                     code_geschlecht,
-                    code_altersgruppe
+                    code_altersgruppe_18_65
                 order by
                     code_stichtag
             ) as fact_kennzahl_vorjahr
         from basis_union
     ),
 
-    {# 3. Altersgruppen konsistent schalten #}
+    {# 3. Altersgruppen ergänzen #}
     base_w_dimensions as (
         select
             basis_lag.*,
-            code_altersgruppe_1,
-            code_altersgruppe_2
+            altersgruppen.code_altersgruppe_grob
         from basis_lag
         left join
-            {{ ref("seed__altersgruppen") }} altersgruppen
-            on basis_lag.code_altersgruppe = altersgruppen.code_altersgruppe_statistik
+            altersgruppen
+            on basis_lag.code_altersgruppe_18_65 = altersgruppen.code_altersgruppe_18_65
     )
 
 select *

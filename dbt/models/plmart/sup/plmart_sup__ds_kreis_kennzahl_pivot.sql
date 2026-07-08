@@ -2,21 +2,19 @@
 -- jede Kennzahl wird zu zwei Spalten: _Wert und _Wert_Vorjahr
 -- joint die dim_kreis mit Polygonen zu one-big-table
 
+-- in der Pivot Ansicht nehmen wir auch Kennzahlen, die aus Helfern berechnet werden [sys]
 
 {%
     set kennzahlen = [
         "Gebietsfläche",
         "Anzahl Einwohner:innen",
-        "Durchschnittsalter",
-        "[sys] Durchschnittsalter (Zähler)",
-        "[sys] Durchschnittsalter (Nenner)",
-        "Medianalter",
-        "Altenquotient",
         "Sterbefälle",
         "Lebendgeburten",
         "Fortzüge",
         "Zuzüge",
         "Wanderung",
+        "[sys] Durchschnittsalter (Zähler)",
+        "[sys] Durchschnittsalter (Nenner)",
     ]
 %}
 {{ log_debug('Kennzahlen für pivot:\n\t' ~kennzahlen | join('\n\t')) }}
@@ -33,9 +31,8 @@ with
             -- Das Casting zu Date erlaubt bessere Formattierung in Superset
             cast(fact_kennzahl.code_stichtag as date)  as "Stichtag",
             fact_kennzahl.code_geschlecht              as "Geschlecht",
-            fact_kennzahl.code_altersgruppe            as "Altersgruppe",
-            fact_kennzahl.code_altersgruppe_1          as "Altersgruppe 1",
-            fact_kennzahl.code_altersgruppe_2          as "Altersgruppe 2",
+            fact_kennzahl.code_altersgruppe_18_65      as "Altersgruppe",
+            fact_kennzahl.code_altersgruppe_grob       as "Altersgruppe grob",
             fact_kennzahl.code_kreis                   as "Kreis Code",
 
             -- Kennzahlen pivot, damit wir berechnete Kennzahlen als Metriken
@@ -71,9 +68,8 @@ with
         group by
             code_stichtag,
             code_geschlecht,
-            code_altersgruppe,
-            code_altersgruppe_1,
-            code_altersgruppe_2,
+            code_altersgruppe_18_65,
+            code_altersgruppe_grob,
             code_kreis
     ),
 

@@ -21,7 +21,7 @@ with
             code_kreis,
             code_stichtag,
             null as code_geschlecht,
-            null as code_altersgruppe,
+            null as code_altersgruppe_18_65,
             fact_flaeche as fact_kennzahl
         from
             kreis_gebietsflaeche

@@ -25,6 +25,7 @@ final as (
         casted
     where
         lower(code_geschlecht) != 'insgesamt'
+        and lower(code_altersgruppe_18_65) != 'insgesamt'
         and len(code_ags) == 5
 )
 

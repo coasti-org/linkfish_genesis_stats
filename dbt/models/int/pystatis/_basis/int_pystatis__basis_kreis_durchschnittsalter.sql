@@ -15,7 +15,7 @@ with
             code_kreis,
             code_stichtag,
             code_geschlecht,
-            null as code_altersgruppe,
+            null as code_altersgruppe_18_65,
             fact_alter_durchschnitt as fact_kennzahl
         from
             kreis_durchschnittsalter
