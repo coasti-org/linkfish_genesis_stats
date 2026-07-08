@@ -1,0 +1,380 @@
+slice_name: '[T] Kennzahl'
+description: null
+certified_by: null
+certification_details: null
+viz_type: table
+params:
+  datasource: 7__table
+  viz_type: table
+  slice_id: 10
+  matrixify_enable: false
+  matrixify_mode_columns: disabled
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_all_sort_by_columns: a_to_z
+  matrixify_topn_order_columns: true
+  matrixify_show_column_headers: true
+  matrixify_fit_columns_dynamically: true
+  matrixify_mode_rows: disabled
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_all_sort_by_rows: a_to_z
+  matrixify_topn_order_rows: true
+  matrixify_show_row_labels: true
+  matrixify_row_height: 300
+  matrixify_charts_per_row: 3
+  matrixify_cell_title_template: ''
+  query_mode: aggregate
+  groupby:
+  - Kreis Bezeichnung
+  temporal_columns_lookup:
+    Stichtag: true
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: "Gebietsfl\xE4che"
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 107
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: null
+      type_generic: null
+      uuid: 6e1070c1-9859-4318-b1a1-22b4411355e0
+      verbose_name: null
+      warning_markdown: null
+    aggregate: MAX
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: "Gebietsfl\xE4che"
+    optionName: metric_w5hpdxpgyil_1ri4kf0jjhsh
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: Anzahl Einwohner:innen
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 98
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: FLOAT
+      type_generic: 0
+      uuid: 336a56d3-4a80-48e2-8a2c-11e19e5d588c
+      verbose_name: null
+      warning_markdown: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Einwohner:innen
+    optionName: metric_zd4hwj4b10q_hy8yc9sfyoi
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: Wanderung
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 100
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: null
+      type_generic: null
+      uuid: ec5205bb-56a3-4322-a9d6-816c113ac03b
+      verbose_name: null
+      warning_markdown: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Wanderung
+    optionName: metric_mrxlquccxes_ep2j8eegfj
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: Lebendgeburten
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 104
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: null
+      type_generic: null
+      uuid: 623ef50d-e2d8-4460-be7a-b588961940bc
+      verbose_name: null
+      warning_markdown: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Geburten
+    optionName: metric_xqvp3cba0ik_0smexwgxf33g
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: "Sterbef\xE4lle"
+      description: null
+      expression: null
+      filterable: true
+      groupby: true
+      id: 103
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: null
+      type_generic: null
+      uuid: 670e86ec-5bff-4086-9c11-3a1660a100da
+      verbose_name: null
+      warning_markdown: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: "Sterbef\xE4lle"
+    optionName: metric_jqlqajv22ts_thjnrkae72a
+  - Durchschnittsalter
+  all_columns: []
+  percent_metrics: []
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: Stichtag
+  timeseries_limit_metric:
+    aggregate: MIN
+    column:
+      advanced_data_type: null
+      certification_details: null
+      certified_by: null
+      column_name: Kreis Bezeichnung
+      description: null
+      expression: ''
+      filterable: true
+      groupby: true
+      id: 67
+      is_certified: false
+      is_dttm: false
+      python_date_format: null
+      type: STRING
+      type_generic: 1
+      uuid: ce36f993-b806-42c9-9ba3-d74d313401cb
+      verbose_name: null
+      warning_markdown: null
+    datasourceWarning: false
+    expressionType: SIMPLE
+    hasCustomLabel: false
+    label: MIN(Kreis Bezeichnung)
+    optionName: metric_bqls5gq4yma_t6cb0tsdc
+    sqlExpression: null
+  order_by_cols: []
+  order_desc: false
+  server_pagination: false
+  row_limit: 10000
+  percent_metric_calculation: row_limit
+  show_totals: false
+  table_timestamp_format: smart_date
+  include_search: false
+  allow_rearrange_columns: false
+  allow_render_html: false
+  column_config:
+    Anzahl Einwohner:innen:
+      alignPositiveNegative: true
+      colorPositiveNegative: true
+      d3NumberFormat: .2s
+      showCellBars: false
+    Durchschnittsalter:
+      d3NumberFormat: ',d'
+      showCellBars: false
+    Kreis Bezeichnung:
+      horizontalAlign: right
+    Wanderung:
+      alignPositiveNegative: true
+      colorPositiveNegative: true
+      d3NumberFormat: ',d'
+      showCellBars: false
+    Geburten:
+      showCellBars: false
+      d3NumberFormat: ',d'
+    "Sterbef\xE4lle":
+      d3NumberFormat: ',d'
+    "Gebietsfl\xE4che":
+      d3NumberFormat: .2s
+  show_cell_bars: false
+  align_pn: false
+  color_pn: false
+  conditional_formatting:
+  - colorScheme: colorError
+    column: Wanderung
+    columnFormatting: Wanderung
+    objectFormatting: TEXT_COLOR
+    operator: <
+    targetValue: 0
+  comparison_type: values
+  extra_form_data: {}
+  dashboards:
+  - 2
+query_context: "{\"datasource\":{\"id\":7,\"type\":\"table\"},\"force\":false,\"queries\"\
+  :[{\"filters\":[{\"col\":\"Stichtag\",\"op\":\"TEMPORAL_RANGE\",\"val\":\"No filter\"\
+  }],\"extras\":{\"having\":\"\",\"where\":\"\"},\"applied_time_extras\":{},\"columns\"\
+  :[\"Kreis Bezeichnung\"],\"metrics\":[{\"expressionType\":\"SIMPLE\",\"column\"\
+  :{\"advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"\
+  column_name\":\"Gebietsfl\xE4che\",\"description\":null,\"expression\":null,\"filterable\"\
+  :true,\"groupby\":true,\"id\":107,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\"\
+  :null,\"type\":null,\"type_generic\":null,\"uuid\":\"6e1070c1-9859-4318-b1a1-22b4411355e0\"\
+  ,\"verbose_name\":null,\"warning_markdown\":null},\"aggregate\":\"MAX\",\"sqlExpression\"\
+  :null,\"datasourceWarning\":false,\"hasCustomLabel\":true,\"label\":\"Gebietsfl\xE4\
+  che\",\"optionName\":\"metric_w5hpdxpgyil_1ri4kf0jjhsh\"},{\"expressionType\":\"\
+  SIMPLE\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"\
+  certified_by\":null,\"column_name\":\"Anzahl Einwohner:innen\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":98,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"FLOAT\",\"type_generic\"\
+  :0,\"uuid\":\"336a56d3-4a80-48e2-8a2c-11e19e5d588c\",\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\":false,\"\
+  hasCustomLabel\":true,\"label\":\"Einwohner:innen\",\"optionName\":\"metric_zd4hwj4b10q_hy8yc9sfyoi\"\
+  },{\"expressionType\":\"SIMPLE\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"Wanderung\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":100,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":null,\"type_generic\"\
+  :null,\"uuid\":\"ec5205bb-56a3-4322-a9d6-816c113ac03b\",\"verbose_name\":null,\"\
+  warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\"\
+  :false,\"hasCustomLabel\":true,\"label\":\"Wanderung\",\"optionName\":\"metric_mrxlquccxes_ep2j8eegfj\"\
+  },{\"expressionType\":\"SIMPLE\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"Lebendgeburten\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":104,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":null,\"type_generic\"\
+  :null,\"uuid\":\"623ef50d-e2d8-4460-be7a-b588961940bc\",\"verbose_name\":null,\"\
+  warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\"\
+  :false,\"hasCustomLabel\":true,\"label\":\"Geburten\",\"optionName\":\"metric_xqvp3cba0ik_0smexwgxf33g\"\
+  },{\"expressionType\":\"SIMPLE\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"Sterbef\xE4lle\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":103,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":null,\"type_generic\"\
+  :null,\"uuid\":\"670e86ec-5bff-4086-9c11-3a1660a100da\",\"verbose_name\":null,\"\
+  warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\"\
+  :false,\"hasCustomLabel\":true,\"label\":\"Sterbef\xE4lle\",\"optionName\":\"metric_jqlqajv22ts_thjnrkae72a\"\
+  },\"Durchschnittsalter\"],\"orderby\":[[{\"aggregate\":\"MIN\",\"column\":{\"advanced_data_type\"\
+  :null,\"certification_details\":null,\"certified_by\":null,\"column_name\":\"Kreis\
+  \ Bezeichnung\",\"description\":null,\"expression\":\"\",\"filterable\":true,\"\
+  groupby\":true,\"id\":67,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\"\
+  :null,\"type\":\"STRING\",\"type_generic\":1,\"uuid\":\"ce36f993-b806-42c9-9ba3-d74d313401cb\"\
+  ,\"verbose_name\":null,\"warning_markdown\":null},\"datasourceWarning\":false,\"\
+  expressionType\":\"SIMPLE\",\"hasCustomLabel\":false,\"label\":\"MIN(Kreis Bezeichnung)\"\
+  ,\"optionName\":\"metric_bqls5gq4yma_t6cb0tsdc\",\"sqlExpression\":null},true]],\"\
+  annotation_layers\":[],\"row_limit\":10000,\"series_limit\":0,\"series_limit_metric\"\
+  :{\"aggregate\":\"MIN\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"Kreis Bezeichnung\",\"description\"\
+  :null,\"expression\":\"\",\"filterable\":true,\"groupby\":true,\"id\":67,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"STRING\",\"type_generic\"\
+  :1,\"uuid\":\"ce36f993-b806-42c9-9ba3-d74d313401cb\",\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\"\
+  :false,\"label\":\"MIN(Kreis Bezeichnung)\",\"optionName\":\"metric_bqls5gq4yma_t6cb0tsdc\"\
+  ,\"sqlExpression\":null},\"group_others_when_limit_reached\":false,\"order_desc\"\
+  :false,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"post_processing\"\
+  :[],\"time_offsets\":[]}],\"form_data\":{\"datasource\":\"7__table\",\"viz_type\"\
+  :\"table\",\"slice_id\":10,\"matrixify_enable\":false,\"matrixify_mode_columns\"\
+  :\"disabled\",\"matrixify_dimension_selection_mode_columns\":\"members\",\"matrixify_dimension_columns\"\
+  :{\"dimension\":\"\",\"values\":[]},\"matrixify_topn_value_columns\":10,\"matrixify_all_sort_by_columns\"\
+  :\"a_to_z\",\"matrixify_topn_order_columns\":true,\"matrixify_show_column_headers\"\
+  :true,\"matrixify_fit_columns_dynamically\":true,\"matrixify_mode_rows\":\"disabled\"\
+  ,\"matrixify_dimension_selection_mode_rows\":\"members\",\"matrixify_dimension_rows\"\
+  :{\"dimension\":\"\",\"values\":[]},\"matrixify_topn_value_rows\":10,\"matrixify_all_sort_by_rows\"\
+  :\"a_to_z\",\"matrixify_topn_order_rows\":true,\"matrixify_show_row_labels\":true,\"\
+  matrixify_row_height\":300,\"matrixify_charts_per_row\":3,\"matrixify_cell_title_template\"\
+  :\"\",\"query_mode\":\"aggregate\",\"groupby\":[\"Kreis Bezeichnung\"],\"temporal_columns_lookup\"\
+  :{\"Stichtag\":true},\"metrics\":[{\"expressionType\":\"SIMPLE\",\"column\":{\"\
+  advanced_data_type\":null,\"certification_details\":null,\"certified_by\":null,\"\
+  column_name\":\"Gebietsfl\xE4che\",\"description\":null,\"expression\":null,\"filterable\"\
+  :true,\"groupby\":true,\"id\":107,\"is_certified\":false,\"is_dttm\":false,\"python_date_format\"\
+  :null,\"type\":null,\"type_generic\":null,\"uuid\":\"6e1070c1-9859-4318-b1a1-22b4411355e0\"\
+  ,\"verbose_name\":null,\"warning_markdown\":null},\"aggregate\":\"MAX\",\"sqlExpression\"\
+  :null,\"datasourceWarning\":false,\"hasCustomLabel\":true,\"label\":\"Gebietsfl\xE4\
+  che\",\"optionName\":\"metric_w5hpdxpgyil_1ri4kf0jjhsh\"},{\"expressionType\":\"\
+  SIMPLE\",\"column\":{\"advanced_data_type\":null,\"certification_details\":null,\"\
+  certified_by\":null,\"column_name\":\"Anzahl Einwohner:innen\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":98,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"FLOAT\",\"type_generic\"\
+  :0,\"uuid\":\"336a56d3-4a80-48e2-8a2c-11e19e5d588c\",\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\":false,\"\
+  hasCustomLabel\":true,\"label\":\"Einwohner:innen\",\"optionName\":\"metric_zd4hwj4b10q_hy8yc9sfyoi\"\
+  },{\"expressionType\":\"SIMPLE\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"Wanderung\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":100,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":null,\"type_generic\"\
+  :null,\"uuid\":\"ec5205bb-56a3-4322-a9d6-816c113ac03b\",\"verbose_name\":null,\"\
+  warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\"\
+  :false,\"hasCustomLabel\":true,\"label\":\"Wanderung\",\"optionName\":\"metric_mrxlquccxes_ep2j8eegfj\"\
+  },{\"expressionType\":\"SIMPLE\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"Lebendgeburten\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":104,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":null,\"type_generic\"\
+  :null,\"uuid\":\"623ef50d-e2d8-4460-be7a-b588961940bc\",\"verbose_name\":null,\"\
+  warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\"\
+  :false,\"hasCustomLabel\":true,\"label\":\"Geburten\",\"optionName\":\"metric_xqvp3cba0ik_0smexwgxf33g\"\
+  },{\"expressionType\":\"SIMPLE\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"Sterbef\xE4lle\",\"description\":null,\"\
+  expression\":null,\"filterable\":true,\"groupby\":true,\"id\":103,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":null,\"type_generic\"\
+  :null,\"uuid\":\"670e86ec-5bff-4086-9c11-3a1660a100da\",\"verbose_name\":null,\"\
+  warning_markdown\":null},\"aggregate\":\"SUM\",\"sqlExpression\":null,\"datasourceWarning\"\
+  :false,\"hasCustomLabel\":true,\"label\":\"Sterbef\xE4lle\",\"optionName\":\"metric_jqlqajv22ts_thjnrkae72a\"\
+  },\"Durchschnittsalter\"],\"all_columns\":[],\"percent_metrics\":[],\"adhoc_filters\"\
+  :[{\"clause\":\"WHERE\",\"comparator\":\"No filter\",\"expressionType\":\"SIMPLE\"\
+  ,\"operator\":\"TEMPORAL_RANGE\",\"subject\":\"Stichtag\"}],\"timeseries_limit_metric\"\
+  :{\"aggregate\":\"MIN\",\"column\":{\"advanced_data_type\":null,\"certification_details\"\
+  :null,\"certified_by\":null,\"column_name\":\"Kreis Bezeichnung\",\"description\"\
+  :null,\"expression\":\"\",\"filterable\":true,\"groupby\":true,\"id\":67,\"is_certified\"\
+  :false,\"is_dttm\":false,\"python_date_format\":null,\"type\":\"STRING\",\"type_generic\"\
+  :1,\"uuid\":\"ce36f993-b806-42c9-9ba3-d74d313401cb\",\"verbose_name\":null,\"warning_markdown\"\
+  :null},\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"hasCustomLabel\"\
+  :false,\"label\":\"MIN(Kreis Bezeichnung)\",\"optionName\":\"metric_bqls5gq4yma_t6cb0tsdc\"\
+  ,\"sqlExpression\":null},\"order_by_cols\":[],\"order_desc\":false,\"server_pagination\"\
+  :false,\"row_limit\":10000,\"percent_metric_calculation\":\"row_limit\",\"show_totals\"\
+  :false,\"table_timestamp_format\":\"smart_date\",\"include_search\":false,\"allow_rearrange_columns\"\
+  :false,\"allow_render_html\":false,\"column_config\":{\"Anzahl Einwohner:innen\"\
+  :{\"alignPositiveNegative\":true,\"colorPositiveNegative\":true,\"d3NumberFormat\"\
+  :\".2s\",\"showCellBars\":false},\"Durchschnittsalter\":{\"d3NumberFormat\":\",d\"\
+  ,\"showCellBars\":false},\"Kreis Bezeichnung\":{\"horizontalAlign\":\"right\"},\"\
+  Wanderung\":{\"alignPositiveNegative\":true,\"colorPositiveNegative\":true,\"d3NumberFormat\"\
+  :\",d\",\"showCellBars\":false},\"Geburten\":{\"showCellBars\":false,\"d3NumberFormat\"\
+  :\",d\"},\"Sterbef\xE4lle\":{\"d3NumberFormat\":\",d\"},\"Gebietsfl\xE4che\":{\"\
+  d3NumberFormat\":\".2s\"}},\"show_cell_bars\":false,\"align_pn\":false,\"color_pn\"\
+  :false,\"conditional_formatting\":[{\"colorScheme\":\"colorError\",\"column\":\"\
+  Wanderung\",\"columnFormatting\":\"Wanderung\",\"objectFormatting\":\"TEXT_COLOR\"\
+  ,\"operator\":\"<\",\"targetValue\":0}],\"comparison_type\":\"values\",\"extra_form_data\"\
+  :{},\"dashboards\":[2],\"force\":false,\"result_format\":\"json\",\"result_type\"\
+  :\"full\"},\"result_format\":\"json\",\"result_type\":\"full\"}"
+cache_timeout: null
+uuid: 6f752915-45cb-4f23-be55-c52e434db48a
+version: 1.0.0
+dataset_uuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
+tags: []
