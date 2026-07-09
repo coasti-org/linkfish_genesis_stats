@@ -1,10 +1,10 @@
-dashboard_title: Kreis-Vergleich Jahresauswahl
+dashboard_title: Genesis Statistik
 description: null
 css: ''
 slug: null
 certified_by: ''
 certification_details: ''
-published: false
+published: true
 uuid: 297b92de-b18a-4c74-8cd2-4f33dbd775fd
 position:
   CHART-12:
@@ -75,6 +75,74 @@ position:
     - TAB-X1l-4Ny5Z31Ho0xjk46MK
     - ROW-TtyMLOtO7AckrjgNq46jI
     type: CHART
+  CHART-17:
+    children: []
+    id: CHART-17
+    meta:
+      chartId: 17
+      height: 50
+      sliceName: '[BC] Anzahl Einwohner:innen nach Geschlecht und Jahr'
+      sliceNameOverride: Anzahl Einwohner:innen nach Geschlecht
+      uuid: edecd07e-00f4-4e41-baae-ddda3f84084b
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+    - ROW-GbOWuWMzWslbjEAvptPGS
+    type: CHART
+  CHART-18:
+    children: []
+    id: CHART-18
+    meta:
+      chartId: 18
+      height: 50
+      sliceName: '[BC] Geburten nach Geschlecht und Jahr'
+      sliceNameOverride: Geburten nach Geschlecht
+      uuid: 27363d8e-d471-4f6f-93be-bbe55b4e6fe4
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+    - ROW-GbOWuWMzWslbjEAvptPGS
+    type: CHART
+  CHART-20:
+    children: []
+    id: CHART-20
+    meta:
+      chartId: 20
+      height: 50
+      sliceName: '[BC] Wanderung nach Altersgruppe und Jahr'
+      sliceNameOverride: Wanderung nach Altersgruppe
+      uuid: 236353a2-ee5b-456f-8525-e6c1fa6a70bf
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+    - ROW-JN0EN1bye6aBfeG7OokZP
+    type: CHART
+  CHART-21:
+    children: []
+    id: CHART-21
+    meta:
+      chartId: 21
+      height: 50
+      sliceName: "[BC] Zuz\xFCge nach Altersgruppe und Jahr"
+      sliceNameOverride: "Zuz\xFCge nach Altersgruppe"
+      uuid: a0a356ef-6176-4cff-bbe3-7d0a4fb6495e
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+    - ROW-JN0EN1bye6aBfeG7OokZP
+    type: CHART
   CHART-P_3CvtZx2g8YdZmg2dHXU:
     children: []
     id: CHART-P_3CvtZx2g8YdZmg2dHXU
@@ -126,6 +194,40 @@ position:
     - TAB-Qf6wE4w2VgfSmdW0kv7mF
     - ROW-iR7r8joXIdG2TxmkmTjQr
     type: CHART
+  CHART-explore-16-1:
+    children: []
+    id: CHART-explore-16-1
+    meta:
+      chartId: 16
+      height: 50
+      sliceName: '[BC] Durchschnittsalter nach Geschlecht und Jahr'
+      sliceNameOverride: Durchschnittsalter nach Geschlecht
+      uuid: b1880814-8bd0-4862-a7ff-8c3a39f437c6
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+    - ROW-GbOWuWMzWslbjEAvptPGS
+    type: CHART
+  CHART-explore-19-1:
+    children: []
+    id: CHART-explore-19-1
+    meta:
+      chartId: 19
+      height: 50
+      sliceName: '[BC] Anzahl Einwohner:innen nach Altersgruppe und Jahr'
+      sliceNameOverride: Anzahl Einwohner:innen nach Altersgruppe
+      uuid: d349cd18-8038-4942-bf85-143dc8ce864a
+      width: 4
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+    - ROW-JN0EN1bye6aBfeG7OokZP
+    type: CHART
   CHART-explore-9-1:
     children: []
     id: CHART-explore-9-1
@@ -154,13 +256,41 @@ position:
   HEADER_ID:
     id: HEADER_ID
     meta:
-      text: Kreis-Vergleich Jahresauswahl
+      text: Genesis Statistik
     type: HEADER
   ROOT_ID:
     children:
     - GRID_ID
     id: ROOT_ID
     type: ROOT
+  ROW-GbOWuWMzWslbjEAvptPGS:
+    children:
+    - CHART-17
+    - CHART-explore-16-1
+    - CHART-18
+    id: ROW-GbOWuWMzWslbjEAvptPGS
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+    type: ROW
+  ROW-JN0EN1bye6aBfeG7OokZP:
+    children:
+    - CHART-explore-19-1
+    - CHART-21
+    - CHART-20
+    id: ROW-JN0EN1bye6aBfeG7OokZP
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+    type: ROW
   ROW-NI9oeU1N-3TtemV-gDMDw:
     children:
     - CHART-12
@@ -221,7 +351,7 @@ position:
     meta:
       defaultText: Tab title
       placeholder: Tab title
-      text: Jahresauswahl
+      text: "\xDCbersicht"
     parents:
     - ROOT_ID
     - GRID_ID
@@ -235,7 +365,21 @@ position:
     meta:
       defaultText: Tab title
       placeholder: Tab title
-      text: Jahresvergleich
+      text: Vergleich zwischen Kreisen
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    type: TAB
+  TAB-ZWX-hPwHwP1ic012kCGZR:
+    children:
+    - ROW-GbOWuWMzWslbjEAvptPGS
+    - ROW-JN0EN1bye6aBfeG7OokZP
+    id: TAB-ZWX-hPwHwP1ic012kCGZR
+    meta:
+      defaultText: Tab title
+      placeholder: Tab title
+      text: Einzelansicht Kreis
     parents:
     - ROOT_ID
     - GRID_ID
@@ -245,6 +389,7 @@ position:
     children:
     - TAB-Qf6wE4w2VgfSmdW0kv7mF
     - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    - TAB-ZWX-hPwHwP1ic012kCGZR
     id: TABS-2GmYGZTDyjW7jgqfdzHa4
     meta: {}
     parents:
@@ -265,6 +410,12 @@ metadata:
         - 13
         - 14
         - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
     '9':
       id: 9
       crossFilters:
@@ -277,6 +428,12 @@ metadata:
         - 13
         - 14
         - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
     '10':
       id: 10
       crossFilters:
@@ -289,6 +446,12 @@ metadata:
         - 13
         - 14
         - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
     '11':
       id: 11
       crossFilters:
@@ -301,6 +464,12 @@ metadata:
         - 13
         - 14
         - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
     '12':
       id: 12
       crossFilters:
@@ -313,6 +482,12 @@ metadata:
         - 13
         - 14
         - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
     '13':
       id: 13
       crossFilters:
@@ -325,6 +500,12 @@ metadata:
         - 12
         - 14
         - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
     '14':
       id: 14
       crossFilters:
@@ -337,6 +518,12 @@ metadata:
         - 12
         - 13
         - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
     '15':
       id: 15
       crossFilters:
@@ -349,6 +536,120 @@ metadata:
         - 12
         - 13
         - 14
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
+    '16':
+      id: 16
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 17
+        - 18
+        - 19
+        - 20
+        - 21
+    '17':
+      id: 17
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 18
+        - 19
+        - 20
+        - 21
+    '18':
+      id: 18
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 19
+        - 20
+        - 21
+    '19':
+      id: 19
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 20
+        - 21
+    '20':
+      id: 20
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 21
+    '21':
+      id: 21
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
+        - 15
+        - 16
+        - 17
+        - 18
+        - 19
+        - 20
   global_chart_configuration:
     scope:
       rootPath:
@@ -363,28 +664,27 @@ metadata:
     - 13
     - 14
     - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
   native_filter_configuration:
-  - id: NATIVE_FILTER-Y2k1cNVj3E5YyWLkK4QR5
-    type: NATIVE_FILTER
-    name: Jahr
-    filterType: filter_select
-    description: ''
-    targets:
-    - column:
-        name: Jahr
-      datasetUuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
-    scope:
-      excluded: []
-      rootPath:
-      - TAB-Qf6wE4w2VgfSmdW0kv7mF
+  - cascadeParentIds: []
+    chartsInScope:
+    - 6
+    - 11
+    - 10
+    - 9
     controlValues:
-      sortAscending: true
-      enableEmptyFilter: true
-      defaultToFirstItem: false
       creatable: true
+      defaultToFirstItem: false
+      enableEmptyFilter: true
+      inverseSelection: false
       multiSelect: false
       searchAllOptions: false
-      inverseSelection: false
+      sortAscending: true
     defaultDataMask:
       extraFormData:
         filters:
@@ -399,121 +699,70 @@ metadata:
         validateStatus: false
         value:
         - 2023
-    cascadeParentIds: []
+    description: ''
+    filterType: filter_select
+    id: NATIVE_FILTER-Y2k1cNVj3E5YyWLkK4QR5
+    name: Jahr
+    scope:
+      excluded: []
+      rootPath:
+      - TAB-Qf6wE4w2VgfSmdW0kv7mF
     sortMetric: null
-    chartsInScope:
-    - 9
-    - 10
-    - 6
-    - 11
     tabsInScope:
     - TAB-Qf6wE4w2VgfSmdW0kv7mF
-  - id: NATIVE_FILTER-UClys1nwqbBXnr9sV7iHI
-    type: NATIVE_FILTER
-    name: Jahr
-    filterType: filter_select
-    description: ''
     targets:
     - column:
         name: Jahr
       datasetUuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
-    scope:
-      excluded: []
-      rootPath:
-      - TAB-X1l-4Ny5Z31Ho0xjk46MK
-    controlValues:
-      enableEmptyFilter: false
-      defaultToFirstItem: false
-      creatable: false
-      multiSelect: true
-      searchAllOptions: false
-      inverseSelection: false
-    defaultDataMask:
-      extraFormData:
-        filters:
-        - col: Jahr
-          op: IN
-          val:
-          - 2020
-          - 2021
-          - 2022
-          - 2023
-          - 2024
-      filterState:
-        excludeFilterValues: true
-        label: 2020, 2021, 2022, 2023, 2024
-        validateMessage: false
-        validateStatus: false
-        value:
-        - 2020
-        - 2021
-        - 2022
-        - 2023
-        - 2024
-    cascadeParentIds: []
-    sortMetric: null
-    chartsInScope:
-    - 12
-    - 13
-    - 14
-    - 15
-    tabsInScope:
-    - TAB-X1l-4Ny5Z31Ho0xjk46MK
-  - id: NATIVE_FILTER-s1zyR9wdYunr-_7CNfWFR
     type: NATIVE_FILTER
-    name: Kreis
-    filterType: filter_select
-    description: ''
-    targets:
-    - column:
-        name: Kreis Bezeichnung
-      datasetUuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
-    scope:
-      rootPath:
-      - TAB-Qf6wE4w2VgfSmdW0kv7mF
-      excluded: []
+  - cascadeParentIds: []
+    chartsInScope:
+    - 6
+    - 11
+    - 10
+    - 9
     controlValues:
-      sortAscending: true
-      enableEmptyFilter: false
-      defaultToFirstItem: false
       creatable: false
+      defaultToFirstItem: false
+      enableEmptyFilter: false
+      inverseSelection: true
       multiSelect: true
       searchAllOptions: false
-      inverseSelection: true
+      sortAscending: true
     defaultDataMask:
       extraFormData: {}
       filterState: {}
       ownState: {}
-    cascadeParentIds: []
+    description: ''
+    filterType: filter_select
+    id: NATIVE_FILTER-s1zyR9wdYunr-_7CNfWFR
+    name: Kreis
+    scope:
+      excluded: []
+      rootPath:
+      - TAB-Qf6wE4w2VgfSmdW0kv7mF
     sortMetric: null
-    chartsInScope:
-    - 9
-    - 10
-    - 6
-    - 11
     tabsInScope:
     - TAB-Qf6wE4w2VgfSmdW0kv7mF
-  - id: NATIVE_FILTER-bq3LQf0LliEekOjhkzbHu
-    type: NATIVE_FILTER
-    name: Kreis
-    filterType: filter_select
-    description: ''
     targets:
     - column:
         name: Kreis Bezeichnung
       datasetUuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
-    scope:
-      excluded: []
-      rootPath:
-      - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    type: NATIVE_FILTER
+  - cascadeParentIds: []
+    chartsInScope:
+    - 12
+    - 14
+    - 13
+    - 15
     controlValues:
-      sortAscending: true
-      enableEmptyFilter: true
-      defaultToFirstItem: false
       creatable: false
+      defaultToFirstItem: false
+      enableEmptyFilter: true
+      inverseSelection: false
       multiSelect: true
       searchAllOptions: false
-      inverseSelection: false
+      sortAscending: true
     defaultDataMask:
       extraFormData:
         filters:
@@ -538,41 +787,59 @@ metadata:
         - Leipzig
         - "M\xFCnchen"
         - "K\xF6ln"
-    cascadeParentIds: []
-    sortMetric: null
-    chartsInScope:
-    - 12
-    - 13
-    - 14
-    - 15
-    tabsInScope:
-    - TAB-X1l-4Ny5Z31Ho0xjk46MK
-  - id: NATIVE_FILTER-Hx5IMgWEaWLk6ge_kKJeo
-    type: NATIVE_FILTER
-    name: Geschlecht
-    filterType: filter_select
     description: ''
-    targets:
-    - column:
-        name: Geschlecht
-      datasetUuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
+    filterType: filter_select
+    id: NATIVE_FILTER-bq3LQf0LliEekOjhkzbHu
+    name: Kreis
     scope:
       excluded: []
       rootPath:
-      - ROOT_ID
+      - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    sortMetric: null
+    tabsInScope:
+    - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    targets:
+    - column:
+        name: Kreis Bezeichnung
+      datasetUuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
+    type: NATIVE_FILTER
+  - cascadeParentIds: []
     controlValues:
-      enableEmptyFilter: false
-      defaultToFirstItem: false
       creatable: false
-      multiSelect: true
-      searchAllOptions: false
+      defaultToFirstItem: false
+      enableEmptyFilter: false
       inverseSelection: false
+      multiSelect: false
+      searchAllOptions: false
+      sortAscending: true
     defaultDataMask:
       extraFormData: {}
       filterState: {}
       ownState: {}
-    cascadeParentIds: []
-    adhoc_filters:
+    description: ''
+    filterType: filter_select
+    id: NATIVE_FILTER-tJarP9yNYwi1cbIhePsQ3
+    name: Kreis
+    scope:
+      excluded: []
+      rootPath:
+      - TAB-ZWX-hPwHwP1ic012kCGZR
+    sortMetric: null
+    targets:
+    - column:
+        name: Kreis Bezeichnung
+      datasetUuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
+    type: NATIVE_FILTER
+    chartsInScope:
+    - 17
+    - 16
+    - 19
+    - 21
+    - 18
+    - 20
+    tabsInScope:
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+  - adhoc_filters:
     - clause: WHERE
       datasourceWarning: false
       expressionType: SIMPLE
@@ -583,20 +850,52 @@ metadata:
       operatorId: IS_NOT_NULL
       sqlExpression: null
       subject: Geschlecht
-    time_range: No filter
-    sortMetric: null
+    cascadeParentIds: []
     chartsInScope:
-    - 9
-    - 10
     - 6
     - 11
+    - 10
+    - 9
     - 12
-    - 13
     - 14
+    - 13
     - 15
+    - 17
+    - 16
+    - 19
+    - 21
+    - 18
+    - 20
+    controlValues:
+      creatable: false
+      defaultToFirstItem: false
+      enableEmptyFilter: false
+      inverseSelection: false
+      multiSelect: true
+      searchAllOptions: false
+    defaultDataMask:
+      extraFormData: {}
+      filterState: {}
+      ownState: {}
+    description: ''
+    filterType: filter_select
+    id: NATIVE_FILTER-Hx5IMgWEaWLk6ge_kKJeo
+    name: Geschlecht
+    scope:
+      excluded: []
+      rootPath:
+      - ROOT_ID
+    sortMetric: null
     tabsInScope:
     - TAB-Qf6wE4w2VgfSmdW0kv7mF
     - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    - TAB-ZWX-hPwHwP1ic012kCGZR
+    targets:
+    - column:
+        name: Geschlecht
+      datasetUuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
+    time_range: No filter
+    type: NATIVE_FILTER
   - id: NATIVE_FILTER-HgNLo0pbK19l2a2JaQK89
     type: NATIVE_FILTER
     name: Altersgruppe
@@ -612,14 +911,12 @@ metadata:
       rootPath:
       - ROOT_ID
     controlValues:
-      sortAscending: true
       enableEmptyFilter: false
       defaultToFirstItem: false
       creatable: false
       multiSelect: true
       searchAllOptions: false
       inverseSelection: false
-      sortMetric: Sortierung Altersgruppe
     defaultDataMask:
       extraFormData: {}
       filterState: {}
@@ -639,34 +936,44 @@ metadata:
     time_range: No filter
     sortMetric: null
     chartsInScope:
-    - 9
-    - 10
     - 11
+    - 10
+    - 9
     - 12
-    - 13
     - 14
+    - 13
     - 15
+    - 17
+    - 16
+    - 19
+    - 21
+    - 18
+    - 20
     tabsInScope:
     - TAB-Qf6wE4w2VgfSmdW0kv7mF
     - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    - TAB-ZWX-hPwHwP1ic012kCGZR
   chart_customization_config: []
-  map_label_colors:
-    Berlin: '#1FA8C9'
-    Hamburg: '#454E7C'
-    "M\xFCnchen": '#5AC189'
-    "K\xF6ln": '#666666'
-    Leipzig: '#E04355'
+  map_label_colors: {}
   color_scheme: ''
   refresh_frequency: 0
   color_scheme_domain: []
   expanded_slices: {}
   label_colors: {}
   shared_label_colors:
+  - 0 bis unter 18 Jahre
+  - 18 bis unter 25 Jahre
+  - 25 bis unter 30 Jahre
+  - 30 bis unter 50 Jahre
+  - 50 bis unter 65 Jahre
+  - 65 Jahre und mehr
   - Berlin
   - Hamburg
   - "K\xF6ln"
   - Leipzig
   - "M\xFCnchen"
+  - "m\xE4nnlich"
+  - weiblich
   timed_refresh_immune_slices: []
   cross_filters_enabled: true
   default_filters: '{}'

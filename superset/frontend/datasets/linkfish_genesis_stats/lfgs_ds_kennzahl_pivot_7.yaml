@@ -21,12 +21,15 @@ metrics:
 - metric_name: Sortierung Altersgruppe
   verbose_name: Sortierung Altersgruppe
   metric_type: null
-  expression: "min(\n  case\n    when \"Altersgruppe\" = 'unter 18 Jahre' then 0\n\
-    \    when \"Altersgruppe\" = '18 bis unter 25 Jahre' then 1\n    when \"Altersgruppe\"\
-    \ = '25 bis unter 30 Jahre' then 2\n    when \"Altersgruppe\" = '30 bis unter\
-    \ 50 Jahre' then 3\n    when \"Altersgruppe\" = '50 bis unter 65 Jahre' then 4\n\
-    \    when \"Altersgruppe\" = '65 Jahre und mehr' then 5\n    else 6\n  end\n)"
-  description: null
+  expression: "min(\n  case\n    when \"Altersgruppe\" = '0 bis unter 18 Jahre' then\
+    \ \"_0\"\n    when \"Altersgruppe\" = '18 bis unter 25 Jahre' then \"_1\"\n  \
+    \  when \"Altersgruppe\" = '25 bis unter 30 Jahre' then \"_2\"\n    when \"Altersgruppe\"\
+    \ = '30 bis unter 50 Jahre' then \"_3\"\n    when \"Altersgruppe\" = '50 bis unter\
+    \ 65 Jahre' then \"_4\"\n    when \"Altersgruppe\" = '65 Jahre und mehr' then\
+    \ \"_5\"\n    else \"Altersgruppe\"\n  end\n)"
+  description: "Hier eigentlich nicht n\xF6tig, da bereits alphabetisch sortierbar.\
+    \ Aber gute Veranschaulichung. Leider k\xF6nnen Sortier-Metriken nicht an allen\
+    \ Stellen in Superset verwendet werden, z.b. zum Sortieren von Chart-Legenden."
   d3format: null
   currency: null
   extra:
