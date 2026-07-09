@@ -40,7 +40,12 @@ with
             -- Das Casting zu Date erlaubt bessere Formattierung in Superset
             cast(fact_kennzahl.code_stichtag as date)  as "Stichtag",
             fact_kennzahl.code_geschlecht              as "Geschlecht",
-            fact_kennzahl.code_altersgruppe_18_65      as "Altersgruppe",
+            case
+                -- kleiner Rename der direkte alphabetische Sortierung ermöglicht
+                when fact_kennzahl.code_altersgruppe_18_65 = 'unter 18 Jahre'
+                then '0 bis unter 18 Jahre'
+                else fact_kennzahl.code_altersgruppe_18_65
+            end as "Altersgruppe",
             fact_kennzahl.code_altersgruppe_grob       as "Altersgruppe grob",
             fact_kennzahl.code_kreis                   as "Kreis Code",
 
