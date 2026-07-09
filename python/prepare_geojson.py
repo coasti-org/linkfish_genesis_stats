@@ -72,16 +72,18 @@ def geosjon_to_superset_csv(
 
             # specific workaround for kreise - in the geojson downloaded from
             # https://regionalatlas.statistikportal.de on 2026-04-30
-            # codes for e.g. hamburg '02000' was incorrectly saved to '02'
+            # codes for e.g. hamburg '02000' were incorrectly saved as '02'
             code_kreis = f"{code_kreis:05}"
 
-            # Add static property "fillColor" to the feature's properties (to be used
-            # in superset for coloring the shapes)
+            # Add static property "fillColor" to the feature's properties
+            # This is not needed when using the deck.gl polygon chart type
+            # (as of superset 6.2) but is useful if you want to use the deck.gl geojson
+            # chart type, with a colormap that is precomputed in dbt.
+            # In this case, it is now easy to replace the color.
             collection["features"][0]["properties"]["fillColor"] = "#REPLACE_ME"
             collection["features"][0].pop("id", None)
-            # collection["features"][0]["properties"] = {}
 
-            # supersets deck.gl **polygon** chart type cannot handle featurecollections,
+            # supersets deck.gl polygon chart type cannot handle featurecollections,
             # but the non-polygon geojson chart type can handle both. so we unpack.
             data = collection["features"][0]
 
