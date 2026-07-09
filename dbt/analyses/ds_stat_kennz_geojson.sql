@@ -1,9 +1,16 @@
--- Superset Dataset for Deck.GL polygon:
--- This dynamically colours the polygons based on the value of 'wert_anteilig' using
--- predefined thresholds (schwellenwerte).
--- this is the code used in superset datasets - for demonstration purposes only, not
--- to be used in production as is.
--- TODO: Sind die Schwellenwerte in Prozent?
+{#
+
+Legacy-Beispiel, um SQL-seitig Colormaps zu erstellen, und so GeoJSON Objekte
+zu erzeugen, die bereits backend-seitig eingefärbt sind.
+Funktioniert mit dem deck.gl GeoJSON Chart Type (nicht Polygon) und
+in Superset Versionen < 6.1.
+
+In Superset 6.2 wird es einige Patches geben, die den deck.gl Polygon Chart Type
+besser nutzbar machen, sodass Colormaps idR direkt im Frontend konfiguriert werden
+können.
+
+#}
+
 {%- set schwellenwerte = [
     {"max": 0.35, "colour": "#D4DFF4"},
     {"max": 0.7, "colour": "#CCD4E6"},

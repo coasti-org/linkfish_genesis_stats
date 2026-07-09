@@ -1,5 +1,5 @@
 name: "linkfish_genesis_stats" # cannot contain dots
-version: "0.1.0" # should match coasti.yml and pyproject.toml
+version: "1.0.0" # should match coasti.yml and pyproject.toml
 
 profile: "lfgs_duckdb" # needs to be found in `config/profiles.yml`
 
@@ -39,7 +39,3 @@ seeds:
 
         pystatis:
             +schema: seed_pystatis
-
-  # seeds have our shorthand, because we define (and ship them).
-  # Another good convention you might want to follow is to use the actual source
-  # here (`genesis` or `regio`) but then you need to do more book-keeping.
