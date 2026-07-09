@@ -18,14 +18,23 @@ always_filter_main_dttm: false
 folders: null
 uuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
 metrics:
+- metric_name: Altenquotient
+  verbose_name: Altenquotient
+  metric_type: null
+  expression: "round(\n  sum(\"[sys] Altenquotient (Z\xE4hler)\") /\n  nullif(sum(\"\
+    [sys] Altenquotient (Nenner)\"), 0) * 100,\n  1\n)"
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
 - metric_name: Durchschnittsalter
   verbose_name: Durchschnittsalter
   metric_type: null
   expression: "round(\n  sum(\"[sys] Durchschnittsalter (Z\xE4hler)\") /\n  nullif(sum(\"\
-    [sys] Durchschnittsalter (Nenner)\"), 0),\n  1\n)\n-- um auch bei Filtern richtig\
-    \ zu gewichten, normieren wir.\n-- Durchschnittsalter Daten sind vorhanden nach\
-    \ Geschlecht (Gesamt, m\xE4nnlich, weiblich)"
-  description: null
+    [sys] Durchschnittsalter (Nenner)\"), 0),\n  1\n)"
+  description: ''
   d3format: null
   currency: null
   extra:
@@ -42,11 +51,37 @@ metrics:
     warning_markdown: ''
   warning_text: null
 columns:
+- column_name: '[sys] Altenquotient (Nenner) (Vorjahr)'
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: {}
+- column_name: "[sys] Altenquotient (Z\xE4hler) (Vorjahr)"
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: {}
 - column_name: '[sys] Durchschnittsalter (Nenner) (Vorjahr)'
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: null
+  type: FLOAT
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -59,7 +94,59 @@ columns:
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: null
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: {}
+- column_name: '[sys] Altenquotient (Nenner)'
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: {}
+- column_name: "[sys] Altenquotient (Z\xE4hler)"
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: {}
+- column_name: '[sys] Durchschnittsalter (Nenner)'
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: {}
+- column_name: "[sys] Durchschnittsalter (Z\xE4hler)"
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -77,58 +164,6 @@ columns:
   groupby: true
   filterable: true
   expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: '[sys] Durchschnittsalter (Nenner)'
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: null
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: "[sys] Durchschnittsalter (Z\xE4hler)"
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: null
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: Altersgruppe 1
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: STRING
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: ''
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: Altersgruppe 2
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: STRING
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: ''
   description: null
   python_date_format: null
   datetime_format: null
@@ -185,7 +220,7 @@ columns:
   python_date_format: null
   datetime_format: null
   extra: {}
-- column_name: Anzahl Einwohner:innen
+- column_name: Lebendgeburten (Vorjahr)
   verbose_name: null
   is_dttm: false
   is_active: true
@@ -198,24 +233,11 @@ columns:
   python_date_format: null
   datetime_format: null
   extra: {}
-- column_name: Altenquotient (Vorjahr)
+- column_name: "Sterbef\xE4lle (Vorjahr)"
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: null
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: Durchschnittsalter (Vorjahr)
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: null
+  type: FLOAT
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -238,45 +260,6 @@ columns:
   datetime_format: null
   extra: {}
 - column_name: "Gebietsfl\xE4che (Vorjahr)"
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: null
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: Lebendgeburten (Vorjahr)
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: null
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: Medianalter (Vorjahr)
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: null
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: "Sterbef\xE4lle (Vorjahr)"
   verbose_name: null
   is_dttm: false
   is_active: true
@@ -315,24 +298,37 @@ columns:
   python_date_format: null
   datetime_format: null
   extra: {}
+- column_name: Anzahl Einwohner:innen
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: {}
+- column_name: Altersgruppe grob
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: null
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: {}
 - column_name: Stichtag
   verbose_name: null
   is_dttm: true
   is_active: true
   type: DATETIME
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: ''
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: Altersgruppe
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: STRING
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -393,11 +389,11 @@ columns:
   python_date_format: null
   datetime_format: null
   extra: {}
-- column_name: Altenquotient
+- column_name: Lebendgeburten
   verbose_name: null
   is_dttm: false
   is_active: true
-  type: null
+  type: FLOAT
   advanced_data_type: null
   groupby: true
   filterable: true
@@ -406,7 +402,20 @@ columns:
   python_date_format: null
   datetime_format: null
   extra: {}
-- column_name: Durchschnittsalter
+- column_name: "Sterbef\xE4lle"
+  verbose_name: null
+  is_dttm: false
+  is_active: true
+  type: FLOAT
+  advanced_data_type: null
+  groupby: true
+  filterable: true
+  expression: null
+  description: null
+  python_date_format: null
+  datetime_format: null
+  extra: {}
+- column_name: Altersgruppe
   verbose_name: null
   is_dttm: false
   is_active: true
@@ -414,7 +423,7 @@ columns:
   advanced_data_type: null
   groupby: true
   filterable: true
-  expression: null
+  expression: ''
   description: null
   python_date_format: null
   datetime_format: null
@@ -433,45 +442,6 @@ columns:
   datetime_format: null
   extra: {}
 - column_name: "Gebietsfl\xE4che"
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: null
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: Lebendgeburten
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: null
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: Medianalter
-  verbose_name: null
-  is_dttm: false
-  is_active: true
-  type: null
-  advanced_data_type: null
-  groupby: true
-  filterable: true
-  expression: null
-  description: null
-  python_date_format: null
-  datetime_format: null
-  extra: {}
-- column_name: "Sterbef\xE4lle"
   verbose_name: null
   is_dttm: false
   is_active: true
