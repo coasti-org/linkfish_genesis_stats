@@ -1,0 +1,1602 @@
+code_stichtag|code_ags|desc_ags|fact_flaeche
+2020-12-31|01001|Flensburg, kreisfreie Stadt|56.73
+2020-12-31|01002|Kiel, kreisfreie Stadt|118.65
+2020-12-31|01003|Lübeck, kreisfreie Stadt|214.19
+2020-12-31|01004|Neumünster, kreisfreie Stadt|71.66
+2020-12-31|01051|Dithmarschen, Landkreis|1428.17
+2020-12-31|01053|Herzogtum Lauenburg, Landkreis|1263.07
+2020-12-31|01054|Nordfriesland, Landkreis|2083.56
+2020-12-31|01055|Ostholstein, Landkreis|1393.02
+2020-12-31|01056|Pinneberg, Landkreis|664.25
+2020-12-31|01057|Plön, Landkreis|1083.56
+2020-12-31|01058|Rendsburg-Eckernförde, Landkreis|2189.79
+2020-12-31|01059|Schleswig-Flensburg, Landkreis|2071.28
+2020-12-31|01060|Segeberg, Landkreis|1344.47
+2020-12-31|01061|Steinburg, Landkreis|1055.7
+2020-12-31|01062|Stormarn, Landkreis|766.22
+2020-12-31|02000|Hamburg, kreisfreie Stadt|755.09
+2020-12-31|03101|Braunschweig, kreisfreie Stadt|192.7
+2020-12-31|03102|Salzgitter, kreisfreie Stadt|224.49
+2020-12-31|03103|Wolfsburg, kreisfreie Stadt|204.61
+2020-12-31|03151|Gifhorn, Landkreis|1567.57
+2020-12-31|03153|Goslar, Landkreis|966.72
+2020-12-31|03154|Helmstedt, Landkreis|676.13
+2020-12-31|03155|Northeim, Landkreis|1268.76
+2020-12-31|03157|Peine, Landkreis|536.5
+2020-12-31|03158|Wolfenbüttel, Landkreis|724.32
+2020-12-31|03159|Göttingen, Landkreis|1755.41
+2020-12-31|03241|Region Hannover, Landkreis|2297.12
+2020-12-31|03251|Diepholz, Landkreis|1991.0
+2020-12-31|03252|Hameln-Pyrmont, Landkreis|797.54
+2020-12-31|03254|Hildesheim, Landkreis|1208.34
+2020-12-31|03255|Holzminden, Landkreis|694.27
+2020-12-31|03256|Nienburg (Weser), Landkreis|1400.82
+2020-12-31|03257|Schaumburg, Landkreis|675.68
+2020-12-31|03351|Celle, Landkreis|1550.83
+2020-12-31|03352|Cuxhaven, Landkreis|2058.96
+2020-12-31|03353|Harburg, Landkreis|1248.45
+2020-12-31|03354|Lüchow-Dannenberg, Landkreis|1227.33
+2020-12-31|03355|Lüneburg, Landkreis|1327.8
+2020-12-31|03356|Osterholz, Landkreis|652.67
+2020-12-31|03357|Rotenburg (Wümme), Landkreis|2074.78
+2020-12-31|03358|Heidekreis|1881.46
+2020-12-31|03359|Stade, Landkreis|1267.38
+2020-12-31|03360|Uelzen, Landkreis|1462.59
+2020-12-31|03361|Verden, Landkreis|789.33
+2020-12-31|03401|Delmenhorst, kreisfreie Stadt|62.45
+2020-12-31|03402|Emden, kreisfreie Stadt|112.34
+2020-12-31|03403|Oldenburg (Oldenburg), kreisfreie Stadt|103.09
+2020-12-31|03404|Osnabrück, kreisfreie Stadt|119.8
+2020-12-31|03405|Wilhelmshaven, kreisfreie Stadt|107.07
+2020-12-31|03451|Ammerland, Landkreis|730.64
+2020-12-31|03452|Aurich, Landkreis|1287.36
+2020-12-31|03453|Cloppenburg, Landkreis|1420.34
+2020-12-31|03454|Emsland, Landkreis|2883.66
+2020-12-31|03455|Friesland, Landkreis|609.53
+2020-12-31|03456|Grafschaft Bentheim, Landkreis|981.79
+2020-12-31|03457|Leer, Landkreis|1085.72
+2020-12-31|03458|Oldenburg, Landkreis|1064.83
+2020-12-31|03459|Osnabrück, Landkreis|2121.81
+2020-12-31|03460|Vechta, Landkreis|814.21
+2020-12-31|03461|Wesermarsch, Landkreis|824.78
+2020-12-31|03462|Wittmund, Landkreis|656.86
+2020-12-31|04011|Bremen, kreisfreie Stadt|318.21
+2020-12-31|04012|Bremerhaven, kreisfreie Stadt|101.41
+2020-12-31|05111|Düsseldorf, kreisfreie Stadt|217.41
+2020-12-31|05112|Duisburg, kreisfreie Stadt|232.8
+2020-12-31|05113|Essen, kreisfreie Stadt|210.34
+2020-12-31|05114|Krefeld, kreisfreie Stadt|137.78
+2020-12-31|05116|Mönchengladbach, kreisfreie Stadt|170.47
+2020-12-31|05117|Mülheim an der Ruhr, kreisfreie Stadt|91.28
+2020-12-31|05119|Oberhausen, kreisfreie Stadt|77.09
+2020-12-31|05120|Remscheid, kreisfreie Stadt|74.52
+2020-12-31|05122|Solingen, kreisfreie Stadt|89.54
+2020-12-31|05124|Wuppertal, kreisfreie Stadt|168.39
+2020-12-31|05154|Kleve, Landkreis|1232.99
+2020-12-31|05158|Mettmann, Landkreis|407.22
+2020-12-31|05162|Rhein-Kreis Neuss|576.44
+2020-12-31|05166|Viersen, Landkreis|563.28
+2020-12-31|05170|Wesel, Landkreis|1042.8
+2020-12-31|05314|Bonn, kreisfreie Stadt|141.06
+2020-12-31|05315|Köln, kreisfreie Stadt|405.01
+2020-12-31|05316|Leverkusen, kreisfreie Stadt|78.87
+2020-12-31|05334|Städteregion Aachen, Landkreis|706.91
+2020-12-31|05358|Düren, Landkreis|941.49
+2020-12-31|05362|Rhein-Erft-Kreis|704.71
+2020-12-31|05366|Euskirchen, Landkreis|1248.73
+2020-12-31|05370|Heinsberg, Landkreis|627.91
+2020-12-31|05374|Oberbergischer Kreis|918.85
+2020-12-31|05378|Rheinisch-Bergischer Kreis|437.32
+2020-12-31|05382|Rhein-Sieg-Kreis|1153.21
+2020-12-31|05512|Bottrop, kreisfreie Stadt|100.62
+2020-12-31|05513|Gelsenkirchen, kreisfreie Stadt|104.94
+2020-12-31|05515|Münster, kreisfreie Stadt|303.28
+2020-12-31|05554|Borken, Landkreis|1420.98
+2020-12-31|05558|Coesfeld, Landkreis|1112.04
+2020-12-31|05562|Recklinghausen, Landkreis|761.31
+2020-12-31|05566|Steinfurt, Landkreis|1795.75
+2020-12-31|05570|Warendorf, Landkreis|1319.42
+2020-12-31|05711|Bielefeld, kreisfreie Stadt|258.83
+2020-12-31|05754|Gütersloh, Landkreis|969.21
+2020-12-31|05758|Herford, Landkreis|450.4
+2020-12-31|05762|Höxter, Landkreis|1201.42
+2020-12-31|05766|Lippe, Landkreis|1246.21
+2020-12-31|05770|Minden-Lübbecke, Landkreis|1152.41
+2020-12-31|05774|Paderborn, Landkreis|1246.8
+2020-12-31|05911|Bochum, kreisfreie Stadt|145.66
+2020-12-31|05913|Dortmund, kreisfreie Stadt|280.71
+2020-12-31|05914|Hagen, kreisfreie Stadt|160.45
+2020-12-31|05915|Hamm, kreisfreie Stadt|226.43
+2020-12-31|05916|Herne, kreisfreie Stadt|51.42
+2020-12-31|05954|Ennepe-Ruhr-Kreis|409.64
+2020-12-31|05958|Hochsauerlandkreis|1960.17
+2020-12-31|05962|Märkischer Kreis|1061.09
+2020-12-31|05966|Olpe, Landkreis|712.11
+2020-12-31|05970|Siegen-Wittgenstein, Landkreis|1132.89
+2020-12-31|05974|Soest, Landkreis|1328.63
+2020-12-31|05978|Unna, Landkreis|543.21
+2020-12-31|06411|Darmstadt, kreisfreie Stadt|122.07
+2020-12-31|06412|Frankfurt am Main, kreisfreie Stadt|248.31
+2020-12-31|06413|Offenbach am Main, kreisfreie Stadt|44.88
+2020-12-31|06414|Wiesbaden, kreisfreie Stadt|203.87
+2020-12-31|06431|Bergstraße, Landkreis|719.47
+2020-12-31|06432|Darmstadt-Dieburg, Landkreis|658.64
+2020-12-31|06433|Groß-Gerau, Landkreis|453.03
+2020-12-31|06434|Hochtaunuskreis|481.84
+2020-12-31|06435|Main-Kinzig-Kreis|1397.32
+2020-12-31|06436|Main-Taunus-Kreis|222.53
+2020-12-31|06437|Odenwaldkreis|623.97
+2020-12-31|06438|Offenbach, Landkreis|356.24
+2020-12-31|06439|Rheingau-Taunus-Kreis|811.41
+2020-12-31|06440|Wetteraukreis|1100.66
+2020-12-31|06531|Gießen, Landkreis|854.56
+2020-12-31|06532|Lahn-Dill-Kreis|1066.3
+2020-12-31|06533|Limburg-Weilburg, Landkreis|738.44
+2020-12-31|06534|Marburg-Biedenkopf, Landkreis|1262.37
+2020-12-31|06535|Vogelsbergkreis|1458.91
+2020-12-31|06611|Kassel, kreisfreie Stadt|106.8
+2020-12-31|06631|Fulda, Landkreis|1380.41
+2020-12-31|06632|Hersfeld-Rotenburg, Landkreis|1097.75
+2020-12-31|06633|Kassel, Landkreis|1293.3
+2020-12-31|06634|Schwalm-Eder-Kreis|1539.01
+2020-12-31|06635|Waldeck-Frankenberg, Landkreis|1848.7
+2020-12-31|06636|Werra-Meißner-Kreis|1024.83
+2020-12-31|07111|Koblenz, kreisfreie Stadt|105.25
+2020-12-31|07131|Ahrweiler, Landkreis|787.02
+2020-12-31|07132|Altenkirchen (Westerwald), Landkreis|642.38
+2020-12-31|07133|Bad Kreuznach, Landkreis|863.89
+2020-12-31|07134|Birkenfeld, Landkreis|776.83
+2020-12-31|07135|Cochem-Zell, Landkreis|692.43
+2020-12-31|07137|Mayen-Koblenz, Landkreis|817.73
+2020-12-31|07138|Neuwied, Landkreis|627.06
+2020-12-31|07140|Rhein-Hunsrück-Kreis|991.06
+2020-12-31|07141|Rhein-Lahn-Kreis|782.24
+2020-12-31|07143|Westerwaldkreis|989.04
+2020-12-31|07211|Trier, kreisfreie Stadt|117.06
+2020-12-31|07231|Bernkastel-Wittlich, Landkreis|1167.92
+2020-12-31|07232|Eifelkreis Bitburg-Prüm|1626.95
+2020-12-31|07233|Vulkaneifel, Landkreis|911.64
+2020-12-31|07235|Trier-Saarburg, Landkreis|1102.26
+2020-12-31|07311|Frankenthal (Pfalz), kreisfreie Stadt|43.88
+2020-12-31|07312|Kaiserslautern, kreisfreie Stadt|139.7
+2020-12-31|07313|Landau in der Pfalz, kreisfreie Stadt|82.94
+2020-12-31|07314|Ludwigshafen am Rhein, kreisfreie Stadt|77.43
+2020-12-31|07315|Mainz, kreisfreie Stadt|97.73
+2020-12-31|07316|Neustadt an der Weinstraße, kreisfreie Stadt|117.09
+2020-12-31|07317|Pirmasens, kreisfreie Stadt|61.35
+2020-12-31|07318|Speyer, kreisfreie Stadt|42.71
+2020-12-31|07319|Worms, kreisfreie Stadt|108.73
+2020-12-31|07320|Zweibrücken, kreisfreie Stadt|70.64
+2020-12-31|07331|Alzey-Worms, Landkreis|588.07
+2020-12-31|07332|Bad Dürkheim, Landkreis|594.64
+2020-12-31|07333|Donnersbergkreis|645.41
+2020-12-31|07334|Germersheim, Landkreis|463.32
+2020-12-31|07335|Kaiserslautern, Landkreis|640.0
+2020-12-31|07336|Kusel, Landkreis|573.61
+2020-12-31|07337|Südliche Weinstraße, Landkreis|639.93
+2020-12-31|07338|Rhein-Pfalz-Kreis|304.99
+2020-12-31|07339|Mainz-Bingen, Landkreis|605.36
+2020-12-31|07340|Südwestpfalz, Landkreis|953.53
+2020-12-31|08111|Stuttgart, kreisfreie Stadt|207.32
+2020-12-31|08115|Böblingen, Landkreis|617.76
+2020-12-31|08116|Esslingen, Landkreis|641.28
+2020-12-31|08117|Göppingen, Landkreis|642.34
+2020-12-31|08118|Ludwigsburg, Landkreis|686.77
+2020-12-31|08119|Rems-Murr-Kreis|858.08
+2020-12-31|08121|Heilbronn, kreisfreie Stadt|99.9
+2020-12-31|08125|Heilbronn, Landkreis|1099.91
+2020-12-31|08126|Hohenlohekreis|776.76
+2020-12-31|08127|Schwäbisch Hall, Landkreis|1484.07
+2020-12-31|08128|Main-Tauber-Kreis|1304.12
+2020-12-31|08135|Heidenheim, Landkreis|627.14
+2020-12-31|08136|Ostalbkreis|1511.39
+2020-12-31|08211|Baden-Baden, kreisfreie Stadt|140.19
+2020-12-31|08212|Karlsruhe, kreisfreie Stadt|173.42
+2020-12-31|08215|Karlsruhe, Landkreis|1084.98
+2020-12-31|08216|Rastatt, Landkreis|738.43
+2020-12-31|08221|Heidelberg, kreisfreie Stadt|108.83
+2020-12-31|08222|Mannheim, kreisfreie Stadt|144.97
+2020-12-31|08225|Neckar-Odenwald-Kreis|1125.95
+2020-12-31|08226|Rhein-Neckar-Kreis|1061.55
+2020-12-31|08231|Pforzheim, kreisfreie Stadt|97.99
+2020-12-31|08235|Calw, Landkreis|797.29
+2020-12-31|08236|Enzkreis|573.6
+2020-12-31|08237|Freudenstadt, Landkreis|870.4
+2020-12-31|08311|Freiburg im Breisgau, kreisfreie Stadt|153.04
+2020-12-31|08315|Breisgau-Hochschwarzwald, Landkreis|1378.32
+2020-12-31|08316|Emmendingen, Landkreis|679.8
+2020-12-31|08317|Ortenaukreis|1860.29
+2020-12-31|08325|Rottweil, Landkreis|769.42
+2020-12-31|08326|Schwarzwald-Baar-Kreis|1025.34
+2020-12-31|08327|Tuttlingen, Landkreis|734.38
+2020-12-31|08335|Konstanz, Landkreis|817.98
+2020-12-31|08336|Lörrach, Landkreis|806.66
+2020-12-31|08337|Waldshut, Landkreis|1131.12
+2020-12-31|08415|Reutlingen, Landkreis|1092.48
+2020-12-31|08416|Tübingen, Landkreis|519.11
+2020-12-31|08417|Zollernalbkreis|917.58
+2020-12-31|08421|Ulm, kreisfreie Stadt|118.68
+2020-12-31|08425|Alb-Donau-Kreis|1358.54
+2020-12-31|08426|Biberach, Landkreis|1409.52
+2020-12-31|08435|Bodenseekreis|664.77
+2020-12-31|08436|Ravensburg, Landkreis|1632.08
+2020-12-31|08437|Sigmaringen, Landkreis|1204.23
+2020-12-31|09161|Ingolstadt, kreisfreie Stadt|133.35
+2020-12-31|09162|München, kreisfreie Stadt|310.7
+2020-12-31|09163|Rosenheim, kreisfreie Stadt|37.22
+2020-12-31|09171|Altötting, Landkreis|569.28
+2020-12-31|09172|Berchtesgadener Land, Landkreis|839.82
+2020-12-31|09173|Bad Tölz-Wolfratshausen, Landkreis|1110.67
+2020-12-31|09174|Dachau, Landkreis|579.16
+2020-12-31|09175|Ebersberg, Landkreis|549.39
+2020-12-31|09176|Eichstätt, Landkreis|1213.85
+2020-12-31|09177|Erding, Landkreis|870.74
+2020-12-31|09178|Freising, Landkreis|799.85
+2020-12-31|09179|Fürstenfeldbruck, Landkreis|434.8
+2020-12-31|09180|Garmisch-Partenkirchen, Landkreis|1012.17
+2020-12-31|09181|Landsberg am Lech, Landkreis|804.36
+2020-12-31|09182|Miesbach, Landkreis|866.21
+2020-12-31|09183|Mühldorf am Inn, Landkreis|805.33
+2020-12-31|09184|München, Landkreis|664.25
+2020-12-31|09185|Neuburg-Schrobenhausen, Landkreis|739.71
+2020-12-31|09186|Pfaffenhofen an der Ilm, Landkreis|761.05
+2020-12-31|09187|Rosenheim, Landkreis|1439.44
+2020-12-31|09188|Starnberg, Landkreis|487.71
+2020-12-31|09189|Traunstein, Landkreis|1533.76
+2020-12-31|09190|Weilheim-Schongau, Landkreis|966.28
+2020-12-31|09261|Landshut, kreisfreie Stadt|65.83
+2020-12-31|09262|Passau, kreisfreie Stadt|69.56
+2020-12-31|09263|Straubing, kreisfreie Stadt|67.59
+2020-12-31|09271|Deggendorf, Landkreis|861.17
+2020-12-31|09272|Freyung-Grafenau, Landkreis|983.85
+2020-12-31|09273|Kelheim, Landkreis|1065.13
+2020-12-31|09274|Landshut, Landkreis|1347.55
+2020-12-31|09275|Passau, Landkreis|1530.09
+2020-12-31|09276|Regen, Landkreis|974.78
+2020-12-31|09277|Rottal-Inn, Landkreis|1281.2
+2020-12-31|09278|Straubing-Bogen, Landkreis|1201.61
+2020-12-31|09279|Dingolfing-Landau, Landkreis|877.58
+2020-12-31|09361|Amberg, kreisfreie Stadt|50.13
+2020-12-31|09362|Regensburg, kreisfreie Stadt|80.86
+2020-12-31|09363|Weiden in der Oberpfalz, kreisfreie Stadt|70.57
+2020-12-31|09371|Amberg-Sulzbach, Landkreis|1255.86
+2020-12-31|09372|Cham, Landkreis|1526.82
+2020-12-31|09373|Neumarkt in der Oberpfalz, Landkreis|1343.96
+2020-12-31|09374|Neustadt an der Waldnaab, Landkreis|1427.69
+2020-12-31|09375|Regensburg, Landkreis|1391.65
+2020-12-31|09376|Schwandorf, Landkreis|1458.34
+2020-12-31|09377|Tirschenreuth, Landkreis|1084.25
+2020-12-31|09461|Bamberg, kreisfreie Stadt|54.62
+2020-12-31|09462|Bayreuth, kreisfreie Stadt|66.89
+2020-12-31|09463|Coburg, kreisfreie Stadt|48.29
+2020-12-31|09464|Hof, kreisfreie Stadt|58.02
+2020-12-31|09471|Bamberg, Landkreis|1167.79
+2020-12-31|09472|Bayreuth, Landkreis|1273.62
+2020-12-31|09473|Coburg, Landkreis|590.42
+2020-12-31|09474|Forchheim, Landkreis|642.82
+2020-12-31|09475|Hof, Landkreis|892.52
+2020-12-31|09476|Kronach, Landkreis|651.49
+2020-12-31|09477|Kulmbach, Landkreis|658.33
+2020-12-31|09478|Lichtenfels, Landkreis|519.94
+2020-12-31|09479|Wunsiedel im Fichtelgebirge, Landkreis|606.37
+2020-12-31|09561|Ansbach, kreisfreie Stadt|99.91
+2020-12-31|09562|Erlangen, kreisfreie Stadt|76.96
+2020-12-31|09563|Fürth, kreisfreie Stadt|63.35
+2020-12-31|09564|Nürnberg, kreisfreie Stadt|186.44
+2020-12-31|09565|Schwabach, kreisfreie Stadt|40.8
+2020-12-31|09571|Ansbach, Landkreis|1971.32
+2020-12-31|09572|Erlangen-Höchstadt, Landkreis|564.55
+2020-12-31|09573|Fürth, Landkreis|307.44
+2020-12-31|09574|Nürnberger Land, Landkreis|799.52
+2020-12-31|09575|Neustadt an der Aisch-Bad Windsheim, Landkreis|1267.45
+2020-12-31|09576|Roth, Landkreis|895.16
+2020-12-31|09577|Weißenburg-Gunzenhausen, Landkreis|970.78
+2020-12-31|09661|Aschaffenburg, kreisfreie Stadt|62.45
+2020-12-31|09662|Schweinfurt, kreisfreie Stadt|35.7
+2020-12-31|09663|Würzburg, kreisfreie Stadt|87.6
+2020-12-31|09671|Aschaffenburg, Landkreis|698.9
+2020-12-31|09672|Bad Kissingen, Landkreis|1136.9
+2020-12-31|09673|Rhön-Grabfeld, Landkreis|1021.68
+2020-12-31|09674|Haßberge, Landkreis|956.19
+2020-12-31|09675|Kitzingen, Landkreis|684.14
+2020-12-31|09676|Miltenberg, Landkreis|715.58
+2020-12-31|09677|Main-Spessart, Landkreis|1321.2
+2020-12-31|09678|Schweinfurt, Landkreis|841.39
+2020-12-31|09679|Würzburg, Landkreis|968.35
+2020-12-31|09761|Augsburg, kreisfreie Stadt|146.85
+2020-12-31|09762|Kaufbeuren, kreisfreie Stadt|40.02
+2020-12-31|09763|Kempten (Allgäu), kreisfreie Stadt|63.28
+2020-12-31|09764|Memmingen, kreisfreie Stadt|70.11
+2020-12-31|09771|Aichach-Friedberg, Landkreis|780.23
+2020-12-31|09772|Augsburg, Landkreis|1070.63
+2020-12-31|09773|Dillingen an der Donau, Landkreis|792.23
+2020-12-31|09774|Günzburg, Landkreis|762.4
+2020-12-31|09775|Neu-Ulm, Landkreis|515.84
+2020-12-31|09776|Lindau (Bodensee), Landkreis|323.39
+2020-12-31|09777|Ostallgäu, Landkreis|1394.43
+2020-12-31|09778|Unterallgäu, Landkreis|1229.57
+2020-12-31|09779|Donau-Ries, Landkreis|1274.57
+2020-12-31|09780|Oberallgäu, Landkreis|1527.96
+2020-12-31|10041|Regionalverband Saarbrücken, Landkreis|410.95
+2020-12-31|10042|Merzig-Wadern, Landkreis|556.66
+2020-12-31|10043|Neunkirchen, Landkreis|249.8
+2020-12-31|10044|Saarlouis, Landkreis|459.35
+2020-12-31|10045|Saarpfalz-Kreis|418.28
+2020-12-31|10046|Sankt Wendel, Landkreis|476.07
+2020-12-31|11000|Berlin, kreisfreie Stadt|891.12
+2020-12-31|12051|Brandenburg an der Havel, kreisfreie Stadt|229.72
+2020-12-31|12052|Cottbus, kreisfreie Stadt|165.62
+2020-12-31|12053|Frankfurt (Oder), kreisfreie Stadt|147.85
+2020-12-31|12054|Potsdam, kreisfreie Stadt|188.24
+2020-12-31|12060|Barnim, Landkreis|1479.58
+2020-12-31|12061|Dahme-Spreewald, Landkreis|2274.5
+2020-12-31|12062|Elbe-Elster, Landkreis|1899.2
+2020-12-31|12063|Havelland, Landkreis|1727.31
+2020-12-31|12064|Märkisch-Oderland, Landkreis|2158.65
+2020-12-31|12065|Oberhavel, Landkreis|1808.18
+2020-12-31|12066|Oberspreewald-Lausitz, Landkreis|1223.48
+2020-12-31|12067|Oder-Spree, Landkreis|2256.75
+2020-12-31|12068|Ostprignitz-Ruppin, Landkreis|2526.48
+2020-12-31|12069|Potsdam-Mittelmark, Landkreis|2592.02
+2020-12-31|12070|Prignitz, Landkreis|2138.54
+2020-12-31|12071|Spree-Neiße, Landkreis|1656.99
+2020-12-31|12072|Teltow-Fläming, Landkreis|2104.21
+2020-12-31|12073|Uckermark, Landkreis|3077.03
+2020-12-31|13003|Rostock, kreisfreie Stadt|181.36
+2020-12-31|13004|Schwerin, kreisfreie Stadt|130.52
+2020-12-31|13071|Mecklenburgische Seenplatte, Landkreis|5495.59
+2020-12-31|13072|Rostock, Landkreis|3431.26
+2020-12-31|13073|Vorpommern-Rügen, Landkreis|3216.18
+2020-12-31|13074|Nordwestmecklenburg, Landkreis|2127.07
+2020-12-31|13075|Vorpommern-Greifswald, Landkreis|3945.66
+2020-12-31|13076|Ludwigslust-Parchim, Landkreis|4766.8
+2020-12-31|14511|Chemnitz, kreisfreie Stadt|221.03
+2020-12-31|14521|Erzgebirgskreis|1827.94
+2020-12-31|14522|Mittelsachsen, Landkreis|2116.86
+2020-12-31|14523|Vogtlandkreis|1412.41
+2020-12-31|14524|Zwickau, Landkreis|949.78
+2020-12-31|14612|Dresden, kreisfreie Stadt|328.48
+2020-12-31|14625|Bautzen, Landkreis|2395.6
+2020-12-31|14626|Görlitz, Landkreis|2111.41
+2020-12-31|14627|Meißen, Landkreis|1454.59
+2020-12-31|14628|Sächsische Schweiz-Osterzgebirge, Landkreis|1654.19
+2020-12-31|14713|Leipzig, kreisfreie Stadt|297.8
+2020-12-31|14729|Leipzig, Landkreis|1651.27
+2020-12-31|14730|Nordsachsen, Landkreis|2028.56
+2020-12-31|15001|Dessau-Roßlau, kreisfreie Stadt|244.79
+2020-12-31|15002|Halle (Saale), kreisfreie Stadt|135.02
+2020-12-31|15003|Magdeburg, kreisfreie Stadt|201.03
+2020-12-31|15081|Altmarkkreis Salzwedel|2294.16
+2020-12-31|15082|Anhalt-Bitterfeld, Landkreis|1454.39
+2020-12-31|15083|Börde, Landkreis|2367.14
+2020-12-31|15084|Burgenlandkreis|1413.99
+2020-12-31|15085|Harz, Landkreis|2104.9
+2020-12-31|15086|Jerichower Land, Landkreis|1577.43
+2020-12-31|15087|Mansfeld-Südharz, Landkreis|1449.0
+2020-12-31|15088|Saalekreis|1434.04
+2020-12-31|15089|Salzlandkreis|1427.56
+2020-12-31|15090|Stendal, Landkreis|2424.0
+2020-12-31|15091|Wittenberg, Landkreis|1931.67
+2020-12-31|16051|Erfurt, kreisfreie Stadt|269.91
+2020-12-31|16052|Gera, kreisfreie Stadt|152.18
+2020-12-31|16053|Jena, kreisfreie Stadt|114.77
+2020-12-31|16054|Suhl, kreisfreie Stadt|141.62
+2020-12-31|16055|Weimar, kreisfreie Stadt|84.48
+2020-12-31|16056|Eisenach, kreisfreie Stadt (bis 30.06.2021)|104.17
+2020-12-31|16061|Eichsfeld, Landkreis|943.07
+2020-12-31|16062|Nordhausen, Landkreis|713.93
+2020-12-31|16063|Wartburgkreis|1266.96
+2020-12-31|16064|Unstrut-Hainich-Kreis|979.68
+2020-12-31|16065|Kyffhäuserkreis|1037.91
+2020-12-31|16066|Schmalkalden-Meiningen, Landkreis|1251.21
+2020-12-31|16067|Gotha, Landkreis|936.08
+2020-12-31|16068|Sömmerda, Landkreis|806.86
+2020-12-31|16069|Hildburghausen, Landkreis|938.42
+2020-12-31|16070|Ilm-Kreis|805.11
+2020-12-31|16071|Weimarer Land, Landkreis|804.48
+2020-12-31|16072|Sonneberg, Landkreis|460.85
+2020-12-31|16073|Saalfeld-Rudolstadt, Landkreis|1008.79
+2020-12-31|16074|Saale-Holzland-Kreis|815.24
+2020-12-31|16075|Saale-Orla-Kreis|1151.3
+2020-12-31|16076|Greiz, Landkreis|845.98
+2020-12-31|16077|Altenburger Land, Landkreis|569.39
+2021-12-31|01001|Flensburg, kreisfreie Stadt|56.73
+2021-12-31|01002|Kiel, kreisfreie Stadt|118.65
+2021-12-31|01003|Lübeck, kreisfreie Stadt|214.19
+2021-12-31|01004|Neumünster, kreisfreie Stadt|71.66
+2021-12-31|01051|Dithmarschen, Landkreis|1428.17
+2021-12-31|01053|Herzogtum Lauenburg, Landkreis|1263.06
+2021-12-31|01054|Nordfriesland, Landkreis|2083.56
+2021-12-31|01055|Ostholstein, Landkreis|1393.02
+2021-12-31|01056|Pinneberg, Landkreis|664.25
+2021-12-31|01057|Plön, Landkreis|1083.56
+2021-12-31|01058|Rendsburg-Eckernförde, Landkreis|2189.79
+2021-12-31|01059|Schleswig-Flensburg, Landkreis|2071.28
+2021-12-31|01060|Segeberg, Landkreis|1344.47
+2021-12-31|01061|Steinburg, Landkreis|1055.7
+2021-12-31|01062|Stormarn, Landkreis|766.22
+2021-12-31|02000|Hamburg, kreisfreie Stadt|755.09
+2021-12-31|03101|Braunschweig, kreisfreie Stadt|192.7
+2021-12-31|03102|Salzgitter, kreisfreie Stadt|224.49
+2021-12-31|03103|Wolfsburg, kreisfreie Stadt|204.62
+2021-12-31|03151|Gifhorn, Landkreis|1567.57
+2021-12-31|03153|Goslar, Landkreis|966.71
+2021-12-31|03154|Helmstedt, Landkreis|676.13
+2021-12-31|03155|Northeim, Landkreis|1268.77
+2021-12-31|03157|Peine, Landkreis|536.5
+2021-12-31|03158|Wolfenbüttel, Landkreis|724.32
+2021-12-31|03159|Göttingen, Landkreis|1755.41
+2021-12-31|03241|Region Hannover, Landkreis|2297.13
+2021-12-31|03251|Diepholz, Landkreis|1991.0
+2021-12-31|03252|Hameln-Pyrmont, Landkreis|797.54
+2021-12-31|03254|Hildesheim, Landkreis|1208.34
+2021-12-31|03255|Holzminden, Landkreis|694.27
+2021-12-31|03256|Nienburg (Weser), Landkreis|1400.83
+2021-12-31|03257|Schaumburg, Landkreis|675.67
+2021-12-31|03351|Celle, Landkreis|1550.83
+2021-12-31|03352|Cuxhaven, Landkreis|2058.96
+2021-12-31|03353|Harburg, Landkreis|1248.45
+2021-12-31|03354|Lüchow-Dannenberg, Landkreis|1227.32
+2021-12-31|03355|Lüneburg, Landkreis|1327.8
+2021-12-31|03356|Osterholz, Landkreis|652.67
+2021-12-31|03357|Rotenburg (Wümme), Landkreis|2074.77
+2021-12-31|03358|Heidekreis|1881.46
+2021-12-31|03359|Stade, Landkreis|1267.38
+2021-12-31|03360|Uelzen, Landkreis|1462.6
+2021-12-31|03361|Verden, Landkreis|789.33
+2021-12-31|03401|Delmenhorst, kreisfreie Stadt|62.45
+2021-12-31|03402|Emden, kreisfreie Stadt|112.34
+2021-12-31|03403|Oldenburg (Oldenburg), kreisfreie Stadt|103.09
+2021-12-31|03404|Osnabrück, kreisfreie Stadt|119.8
+2021-12-31|03405|Wilhelmshaven, kreisfreie Stadt|107.11
+2021-12-31|03451|Ammerland, Landkreis|730.65
+2021-12-31|03452|Aurich, Landkreis|1287.35
+2021-12-31|03453|Cloppenburg, Landkreis|1420.34
+2021-12-31|03454|Emsland, Landkreis|2883.67
+2021-12-31|03455|Friesland, Landkreis|609.53
+2021-12-31|03456|Grafschaft Bentheim, Landkreis|981.79
+2021-12-31|03457|Leer, Landkreis|1085.72
+2021-12-31|03458|Oldenburg, Landkreis|1064.82
+2021-12-31|03459|Osnabrück, Landkreis|2121.81
+2021-12-31|03460|Vechta, Landkreis|814.21
+2021-12-31|03461|Wesermarsch, Landkreis|824.78
+2021-12-31|03462|Wittmund, Landkreis|656.86
+2021-12-31|04011|Bremen, kreisfreie Stadt|317.84
+2021-12-31|04012|Bremerhaven, kreisfreie Stadt|101.53
+2021-12-31|05111|Düsseldorf, kreisfreie Stadt|217.41
+2021-12-31|05112|Duisburg, kreisfreie Stadt|232.79
+2021-12-31|05113|Essen, kreisfreie Stadt|210.34
+2021-12-31|05114|Krefeld, kreisfreie Stadt|137.78
+2021-12-31|05116|Mönchengladbach, kreisfreie Stadt|170.47
+2021-12-31|05117|Mülheim an der Ruhr, kreisfreie Stadt|91.28
+2021-12-31|05119|Oberhausen, kreisfreie Stadt|77.09
+2021-12-31|05120|Remscheid, kreisfreie Stadt|74.52
+2021-12-31|05122|Solingen, kreisfreie Stadt|89.54
+2021-12-31|05124|Wuppertal, kreisfreie Stadt|168.39
+2021-12-31|05154|Kleve, Landkreis|1232.99
+2021-12-31|05158|Mettmann, Landkreis|407.22
+2021-12-31|05162|Rhein-Kreis Neuss|576.44
+2021-12-31|05166|Viersen, Landkreis|563.28
+2021-12-31|05170|Wesel, Landkreis|1042.8
+2021-12-31|05314|Bonn, kreisfreie Stadt|141.06
+2021-12-31|05315|Köln, kreisfreie Stadt|405.01
+2021-12-31|05316|Leverkusen, kreisfreie Stadt|78.87
+2021-12-31|05334|Städteregion Aachen, Landkreis|706.91
+2021-12-31|05358|Düren, Landkreis|941.49
+2021-12-31|05362|Rhein-Erft-Kreis|704.71
+2021-12-31|05366|Euskirchen, Landkreis|1248.73
+2021-12-31|05370|Heinsberg, Landkreis|627.91
+2021-12-31|05374|Oberbergischer Kreis|918.85
+2021-12-31|05378|Rheinisch-Bergischer Kreis|437.33
+2021-12-31|05382|Rhein-Sieg-Kreis|1153.21
+2021-12-31|05512|Bottrop, kreisfreie Stadt|100.62
+2021-12-31|05513|Gelsenkirchen, kreisfreie Stadt|104.94
+2021-12-31|05515|Münster, kreisfreie Stadt|303.28
+2021-12-31|05554|Borken, Landkreis|1420.98
+2021-12-31|05558|Coesfeld, Landkreis|1112.04
+2021-12-31|05562|Recklinghausen, Landkreis|761.48
+2021-12-31|05566|Steinfurt, Landkreis|1795.75
+2021-12-31|05570|Warendorf, Landkreis|1319.42
+2021-12-31|05711|Bielefeld, kreisfreie Stadt|258.83
+2021-12-31|05754|Gütersloh, Landkreis|969.21
+2021-12-31|05758|Herford, Landkreis|450.39
+2021-12-31|05762|Höxter, Landkreis|1201.42
+2021-12-31|05766|Lippe, Landkreis|1246.21
+2021-12-31|05770|Minden-Lübbecke, Landkreis|1152.42
+2021-12-31|05774|Paderborn, Landkreis|1246.8
+2021-12-31|05911|Bochum, kreisfreie Stadt|145.66
+2021-12-31|05913|Dortmund, kreisfreie Stadt|280.71
+2021-12-31|05914|Hagen, kreisfreie Stadt|160.45
+2021-12-31|05915|Hamm, kreisfreie Stadt|226.42
+2021-12-31|05916|Herne, kreisfreie Stadt|51.42
+2021-12-31|05954|Ennepe-Ruhr-Kreis|409.64
+2021-12-31|05958|Hochsauerlandkreis|1960.17
+2021-12-31|05962|Märkischer Kreis|1061.09
+2021-12-31|05966|Olpe, Landkreis|712.11
+2021-12-31|05970|Siegen-Wittgenstein, Landkreis|1132.89
+2021-12-31|05974|Soest, Landkreis|1328.63
+2021-12-31|05978|Unna, Landkreis|543.21
+2021-12-31|06411|Darmstadt, kreisfreie Stadt|122.07
+2021-12-31|06412|Frankfurt am Main, kreisfreie Stadt|248.31
+2021-12-31|06413|Offenbach am Main, kreisfreie Stadt|44.88
+2021-12-31|06414|Wiesbaden, kreisfreie Stadt|203.87
+2021-12-31|06431|Bergstraße, Landkreis|719.47
+2021-12-31|06432|Darmstadt-Dieburg, Landkreis|658.64
+2021-12-31|06433|Groß-Gerau, Landkreis|453.03
+2021-12-31|06434|Hochtaunuskreis|481.84
+2021-12-31|06435|Main-Kinzig-Kreis|1397.32
+2021-12-31|06436|Main-Taunus-Kreis|222.53
+2021-12-31|06437|Odenwaldkreis|623.97
+2021-12-31|06438|Offenbach, Landkreis|356.24
+2021-12-31|06439|Rheingau-Taunus-Kreis|811.41
+2021-12-31|06440|Wetteraukreis|1100.66
+2021-12-31|06531|Gießen, Landkreis|854.56
+2021-12-31|06532|Lahn-Dill-Kreis|1066.3
+2021-12-31|06533|Limburg-Weilburg, Landkreis|738.44
+2021-12-31|06534|Marburg-Biedenkopf, Landkreis|1262.37
+2021-12-31|06535|Vogelsbergkreis|1458.91
+2021-12-31|06611|Kassel, kreisfreie Stadt|106.79
+2021-12-31|06631|Fulda, Landkreis|1380.41
+2021-12-31|06632|Hersfeld-Rotenburg, Landkreis|1097.75
+2021-12-31|06633|Kassel, Landkreis|1293.31
+2021-12-31|06634|Schwalm-Eder-Kreis|1539.01
+2021-12-31|06635|Waldeck-Frankenberg, Landkreis|1848.7
+2021-12-31|06636|Werra-Meißner-Kreis|1024.83
+2021-12-31|07111|Koblenz, kreisfreie Stadt|105.25
+2021-12-31|07131|Ahrweiler, Landkreis|787.03
+2021-12-31|07132|Altenkirchen (Westerwald), Landkreis|642.38
+2021-12-31|07133|Bad Kreuznach, Landkreis|863.89
+2021-12-31|07134|Birkenfeld, Landkreis|776.83
+2021-12-31|07135|Cochem-Zell, Landkreis|692.43
+2021-12-31|07137|Mayen-Koblenz, Landkreis|817.73
+2021-12-31|07138|Neuwied, Landkreis|627.06
+2021-12-31|07140|Rhein-Hunsrück-Kreis|991.06
+2021-12-31|07141|Rhein-Lahn-Kreis|782.24
+2021-12-31|07143|Westerwaldkreis|989.04
+2021-12-31|07211|Trier, kreisfreie Stadt|117.06
+2021-12-31|07231|Bernkastel-Wittlich, Landkreis|1167.92
+2021-12-31|07232|Eifelkreis Bitburg-Prüm|1626.95
+2021-12-31|07233|Vulkaneifel, Landkreis|911.64
+2021-12-31|07235|Trier-Saarburg, Landkreis|1102.26
+2021-12-31|07311|Frankenthal (Pfalz), kreisfreie Stadt|43.88
+2021-12-31|07312|Kaiserslautern, kreisfreie Stadt|139.7
+2021-12-31|07313|Landau in der Pfalz, kreisfreie Stadt|82.94
+2021-12-31|07314|Ludwigshafen am Rhein, kreisfreie Stadt|77.43
+2021-12-31|07315|Mainz, kreisfreie Stadt|97.73
+2021-12-31|07316|Neustadt an der Weinstraße, kreisfreie Stadt|117.09
+2021-12-31|07317|Pirmasens, kreisfreie Stadt|61.35
+2021-12-31|07318|Speyer, kreisfreie Stadt|42.71
+2021-12-31|07319|Worms, kreisfreie Stadt|108.73
+2021-12-31|07320|Zweibrücken, kreisfreie Stadt|70.64
+2021-12-31|07331|Alzey-Worms, Landkreis|588.07
+2021-12-31|07332|Bad Dürkheim, Landkreis|594.64
+2021-12-31|07333|Donnersbergkreis|645.41
+2021-12-31|07334|Germersheim, Landkreis|463.32
+2021-12-31|07335|Kaiserslautern, Landkreis|640.0
+2021-12-31|07336|Kusel, Landkreis|573.61
+2021-12-31|07337|Südliche Weinstraße, Landkreis|639.93
+2021-12-31|07338|Rhein-Pfalz-Kreis|304.99
+2021-12-31|07339|Mainz-Bingen, Landkreis|605.33
+2021-12-31|07340|Südwestpfalz, Landkreis|953.53
+2021-12-31|08111|Stuttgart, kreisfreie Stadt|207.33
+2021-12-31|08115|Böblingen, Landkreis|617.76
+2021-12-31|08116|Esslingen, Landkreis|641.28
+2021-12-31|08117|Göppingen, Landkreis|642.34
+2021-12-31|08118|Ludwigsburg, Landkreis|686.77
+2021-12-31|08119|Rems-Murr-Kreis|858.08
+2021-12-31|08121|Heilbronn, kreisfreie Stadt|99.89
+2021-12-31|08125|Heilbronn, Landkreis|1099.91
+2021-12-31|08126|Hohenlohekreis|776.76
+2021-12-31|08127|Schwäbisch Hall, Landkreis|1484.07
+2021-12-31|08128|Main-Tauber-Kreis|1304.12
+2021-12-31|08135|Heidenheim, Landkreis|627.14
+2021-12-31|08136|Ostalbkreis|1511.39
+2021-12-31|08211|Baden-Baden, kreisfreie Stadt|140.19
+2021-12-31|08212|Karlsruhe, kreisfreie Stadt|173.42
+2021-12-31|08215|Karlsruhe, Landkreis|1084.98
+2021-12-31|08216|Rastatt, Landkreis|738.43
+2021-12-31|08221|Heidelberg, kreisfreie Stadt|108.83
+2021-12-31|08222|Mannheim, kreisfreie Stadt|144.97
+2021-12-31|08225|Neckar-Odenwald-Kreis|1125.95
+2021-12-31|08226|Rhein-Neckar-Kreis|1061.55
+2021-12-31|08231|Pforzheim, kreisfreie Stadt|97.99
+2021-12-31|08235|Calw, Landkreis|797.29
+2021-12-31|08236|Enzkreis|573.6
+2021-12-31|08237|Freudenstadt, Landkreis|870.4
+2021-12-31|08311|Freiburg im Breisgau, kreisfreie Stadt|153.04
+2021-12-31|08315|Breisgau-Hochschwarzwald, Landkreis|1378.32
+2021-12-31|08316|Emmendingen, Landkreis|679.8
+2021-12-31|08317|Ortenaukreis|1860.29
+2021-12-31|08325|Rottweil, Landkreis|769.42
+2021-12-31|08326|Schwarzwald-Baar-Kreis|1025.34
+2021-12-31|08327|Tuttlingen, Landkreis|734.38
+2021-12-31|08335|Konstanz, Landkreis|817.98
+2021-12-31|08336|Lörrach, Landkreis|806.66
+2021-12-31|08337|Waldshut, Landkreis|1131.15
+2021-12-31|08415|Reutlingen, Landkreis|1092.48
+2021-12-31|08416|Tübingen, Landkreis|519.11
+2021-12-31|08417|Zollernalbkreis|917.58
+2021-12-31|08421|Ulm, kreisfreie Stadt|118.68
+2021-12-31|08425|Alb-Donau-Kreis|1358.55
+2021-12-31|08426|Biberach, Landkreis|1409.53
+2021-12-31|08435|Bodenseekreis|664.77
+2021-12-31|08436|Ravensburg, Landkreis|1632.08
+2021-12-31|08437|Sigmaringen, Landkreis|1204.23
+2021-12-31|09161|Ingolstadt, kreisfreie Stadt|133.35
+2021-12-31|09162|München, kreisfreie Stadt|310.7
+2021-12-31|09163|Rosenheim, kreisfreie Stadt|37.22
+2021-12-31|09171|Altötting, Landkreis|569.28
+2021-12-31|09172|Berchtesgadener Land, Landkreis|839.82
+2021-12-31|09173|Bad Tölz-Wolfratshausen, Landkreis|1110.67
+2021-12-31|09174|Dachau, Landkreis|579.16
+2021-12-31|09175|Ebersberg, Landkreis|549.39
+2021-12-31|09176|Eichstätt, Landkreis|1213.85
+2021-12-31|09177|Erding, Landkreis|870.74
+2021-12-31|09178|Freising, Landkreis|799.85
+2021-12-31|09179|Fürstenfeldbruck, Landkreis|434.8
+2021-12-31|09180|Garmisch-Partenkirchen, Landkreis|1012.17
+2021-12-31|09181|Landsberg am Lech, Landkreis|804.36
+2021-12-31|09182|Miesbach, Landkreis|866.21
+2021-12-31|09183|Mühldorf am Inn, Landkreis|805.33
+2021-12-31|09184|München, Landkreis|664.25
+2021-12-31|09185|Neuburg-Schrobenhausen, Landkreis|739.71
+2021-12-31|09186|Pfaffenhofen an der Ilm, Landkreis|761.05
+2021-12-31|09187|Rosenheim, Landkreis|1439.44
+2021-12-31|09188|Starnberg, Landkreis|487.71
+2021-12-31|09189|Traunstein, Landkreis|1533.76
+2021-12-31|09190|Weilheim-Schongau, Landkreis|966.28
+2021-12-31|09261|Landshut, kreisfreie Stadt|65.83
+2021-12-31|09262|Passau, kreisfreie Stadt|69.56
+2021-12-31|09263|Straubing, kreisfreie Stadt|67.59
+2021-12-31|09271|Deggendorf, Landkreis|861.17
+2021-12-31|09272|Freyung-Grafenau, Landkreis|983.85
+2021-12-31|09273|Kelheim, Landkreis|1065.13
+2021-12-31|09274|Landshut, Landkreis|1347.55
+2021-12-31|09275|Passau, Landkreis|1530.09
+2021-12-31|09276|Regen, Landkreis|974.78
+2021-12-31|09277|Rottal-Inn, Landkreis|1281.2
+2021-12-31|09278|Straubing-Bogen, Landkreis|1201.61
+2021-12-31|09279|Dingolfing-Landau, Landkreis|877.58
+2021-12-31|09361|Amberg, kreisfreie Stadt|50.13
+2021-12-31|09362|Regensburg, kreisfreie Stadt|80.86
+2021-12-31|09363|Weiden in der Oberpfalz, kreisfreie Stadt|70.57
+2021-12-31|09371|Amberg-Sulzbach, Landkreis|1255.86
+2021-12-31|09372|Cham, Landkreis|1526.82
+2021-12-31|09373|Neumarkt in der Oberpfalz, Landkreis|1343.96
+2021-12-31|09374|Neustadt an der Waldnaab, Landkreis|1427.69
+2021-12-31|09375|Regensburg, Landkreis|1391.65
+2021-12-31|09376|Schwandorf, Landkreis|1458.34
+2021-12-31|09377|Tirschenreuth, Landkreis|1084.25
+2021-12-31|09461|Bamberg, kreisfreie Stadt|54.62
+2021-12-31|09462|Bayreuth, kreisfreie Stadt|66.89
+2021-12-31|09463|Coburg, kreisfreie Stadt|48.29
+2021-12-31|09464|Hof, kreisfreie Stadt|58.02
+2021-12-31|09471|Bamberg, Landkreis|1167.79
+2021-12-31|09472|Bayreuth, Landkreis|1273.62
+2021-12-31|09473|Coburg, Landkreis|590.42
+2021-12-31|09474|Forchheim, Landkreis|642.82
+2021-12-31|09475|Hof, Landkreis|892.52
+2021-12-31|09476|Kronach, Landkreis|651.49
+2021-12-31|09477|Kulmbach, Landkreis|658.33
+2021-12-31|09478|Lichtenfels, Landkreis|519.94
+2021-12-31|09479|Wunsiedel im Fichtelgebirge, Landkreis|606.37
+2021-12-31|09561|Ansbach, kreisfreie Stadt|99.91
+2021-12-31|09562|Erlangen, kreisfreie Stadt|76.96
+2021-12-31|09563|Fürth, kreisfreie Stadt|63.35
+2021-12-31|09564|Nürnberg, kreisfreie Stadt|186.44
+2021-12-31|09565|Schwabach, kreisfreie Stadt|40.8
+2021-12-31|09571|Ansbach, Landkreis|1971.32
+2021-12-31|09572|Erlangen-Höchstadt, Landkreis|564.55
+2021-12-31|09573|Fürth, Landkreis|307.44
+2021-12-31|09574|Nürnberger Land, Landkreis|799.52
+2021-12-31|09575|Neustadt an der Aisch-Bad Windsheim, Landkreis|1267.45
+2021-12-31|09576|Roth, Landkreis|895.16
+2021-12-31|09577|Weißenburg-Gunzenhausen, Landkreis|970.78
+2021-12-31|09661|Aschaffenburg, kreisfreie Stadt|62.45
+2021-12-31|09662|Schweinfurt, kreisfreie Stadt|35.7
+2021-12-31|09663|Würzburg, kreisfreie Stadt|87.6
+2021-12-31|09671|Aschaffenburg, Landkreis|698.9
+2021-12-31|09672|Bad Kissingen, Landkreis|1136.9
+2021-12-31|09673|Rhön-Grabfeld, Landkreis|1021.68
+2021-12-31|09674|Haßberge, Landkreis|956.19
+2021-12-31|09675|Kitzingen, Landkreis|684.14
+2021-12-31|09676|Miltenberg, Landkreis|715.58
+2021-12-31|09677|Main-Spessart, Landkreis|1321.2
+2021-12-31|09678|Schweinfurt, Landkreis|841.39
+2021-12-31|09679|Würzburg, Landkreis|968.35
+2021-12-31|09761|Augsburg, kreisfreie Stadt|146.85
+2021-12-31|09762|Kaufbeuren, kreisfreie Stadt|40.02
+2021-12-31|09763|Kempten (Allgäu), kreisfreie Stadt|63.28
+2021-12-31|09764|Memmingen, kreisfreie Stadt|70.11
+2021-12-31|09771|Aichach-Friedberg, Landkreis|780.23
+2021-12-31|09772|Augsburg, Landkreis|1070.63
+2021-12-31|09773|Dillingen an der Donau, Landkreis|792.23
+2021-12-31|09774|Günzburg, Landkreis|762.4
+2021-12-31|09775|Neu-Ulm, Landkreis|515.84
+2021-12-31|09776|Lindau (Bodensee), Landkreis|323.39
+2021-12-31|09777|Ostallgäu, Landkreis|1394.43
+2021-12-31|09778|Unterallgäu, Landkreis|1229.57
+2021-12-31|09779|Donau-Ries, Landkreis|1274.57
+2021-12-31|09780|Oberallgäu, Landkreis|1527.97
+2021-12-31|10041|Regionalverband Saarbrücken, Landkreis|410.95
+2021-12-31|10042|Merzig-Wadern, Landkreis|556.66
+2021-12-31|10043|Neunkirchen, Landkreis|249.8
+2021-12-31|10044|Saarlouis, Landkreis|459.35
+2021-12-31|10045|Saarpfalz-Kreis|418.28
+2021-12-31|10046|Sankt Wendel, Landkreis|476.48
+2021-12-31|11000|Berlin, kreisfreie Stadt|891.12
+2021-12-31|12051|Brandenburg an der Havel, kreisfreie Stadt|229.72
+2021-12-31|12052|Cottbus, kreisfreie Stadt|165.62
+2021-12-31|12053|Frankfurt (Oder), kreisfreie Stadt|147.85
+2021-12-31|12054|Potsdam, kreisfreie Stadt|188.24
+2021-12-31|12060|Barnim, Landkreis|1479.58
+2021-12-31|12061|Dahme-Spreewald, Landkreis|2274.5
+2021-12-31|12062|Elbe-Elster, Landkreis|1899.2
+2021-12-31|12063|Havelland, Landkreis|1727.31
+2021-12-31|12064|Märkisch-Oderland, Landkreis|2158.65
+2021-12-31|12065|Oberhavel, Landkreis|1808.19
+2021-12-31|12066|Oberspreewald-Lausitz, Landkreis|1223.48
+2021-12-31|12067|Oder-Spree, Landkreis|2256.75
+2021-12-31|12068|Ostprignitz-Ruppin, Landkreis|2526.5
+2021-12-31|12069|Potsdam-Mittelmark, Landkreis|2592.02
+2021-12-31|12070|Prignitz, Landkreis|2138.54
+2021-12-31|12071|Spree-Neiße, Landkreis|1656.99
+2021-12-31|12072|Teltow-Fläming, Landkreis|2104.2
+2021-12-31|12073|Uckermark, Landkreis|3077.03
+2021-12-31|13003|Rostock, kreisfreie Stadt|181.36
+2021-12-31|13004|Schwerin, kreisfreie Stadt|130.52
+2021-12-31|13071|Mecklenburgische Seenplatte, Landkreis|5495.58
+2021-12-31|13072|Rostock, Landkreis|3431.2
+2021-12-31|13073|Vorpommern-Rügen, Landkreis|3215.69
+2021-12-31|13074|Nordwestmecklenburg, Landkreis|2127.07
+2021-12-31|13075|Vorpommern-Greifswald, Landkreis|3945.66
+2021-12-31|13076|Ludwigslust-Parchim, Landkreis|4766.81
+2021-12-31|14511|Chemnitz, kreisfreie Stadt|221.03
+2021-12-31|14521|Erzgebirgskreis|1827.93
+2021-12-31|14522|Mittelsachsen, Landkreis|2116.85
+2021-12-31|14523|Vogtlandkreis|1412.41
+2021-12-31|14524|Zwickau, Landkreis|949.78
+2021-12-31|14612|Dresden, kreisfreie Stadt|328.49
+2021-12-31|14625|Bautzen, Landkreis|2395.59
+2021-12-31|14626|Görlitz, Landkreis|2111.41
+2021-12-31|14627|Meißen, Landkreis|1454.59
+2021-12-31|14628|Sächsische Schweiz-Osterzgebirge, Landkreis|1654.2
+2021-12-31|14713|Leipzig, kreisfreie Stadt|297.8
+2021-12-31|14729|Leipzig, Landkreis|1651.26
+2021-12-31|14730|Nordsachsen, Landkreis|2028.56
+2021-12-31|15001|Dessau-Roßlau, kreisfreie Stadt|245.0
+2021-12-31|15002|Halle (Saale), kreisfreie Stadt|135.01
+2021-12-31|15003|Magdeburg, kreisfreie Stadt|201.03
+2021-12-31|15081|Altmarkkreis Salzwedel|2294.59
+2021-12-31|15082|Anhalt-Bitterfeld, Landkreis|1455.08
+2021-12-31|15083|Börde, Landkreis|2367.22
+2021-12-31|15084|Burgenlandkreis|1414.04
+2021-12-31|15085|Harz, Landkreis|2104.92
+2021-12-31|15086|Jerichower Land, Landkreis|1578.19
+2021-12-31|15087|Mansfeld-Südharz, Landkreis|1449.05
+2021-12-31|15088|Saalekreis|1434.23
+2021-12-31|15089|Salzlandkreis|1428.11
+2021-12-31|15090|Stendal, Landkreis|2424.25
+2021-12-31|15091|Wittenberg, Landkreis|1933.32
+2021-12-31|16051|Erfurt, kreisfreie Stadt|269.91
+2021-12-31|16052|Gera, kreisfreie Stadt|152.18
+2021-12-31|16053|Jena, kreisfreie Stadt|114.77
+2021-12-31|16054|Suhl, kreisfreie Stadt|141.62
+2021-12-31|16055|Weimar, kreisfreie Stadt|84.48
+2021-12-31|16061|Eichsfeld, Landkreis|943.07
+2021-12-31|16062|Nordhausen, Landkreis|713.93
+2021-12-31|16063|Wartburgkreis|1371.14
+2021-12-31|16064|Unstrut-Hainich-Kreis|979.68
+2021-12-31|16065|Kyffhäuserkreis|1037.91
+2021-12-31|16066|Schmalkalden-Meiningen, Landkreis|1251.21
+2021-12-31|16067|Gotha, Landkreis|936.08
+2021-12-31|16068|Sömmerda, Landkreis|806.86
+2021-12-31|16069|Hildburghausen, Landkreis|938.42
+2021-12-31|16070|Ilm-Kreis|805.11
+2021-12-31|16071|Weimarer Land, Landkreis|804.48
+2021-12-31|16072|Sonneberg, Landkreis|460.85
+2021-12-31|16073|Saalfeld-Rudolstadt, Landkreis|1008.78
+2021-12-31|16074|Saale-Holzland-Kreis|815.24
+2021-12-31|16075|Saale-Orla-Kreis|1151.3
+2021-12-31|16076|Greiz, Landkreis|845.98
+2021-12-31|16077|Altenburger Land, Landkreis|569.39
+2022-12-31|01001|Flensburg, kreisfreie Stadt|56.73
+2022-12-31|01002|Kiel, kreisfreie Stadt|118.65
+2022-12-31|01003|Lübeck, kreisfreie Stadt|214.19
+2022-12-31|01004|Neumünster, kreisfreie Stadt|71.66
+2022-12-31|01051|Dithmarschen, Landkreis|1428.17
+2022-12-31|01053|Herzogtum Lauenburg, Landkreis|1263.07
+2022-12-31|01054|Nordfriesland, Landkreis|2083.56
+2022-12-31|01055|Ostholstein, Landkreis|1393.02
+2022-12-31|01056|Pinneberg, Landkreis|664.25
+2022-12-31|01057|Plön, Landkreis|1083.56
+2022-12-31|01058|Rendsburg-Eckernförde, Landkreis|2189.79
+2022-12-31|01059|Schleswig-Flensburg, Landkreis|2071.28
+2022-12-31|01060|Segeberg, Landkreis|1344.47
+2022-12-31|01061|Steinburg, Landkreis|1055.7
+2022-12-31|01062|Stormarn, Landkreis|766.22
+2022-12-31|02000|Hamburg, kreisfreie Stadt|755.09
+2022-12-31|03101|Braunschweig, kreisfreie Stadt|192.7
+2022-12-31|03102|Salzgitter, kreisfreie Stadt|224.49
+2022-12-31|03103|Wolfsburg, kreisfreie Stadt|204.62
+2022-12-31|03151|Gifhorn, Landkreis|1567.57
+2022-12-31|03153|Goslar, Landkreis|966.71
+2022-12-31|03154|Helmstedt, Landkreis|676.13
+2022-12-31|03155|Northeim, Landkreis|1268.77
+2022-12-31|03157|Peine, Landkreis|536.5
+2022-12-31|03158|Wolfenbüttel, Landkreis|724.32
+2022-12-31|03159|Göttingen, Landkreis|1755.41
+2022-12-31|03241|Region Hannover, Landkreis|2297.13
+2022-12-31|03251|Diepholz, Landkreis|1991.02
+2022-12-31|03252|Hameln-Pyrmont, Landkreis|797.54
+2022-12-31|03254|Hildesheim, Landkreis|1208.34
+2022-12-31|03255|Holzminden, Landkreis|694.27
+2022-12-31|03256|Nienburg (Weser), Landkreis|1400.81
+2022-12-31|03257|Schaumburg, Landkreis|675.67
+2022-12-31|03351|Celle, Landkreis|1550.83
+2022-12-31|03352|Cuxhaven, Landkreis|2058.96
+2022-12-31|03353|Harburg, Landkreis|1248.45
+2022-12-31|03354|Lüchow-Dannenberg, Landkreis|1227.32
+2022-12-31|03355|Lüneburg, Landkreis|1327.83
+2022-12-31|03356|Osterholz, Landkreis|652.67
+2022-12-31|03357|Rotenburg (Wümme), Landkreis|2074.77
+2022-12-31|03358|Heidekreis|1881.46
+2022-12-31|03359|Stade, Landkreis|1267.38
+2022-12-31|03360|Uelzen, Landkreis|1462.6
+2022-12-31|03361|Verden, Landkreis|789.33
+2022-12-31|03401|Delmenhorst, kreisfreie Stadt|62.45
+2022-12-31|03402|Emden, kreisfreie Stadt|112.34
+2022-12-31|03403|Oldenburg (Oldenburg), kreisfreie Stadt|103.09
+2022-12-31|03404|Osnabrück, kreisfreie Stadt|119.8
+2022-12-31|03405|Wilhelmshaven, kreisfreie Stadt|107.11
+2022-12-31|03451|Ammerland, Landkreis|730.65
+2022-12-31|03452|Aurich, Landkreis|1287.35
+2022-12-31|03453|Cloppenburg, Landkreis|1420.34
+2022-12-31|03454|Emsland, Landkreis|2883.67
+2022-12-31|03455|Friesland, Landkreis|609.53
+2022-12-31|03456|Grafschaft Bentheim, Landkreis|981.79
+2022-12-31|03457|Leer, Landkreis|1085.72
+2022-12-31|03458|Oldenburg, Landkreis|1064.83
+2022-12-31|03459|Osnabrück, Landkreis|2121.8
+2022-12-31|03460|Vechta, Landkreis|814.21
+2022-12-31|03461|Wesermarsch, Landkreis|824.78
+2022-12-31|03462|Wittmund, Landkreis|656.86
+2022-12-31|04011|Bremen, kreisfreie Stadt|318.2
+2022-12-31|04012|Bremerhaven, kreisfreie Stadt|101.41
+2022-12-31|05111|Düsseldorf, kreisfreie Stadt|217.41
+2022-12-31|05112|Duisburg, kreisfreie Stadt|232.84
+2022-12-31|05113|Essen, kreisfreie Stadt|210.34
+2022-12-31|05114|Krefeld, kreisfreie Stadt|137.78
+2022-12-31|05116|Mönchengladbach, kreisfreie Stadt|170.47
+2022-12-31|05117|Mülheim an der Ruhr, kreisfreie Stadt|91.28
+2022-12-31|05119|Oberhausen, kreisfreie Stadt|77.09
+2022-12-31|05120|Remscheid, kreisfreie Stadt|74.52
+2022-12-31|05122|Solingen, kreisfreie Stadt|89.54
+2022-12-31|05124|Wuppertal, kreisfreie Stadt|168.39
+2022-12-31|05154|Kleve, Landkreis|1232.99
+2022-12-31|05158|Mettmann, Landkreis|407.22
+2022-12-31|05162|Rhein-Kreis Neuss|576.61
+2022-12-31|05166|Viersen, Landkreis|563.28
+2022-12-31|05170|Wesel, Landkreis|1042.76
+2022-12-31|05314|Bonn, kreisfreie Stadt|141.06
+2022-12-31|05315|Köln, kreisfreie Stadt|405.02
+2022-12-31|05316|Leverkusen, kreisfreie Stadt|78.87
+2022-12-31|05334|Städteregion Aachen, Landkreis|706.91
+2022-12-31|05358|Düren, Landkreis|941.58
+2022-12-31|05362|Rhein-Erft-Kreis|704.72
+2022-12-31|05366|Euskirchen, Landkreis|1248.73
+2022-12-31|05370|Heinsberg, Landkreis|627.91
+2022-12-31|05374|Oberbergischer Kreis|918.85
+2022-12-31|05378|Rheinisch-Bergischer Kreis|437.32
+2022-12-31|05382|Rhein-Sieg-Kreis|1153.21
+2022-12-31|05512|Bottrop, kreisfreie Stadt|100.61
+2022-12-31|05513|Gelsenkirchen, kreisfreie Stadt|104.94
+2022-12-31|05515|Münster, kreisfreie Stadt|303.28
+2022-12-31|05554|Borken, Landkreis|1420.98
+2022-12-31|05558|Coesfeld, Landkreis|1112.04
+2022-12-31|05562|Recklinghausen, Landkreis|761.31
+2022-12-31|05566|Steinfurt, Landkreis|1795.75
+2022-12-31|05570|Warendorf, Landkreis|1319.42
+2022-12-31|05711|Bielefeld, kreisfreie Stadt|258.83
+2022-12-31|05754|Gütersloh, Landkreis|969.21
+2022-12-31|05758|Herford, Landkreis|450.4
+2022-12-31|05762|Höxter, Landkreis|1201.42
+2022-12-31|05766|Lippe, Landkreis|1246.21
+2022-12-31|05770|Minden-Lübbecke, Landkreis|1152.42
+2022-12-31|05774|Paderborn, Landkreis|1246.8
+2022-12-31|05911|Bochum, kreisfreie Stadt|145.66
+2022-12-31|05913|Dortmund, kreisfreie Stadt|280.71
+2022-12-31|05914|Hagen, kreisfreie Stadt|160.45
+2022-12-31|05915|Hamm, kreisfreie Stadt|226.43
+2022-12-31|05916|Herne, kreisfreie Stadt|51.42
+2022-12-31|05954|Ennepe-Ruhr-Kreis|409.64
+2022-12-31|05958|Hochsauerlandkreis|1960.17
+2022-12-31|05962|Märkischer Kreis|1061.09
+2022-12-31|05966|Olpe, Landkreis|712.11
+2022-12-31|05970|Siegen-Wittgenstein, Landkreis|1132.89
+2022-12-31|05974|Soest, Landkreis|1328.64
+2022-12-31|05978|Unna, Landkreis|543.21
+2022-12-31|06411|Darmstadt, kreisfreie Stadt|122.07
+2022-12-31|06412|Frankfurt am Main, kreisfreie Stadt|248.31
+2022-12-31|06413|Offenbach am Main, kreisfreie Stadt|44.88
+2022-12-31|06414|Wiesbaden, kreisfreie Stadt|203.87
+2022-12-31|06431|Bergstraße, Landkreis|719.47
+2022-12-31|06432|Darmstadt-Dieburg, Landkreis|658.64
+2022-12-31|06433|Groß-Gerau, Landkreis|453.03
+2022-12-31|06434|Hochtaunuskreis|481.84
+2022-12-31|06435|Main-Kinzig-Kreis|1397.32
+2022-12-31|06436|Main-Taunus-Kreis|222.53
+2022-12-31|06437|Odenwaldkreis|623.97
+2022-12-31|06438|Offenbach, Landkreis|356.24
+2022-12-31|06439|Rheingau-Taunus-Kreis|811.4
+2022-12-31|06440|Wetteraukreis|1100.66
+2022-12-31|06531|Gießen, Landkreis|854.56
+2022-12-31|06532|Lahn-Dill-Kreis|1066.3
+2022-12-31|06533|Limburg-Weilburg, Landkreis|738.44
+2022-12-31|06534|Marburg-Biedenkopf, Landkreis|1262.37
+2022-12-31|06535|Vogelsbergkreis|1458.91
+2022-12-31|06611|Kassel, kreisfreie Stadt|106.79
+2022-12-31|06631|Fulda, Landkreis|1380.41
+2022-12-31|06632|Hersfeld-Rotenburg, Landkreis|1097.75
+2022-12-31|06633|Kassel, Landkreis|1293.31
+2022-12-31|06634|Schwalm-Eder-Kreis|1539.01
+2022-12-31|06635|Waldeck-Frankenberg, Landkreis|1848.7
+2022-12-31|06636|Werra-Meißner-Kreis|1024.83
+2022-12-31|07111|Koblenz, kreisfreie Stadt|105.25
+2022-12-31|07131|Ahrweiler, Landkreis|787.03
+2022-12-31|07132|Altenkirchen (Westerwald), Landkreis|642.38
+2022-12-31|07133|Bad Kreuznach, Landkreis|863.89
+2022-12-31|07134|Birkenfeld, Landkreis|776.83
+2022-12-31|07135|Cochem-Zell, Landkreis|692.43
+2022-12-31|07137|Mayen-Koblenz, Landkreis|817.73
+2022-12-31|07138|Neuwied, Landkreis|627.06
+2022-12-31|07140|Rhein-Hunsrück-Kreis|991.06
+2022-12-31|07141|Rhein-Lahn-Kreis|782.24
+2022-12-31|07143|Westerwaldkreis|989.04
+2022-12-31|07211|Trier, kreisfreie Stadt|117.06
+2022-12-31|07231|Bernkastel-Wittlich, Landkreis|1167.93
+2022-12-31|07232|Eifelkreis Bitburg-Prüm|1626.95
+2022-12-31|07233|Vulkaneifel, Landkreis|911.64
+2022-12-31|07235|Trier-Saarburg, Landkreis|1102.25
+2022-12-31|07311|Frankenthal (Pfalz), kreisfreie Stadt|43.88
+2022-12-31|07312|Kaiserslautern, kreisfreie Stadt|139.7
+2022-12-31|07313|Landau in der Pfalz, kreisfreie Stadt|82.94
+2022-12-31|07314|Ludwigshafen am Rhein, kreisfreie Stadt|77.43
+2022-12-31|07315|Mainz, kreisfreie Stadt|97.73
+2022-12-31|07316|Neustadt an der Weinstraße, kreisfreie Stadt|117.09
+2022-12-31|07317|Pirmasens, kreisfreie Stadt|61.35
+2022-12-31|07318|Speyer, kreisfreie Stadt|42.71
+2022-12-31|07319|Worms, kreisfreie Stadt|108.73
+2022-12-31|07320|Zweibrücken, kreisfreie Stadt|70.64
+2022-12-31|07331|Alzey-Worms, Landkreis|588.07
+2022-12-31|07332|Bad Dürkheim, Landkreis|594.64
+2022-12-31|07333|Donnersbergkreis|645.41
+2022-12-31|07334|Germersheim, Landkreis|463.32
+2022-12-31|07335|Kaiserslautern, Landkreis|640.0
+2022-12-31|07336|Kusel, Landkreis|573.61
+2022-12-31|07337|Südliche Weinstraße, Landkreis|639.93
+2022-12-31|07338|Rhein-Pfalz-Kreis|304.99
+2022-12-31|07339|Mainz-Bingen, Landkreis|605.33
+2022-12-31|07340|Südwestpfalz, Landkreis|953.52
+2022-12-31|08111|Stuttgart, kreisfreie Stadt|207.33
+2022-12-31|08115|Böblingen, Landkreis|617.77
+2022-12-31|08116|Esslingen, Landkreis|641.28
+2022-12-31|08117|Göppingen, Landkreis|642.34
+2022-12-31|08118|Ludwigsburg, Landkreis|686.77
+2022-12-31|08119|Rems-Murr-Kreis|858.08
+2022-12-31|08121|Heilbronn, kreisfreie Stadt|99.89
+2022-12-31|08125|Heilbronn, Landkreis|1099.91
+2022-12-31|08126|Hohenlohekreis|776.75
+2022-12-31|08127|Schwäbisch Hall, Landkreis|1484.08
+2022-12-31|08128|Main-Tauber-Kreis|1304.12
+2022-12-31|08135|Heidenheim, Landkreis|627.14
+2022-12-31|08136|Ostalbkreis|1511.39
+2022-12-31|08211|Baden-Baden, kreisfreie Stadt|140.19
+2022-12-31|08212|Karlsruhe, kreisfreie Stadt|173.42
+2022-12-31|08215|Karlsruhe, Landkreis|1084.98
+2022-12-31|08216|Rastatt, Landkreis|738.43
+2022-12-31|08221|Heidelberg, kreisfreie Stadt|108.83
+2022-12-31|08222|Mannheim, kreisfreie Stadt|144.97
+2022-12-31|08225|Neckar-Odenwald-Kreis|1125.95
+2022-12-31|08226|Rhein-Neckar-Kreis|1061.55
+2022-12-31|08231|Pforzheim, kreisfreie Stadt|97.99
+2022-12-31|08235|Calw, Landkreis|797.29
+2022-12-31|08236|Enzkreis|573.6
+2022-12-31|08237|Freudenstadt, Landkreis|870.4
+2022-12-31|08311|Freiburg im Breisgau, kreisfreie Stadt|153.04
+2022-12-31|08315|Breisgau-Hochschwarzwald, Landkreis|1378.32
+2022-12-31|08316|Emmendingen, Landkreis|679.8
+2022-12-31|08317|Ortenaukreis|1860.29
+2022-12-31|08325|Rottweil, Landkreis|769.42
+2022-12-31|08326|Schwarzwald-Baar-Kreis|1025.34
+2022-12-31|08327|Tuttlingen, Landkreis|734.38
+2022-12-31|08335|Konstanz, Landkreis|817.98
+2022-12-31|08336|Lörrach, Landkreis|806.66
+2022-12-31|08337|Waldshut, Landkreis|1131.15
+2022-12-31|08415|Reutlingen, Landkreis|1092.48
+2022-12-31|08416|Tübingen, Landkreis|519.12
+2022-12-31|08417|Zollernalbkreis|917.58
+2022-12-31|08421|Ulm, kreisfreie Stadt|118.68
+2022-12-31|08425|Alb-Donau-Kreis|1358.55
+2022-12-31|08426|Biberach, Landkreis|1409.52
+2022-12-31|08435|Bodenseekreis|664.77
+2022-12-31|08436|Ravensburg, Landkreis|1632.08
+2022-12-31|08437|Sigmaringen, Landkreis|1204.23
+2022-12-31|09161|Ingolstadt, kreisfreie Stadt|133.35
+2022-12-31|09162|München, kreisfreie Stadt|310.7
+2022-12-31|09163|Rosenheim, kreisfreie Stadt|37.22
+2022-12-31|09171|Altötting, Landkreis|569.28
+2022-12-31|09172|Berchtesgadener Land, Landkreis|839.82
+2022-12-31|09173|Bad Tölz-Wolfratshausen, Landkreis|1110.67
+2022-12-31|09174|Dachau, Landkreis|579.16
+2022-12-31|09175|Ebersberg, Landkreis|549.39
+2022-12-31|09176|Eichstätt, Landkreis|1213.85
+2022-12-31|09177|Erding, Landkreis|870.74
+2022-12-31|09178|Freising, Landkreis|799.85
+2022-12-31|09179|Fürstenfeldbruck, Landkreis|434.8
+2022-12-31|09180|Garmisch-Partenkirchen, Landkreis|1012.17
+2022-12-31|09181|Landsberg am Lech, Landkreis|804.36
+2022-12-31|09182|Miesbach, Landkreis|866.21
+2022-12-31|09183|Mühldorf am Inn, Landkreis|805.33
+2022-12-31|09184|München, Landkreis|664.25
+2022-12-31|09185|Neuburg-Schrobenhausen, Landkreis|739.71
+2022-12-31|09186|Pfaffenhofen an der Ilm, Landkreis|761.05
+2022-12-31|09187|Rosenheim, Landkreis|1439.44
+2022-12-31|09188|Starnberg, Landkreis|487.71
+2022-12-31|09189|Traunstein, Landkreis|1533.76
+2022-12-31|09190|Weilheim-Schongau, Landkreis|966.28
+2022-12-31|09261|Landshut, kreisfreie Stadt|65.83
+2022-12-31|09262|Passau, kreisfreie Stadt|69.56
+2022-12-31|09263|Straubing, kreisfreie Stadt|67.59
+2022-12-31|09271|Deggendorf, Landkreis|861.17
+2022-12-31|09272|Freyung-Grafenau, Landkreis|983.85
+2022-12-31|09273|Kelheim, Landkreis|1065.13
+2022-12-31|09274|Landshut, Landkreis|1347.55
+2022-12-31|09275|Passau, Landkreis|1530.09
+2022-12-31|09276|Regen, Landkreis|974.78
+2022-12-31|09277|Rottal-Inn, Landkreis|1281.2
+2022-12-31|09278|Straubing-Bogen, Landkreis|1201.62
+2022-12-31|09279|Dingolfing-Landau, Landkreis|877.58
+2022-12-31|09361|Amberg, kreisfreie Stadt|50.13
+2022-12-31|09362|Regensburg, kreisfreie Stadt|80.86
+2022-12-31|09363|Weiden in der Oberpfalz, kreisfreie Stadt|70.57
+2022-12-31|09371|Amberg-Sulzbach, Landkreis|1255.86
+2022-12-31|09372|Cham, Landkreis|1526.82
+2022-12-31|09373|Neumarkt in der Oberpfalz, Landkreis|1343.96
+2022-12-31|09374|Neustadt an der Waldnaab, Landkreis|1427.69
+2022-12-31|09375|Regensburg, Landkreis|1391.65
+2022-12-31|09376|Schwandorf, Landkreis|1458.34
+2022-12-31|09377|Tirschenreuth, Landkreis|1084.25
+2022-12-31|09461|Bamberg, kreisfreie Stadt|54.62
+2022-12-31|09462|Bayreuth, kreisfreie Stadt|66.89
+2022-12-31|09463|Coburg, kreisfreie Stadt|48.29
+2022-12-31|09464|Hof, kreisfreie Stadt|58.02
+2022-12-31|09471|Bamberg, Landkreis|1167.79
+2022-12-31|09472|Bayreuth, Landkreis|1273.62
+2022-12-31|09473|Coburg, Landkreis|590.42
+2022-12-31|09474|Forchheim, Landkreis|642.83
+2022-12-31|09475|Hof, Landkreis|892.52
+2022-12-31|09476|Kronach, Landkreis|651.49
+2022-12-31|09477|Kulmbach, Landkreis|658.33
+2022-12-31|09478|Lichtenfels, Landkreis|519.94
+2022-12-31|09479|Wunsiedel im Fichtelgebirge, Landkreis|606.37
+2022-12-31|09561|Ansbach, kreisfreie Stadt|99.91
+2022-12-31|09562|Erlangen, kreisfreie Stadt|76.96
+2022-12-31|09563|Fürth, kreisfreie Stadt|63.35
+2022-12-31|09564|Nürnberg, kreisfreie Stadt|186.44
+2022-12-31|09565|Schwabach, kreisfreie Stadt|40.8
+2022-12-31|09571|Ansbach, Landkreis|1971.32
+2022-12-31|09572|Erlangen-Höchstadt, Landkreis|564.55
+2022-12-31|09573|Fürth, Landkreis|307.44
+2022-12-31|09574|Nürnberger Land, Landkreis|799.52
+2022-12-31|09575|Neustadt an der Aisch-Bad Windsheim, Landkreis|1267.45
+2022-12-31|09576|Roth, Landkreis|895.16
+2022-12-31|09577|Weißenburg-Gunzenhausen, Landkreis|970.78
+2022-12-31|09661|Aschaffenburg, kreisfreie Stadt|62.45
+2022-12-31|09662|Schweinfurt, kreisfreie Stadt|35.7
+2022-12-31|09663|Würzburg, kreisfreie Stadt|87.6
+2022-12-31|09671|Aschaffenburg, Landkreis|698.9
+2022-12-31|09672|Bad Kissingen, Landkreis|1136.9
+2022-12-31|09673|Rhön-Grabfeld, Landkreis|1021.68
+2022-12-31|09674|Haßberge, Landkreis|956.19
+2022-12-31|09675|Kitzingen, Landkreis|684.14
+2022-12-31|09676|Miltenberg, Landkreis|715.58
+2022-12-31|09677|Main-Spessart, Landkreis|1321.2
+2022-12-31|09678|Schweinfurt, Landkreis|841.39
+2022-12-31|09679|Würzburg, Landkreis|968.35
+2022-12-31|09761|Augsburg, kreisfreie Stadt|146.85
+2022-12-31|09762|Kaufbeuren, kreisfreie Stadt|40.02
+2022-12-31|09763|Kempten (Allgäu), kreisfreie Stadt|63.28
+2022-12-31|09764|Memmingen, kreisfreie Stadt|70.11
+2022-12-31|09771|Aichach-Friedberg, Landkreis|780.23
+2022-12-31|09772|Augsburg, Landkreis|1070.63
+2022-12-31|09773|Dillingen an der Donau, Landkreis|792.23
+2022-12-31|09774|Günzburg, Landkreis|762.4
+2022-12-31|09775|Neu-Ulm, Landkreis|515.84
+2022-12-31|09776|Lindau (Bodensee), Landkreis|323.39
+2022-12-31|09777|Ostallgäu, Landkreis|1394.44
+2022-12-31|09778|Unterallgäu, Landkreis|1229.57
+2022-12-31|09779|Donau-Ries, Landkreis|1274.57
+2022-12-31|09780|Oberallgäu, Landkreis|1527.97
+2022-12-31|10041|Regionalverband Saarbrücken, Landkreis|410.95
+2022-12-31|10042|Merzig-Wadern, Landkreis|556.66
+2022-12-31|10043|Neunkirchen, Landkreis|249.8
+2022-12-31|10044|Saarlouis, Landkreis|459.35
+2022-12-31|10045|Saarpfalz-Kreis|418.28
+2022-12-31|10046|Sankt Wendel, Landkreis|476.48
+2022-12-31|11000|Berlin, kreisfreie Stadt|891.12
+2022-12-31|12051|Brandenburg an der Havel, kreisfreie Stadt|229.72
+2022-12-31|12052|Cottbus, kreisfreie Stadt|165.62
+2022-12-31|12053|Frankfurt (Oder), kreisfreie Stadt|147.85
+2022-12-31|12054|Potsdam, kreisfreie Stadt|188.24
+2022-12-31|12060|Barnim, Landkreis|1479.59
+2022-12-31|12061|Dahme-Spreewald, Landkreis|2274.49
+2022-12-31|12062|Elbe-Elster, Landkreis|1899.18
+2022-12-31|12063|Havelland, Landkreis|1727.31
+2022-12-31|12064|Märkisch-Oderland, Landkreis|2158.65
+2022-12-31|12065|Oberhavel, Landkreis|1808.19
+2022-12-31|12066|Oberspreewald-Lausitz, Landkreis|1223.48
+2022-12-31|12067|Oder-Spree, Landkreis|2256.76
+2022-12-31|12068|Ostprignitz-Ruppin, Landkreis|2526.46
+2022-12-31|12069|Potsdam-Mittelmark, Landkreis|2592.03
+2022-12-31|12070|Prignitz, Landkreis|2138.58
+2022-12-31|12071|Spree-Neiße, Landkreis|1656.99
+2022-12-31|12072|Teltow-Fläming, Landkreis|2104.22
+2022-12-31|12073|Uckermark, Landkreis|3077.02
+2022-12-31|13003|Rostock, kreisfreie Stadt|181.36
+2022-12-31|13004|Schwerin, kreisfreie Stadt|130.52
+2022-12-31|13071|Mecklenburgische Seenplatte, Landkreis|5495.58
+2022-12-31|13072|Rostock, Landkreis|3431.2
+2022-12-31|13073|Vorpommern-Rügen, Landkreis|3215.73
+2022-12-31|13074|Nordwestmecklenburg, Landkreis|2127.07
+2022-12-31|13075|Vorpommern-Greifswald, Landkreis|3945.66
+2022-12-31|13076|Ludwigslust-Parchim, Landkreis|4766.77
+2022-12-31|14511|Chemnitz, kreisfreie Stadt|221.03
+2022-12-31|14521|Erzgebirgskreis|1827.93
+2022-12-31|14522|Mittelsachsen, Landkreis|2116.83
+2022-12-31|14523|Vogtlandkreis|1412.39
+2022-12-31|14524|Zwickau, Landkreis|949.8
+2022-12-31|14612|Dresden, kreisfreie Stadt|328.48
+2022-12-31|14625|Bautzen, Landkreis|2395.59
+2022-12-31|14626|Görlitz, Landkreis|2111.41
+2022-12-31|14627|Meißen, Landkreis|1454.59
+2022-12-31|14628|Sächsische Schweiz-Osterzgebirge, Landkreis|1654.2
+2022-12-31|14713|Leipzig, kreisfreie Stadt|297.8
+2022-12-31|14729|Leipzig, Landkreis|1651.27
+2022-12-31|14730|Nordsachsen, Landkreis|2028.55
+2022-12-31|15001|Dessau-Roßlau, kreisfreie Stadt|245.05
+2022-12-31|15002|Halle (Saale), kreisfreie Stadt|135.03
+2022-12-31|15003|Magdeburg, kreisfreie Stadt|201.04
+2022-12-31|15081|Altmarkkreis Salzwedel|2294.98
+2022-12-31|15082|Anhalt-Bitterfeld, Landkreis|1455.09
+2022-12-31|15083|Börde, Landkreis|2367.65
+2022-12-31|15084|Burgenlandkreis|1414.09
+2022-12-31|15085|Harz, Landkreis|2105.25
+2022-12-31|15086|Jerichower Land, Landkreis|1579.1
+2022-12-31|15087|Mansfeld-Südharz, Landkreis|1448.97
+2022-12-31|15088|Saalekreis|1434.46
+2022-12-31|15089|Salzlandkreis|1428.16
+2022-12-31|15090|Stendal, Landkreis|2424.67
+2022-12-31|15091|Wittenberg, Landkreis|1933.65
+2022-12-31|16051|Erfurt, kreisfreie Stadt|269.91
+2022-12-31|16052|Gera, kreisfreie Stadt|152.18
+2022-12-31|16053|Jena, kreisfreie Stadt|114.77
+2022-12-31|16054|Suhl, kreisfreie Stadt|141.62
+2022-12-31|16055|Weimar, kreisfreie Stadt|84.47
+2022-12-31|16061|Eichsfeld, Landkreis|943.07
+2022-12-31|16062|Nordhausen, Landkreis|713.91
+2022-12-31|16063|Wartburgkreis|1371.14
+2022-12-31|16064|Unstrut-Hainich-Kreis|979.68
+2022-12-31|16065|Kyffhäuserkreis|1037.91
+2022-12-31|16066|Schmalkalden-Meiningen, Landkreis|1251.21
+2022-12-31|16067|Gotha, Landkreis|936.08
+2022-12-31|16068|Sömmerda, Landkreis|806.85
+2022-12-31|16069|Hildburghausen, Landkreis|938.42
+2022-12-31|16070|Ilm-Kreis|805.11
+2022-12-31|16071|Weimarer Land, Landkreis|804.48
+2022-12-31|16072|Sonneberg, Landkreis|460.85
+2022-12-31|16073|Saalfeld-Rudolstadt, Landkreis|1008.78
+2022-12-31|16074|Saale-Holzland-Kreis|815.24
+2022-12-31|16075|Saale-Orla-Kreis|1151.3
+2022-12-31|16076|Greiz, Landkreis|845.98
+2022-12-31|16077|Altenburger Land, Landkreis|569.39
+2023-12-31|01001|Flensburg, kreisfreie Stadt|56.73
+2023-12-31|01002|Kiel, kreisfreie Stadt|118.65
+2023-12-31|01003|Lübeck, kreisfreie Stadt|214.19
+2023-12-31|01004|Neumünster, kreisfreie Stadt|71.66
+2023-12-31|01051|Dithmarschen, Landkreis|1428.17
+2023-12-31|01053|Herzogtum Lauenburg, Landkreis|1263.06
+2023-12-31|01054|Nordfriesland, Landkreis|2083.56
+2023-12-31|01055|Ostholstein, Landkreis|1393.02
+2023-12-31|01056|Pinneberg, Landkreis|664.25
+2023-12-31|01057|Plön, Landkreis|1083.56
+2023-12-31|01058|Rendsburg-Eckernförde, Landkreis|2189.79
+2023-12-31|01059|Schleswig-Flensburg, Landkreis|2071.28
+2023-12-31|01060|Segeberg, Landkreis|1344.47
+2023-12-31|01061|Steinburg, Landkreis|1055.7
+2023-12-31|01062|Stormarn, Landkreis|766.23
+2023-12-31|02000|Hamburg, kreisfreie Stadt|755.09
+2023-12-31|03101|Braunschweig, kreisfreie Stadt|192.7
+2023-12-31|03102|Salzgitter, kreisfreie Stadt|224.49
+2023-12-31|03103|Wolfsburg, kreisfreie Stadt|204.62
+2023-12-31|03151|Gifhorn, Landkreis|1567.57
+2023-12-31|03153|Goslar, Landkreis|966.72
+2023-12-31|03154|Helmstedt, Landkreis|676.12
+2023-12-31|03155|Northeim, Landkreis|1268.77
+2023-12-31|03157|Peine, Landkreis|536.5
+2023-12-31|03158|Wolfenbüttel, Landkreis|724.32
+2023-12-31|03159|Göttingen, Landkreis|1755.41
+2023-12-31|03241|Region Hannover, Landkreis|2297.13
+2023-12-31|03251|Diepholz, Landkreis|1991.02
+2023-12-31|03252|Hameln-Pyrmont, Landkreis|797.53
+2023-12-31|03254|Hildesheim, Landkreis|1208.33
+2023-12-31|03255|Holzminden, Landkreis|694.27
+2023-12-31|03256|Nienburg (Weser), Landkreis|1400.81
+2023-12-31|03257|Schaumburg, Landkreis|675.67
+2023-12-31|03351|Celle, Landkreis|1550.83
+2023-12-31|03352|Cuxhaven, Landkreis|2058.96
+2023-12-31|03353|Harburg, Landkreis|1248.45
+2023-12-31|03354|Lüchow-Dannenberg, Landkreis|1227.32
+2023-12-31|03355|Lüneburg, Landkreis|1327.83
+2023-12-31|03356|Osterholz, Landkreis|652.67
+2023-12-31|03357|Rotenburg (Wümme), Landkreis|2074.77
+2023-12-31|03358|Heidekreis|1881.46
+2023-12-31|03359|Stade, Landkreis|1267.38
+2023-12-31|03360|Uelzen, Landkreis|1462.59
+2023-12-31|03361|Verden, Landkreis|789.33
+2023-12-31|03401|Delmenhorst, kreisfreie Stadt|62.45
+2023-12-31|03402|Emden, kreisfreie Stadt|112.34
+2023-12-31|03403|Oldenburg (Oldenburg), kreisfreie Stadt|103.09
+2023-12-31|03404|Osnabrück, kreisfreie Stadt|119.8
+2023-12-31|03405|Wilhelmshaven, kreisfreie Stadt|107.11
+2023-12-31|03451|Ammerland, Landkreis|730.65
+2023-12-31|03452|Aurich, Landkreis|1287.35
+2023-12-31|03453|Cloppenburg, Landkreis|1420.34
+2023-12-31|03454|Emsland, Landkreis|2883.67
+2023-12-31|03455|Friesland, Landkreis|609.53
+2023-12-31|03456|Grafschaft Bentheim, Landkreis|981.79
+2023-12-31|03457|Leer, Landkreis|1085.72
+2023-12-31|03458|Oldenburg, Landkreis|1064.83
+2023-12-31|03459|Osnabrück, Landkreis|2121.8
+2023-12-31|03460|Vechta, Landkreis|814.21
+2023-12-31|03461|Wesermarsch, Landkreis|824.78
+2023-12-31|03462|Wittmund, Landkreis|656.86
+2023-12-31|04011|Bremen, kreisfreie Stadt|318.2
+2023-12-31|04012|Bremerhaven, kreisfreie Stadt|101.41
+2023-12-31|05111|Düsseldorf, kreisfreie Stadt|217.41
+2023-12-31|05112|Duisburg, kreisfreie Stadt|232.84
+2023-12-31|05113|Essen, kreisfreie Stadt|210.34
+2023-12-31|05114|Krefeld, kreisfreie Stadt|137.77
+2023-12-31|05116|Mönchengladbach, kreisfreie Stadt|170.47
+2023-12-31|05117|Mülheim an der Ruhr, kreisfreie Stadt|91.28
+2023-12-31|05119|Oberhausen, kreisfreie Stadt|77.09
+2023-12-31|05120|Remscheid, kreisfreie Stadt|74.52
+2023-12-31|05122|Solingen, kreisfreie Stadt|89.54
+2023-12-31|05124|Wuppertal, kreisfreie Stadt|168.39
+2023-12-31|05154|Kleve, Landkreis|1232.99
+2023-12-31|05158|Mettmann, Landkreis|407.22
+2023-12-31|05162|Rhein-Kreis Neuss|576.42
+2023-12-31|05166|Viersen, Landkreis|563.28
+2023-12-31|05170|Wesel, Landkreis|1042.76
+2023-12-31|05314|Bonn, kreisfreie Stadt|141.06
+2023-12-31|05315|Köln, kreisfreie Stadt|405.02
+2023-12-31|05316|Leverkusen, kreisfreie Stadt|78.87
+2023-12-31|05334|Städteregion Aachen, Landkreis|706.91
+2023-12-31|05358|Düren, Landkreis|941.49
+2023-12-31|05362|Rhein-Erft-Kreis|704.71
+2023-12-31|05366|Euskirchen, Landkreis|1248.73
+2023-12-31|05370|Heinsberg, Landkreis|627.91
+2023-12-31|05374|Oberbergischer Kreis|918.85
+2023-12-31|05378|Rheinisch-Bergischer Kreis|437.32
+2023-12-31|05382|Rhein-Sieg-Kreis|1153.21
+2023-12-31|05512|Bottrop, kreisfreie Stadt|100.61
+2023-12-31|05513|Gelsenkirchen, kreisfreie Stadt|104.94
+2023-12-31|05515|Münster, kreisfreie Stadt|303.28
+2023-12-31|05554|Borken, Landkreis|1420.98
+2023-12-31|05558|Coesfeld, Landkreis|1112.04
+2023-12-31|05562|Recklinghausen, Landkreis|761.31
+2023-12-31|05566|Steinfurt, Landkreis|1795.75
+2023-12-31|05570|Warendorf, Landkreis|1319.42
+2023-12-31|05711|Bielefeld, kreisfreie Stadt|258.83
+2023-12-31|05754|Gütersloh, Landkreis|969.21
+2023-12-31|05758|Herford, Landkreis|450.4
+2023-12-31|05762|Höxter, Landkreis|1201.42
+2023-12-31|05766|Lippe, Landkreis|1246.21
+2023-12-31|05770|Minden-Lübbecke, Landkreis|1152.42
+2023-12-31|05774|Paderborn, Landkreis|1246.8
+2023-12-31|05911|Bochum, kreisfreie Stadt|145.66
+2023-12-31|05913|Dortmund, kreisfreie Stadt|280.71
+2023-12-31|05914|Hagen, kreisfreie Stadt|160.45
+2023-12-31|05915|Hamm, kreisfreie Stadt|226.66
+2023-12-31|05916|Herne, kreisfreie Stadt|51.42
+2023-12-31|05954|Ennepe-Ruhr-Kreis|409.64
+2023-12-31|05958|Hochsauerlandkreis|1960.17
+2023-12-31|05962|Märkischer Kreis|1061.09
+2023-12-31|05966|Olpe, Landkreis|712.11
+2023-12-31|05970|Siegen-Wittgenstein, Landkreis|1132.89
+2023-12-31|05974|Soest, Landkreis|1328.64
+2023-12-31|05978|Unna, Landkreis|543.21
+2023-12-31|06411|Darmstadt, kreisfreie Stadt|122.07
+2023-12-31|06412|Frankfurt am Main, kreisfreie Stadt|248.31
+2023-12-31|06413|Offenbach am Main, kreisfreie Stadt|44.88
+2023-12-31|06414|Wiesbaden, kreisfreie Stadt|203.87
+2023-12-31|06431|Bergstraße, Landkreis|719.47
+2023-12-31|06432|Darmstadt-Dieburg, Landkreis|658.64
+2023-12-31|06433|Groß-Gerau, Landkreis|453.03
+2023-12-31|06434|Hochtaunuskreis|481.84
+2023-12-31|06435|Main-Kinzig-Kreis|1397.32
+2023-12-31|06436|Main-Taunus-Kreis|222.53
+2023-12-31|06437|Odenwaldkreis|623.97
+2023-12-31|06438|Offenbach, Landkreis|356.24
+2023-12-31|06439|Rheingau-Taunus-Kreis|811.4
+2023-12-31|06440|Wetteraukreis|1100.66
+2023-12-31|06531|Gießen, Landkreis|854.56
+2023-12-31|06532|Lahn-Dill-Kreis|1066.3
+2023-12-31|06533|Limburg-Weilburg, Landkreis|738.44
+2023-12-31|06534|Marburg-Biedenkopf, Landkreis|1262.37
+2023-12-31|06535|Vogelsbergkreis|1458.91
+2023-12-31|06611|Kassel, kreisfreie Stadt|106.79
+2023-12-31|06631|Fulda, Landkreis|1380.41
+2023-12-31|06632|Hersfeld-Rotenburg, Landkreis|1097.77
+2023-12-31|06633|Kassel, Landkreis|1293.31
+2023-12-31|06634|Schwalm-Eder-Kreis|1539.01
+2023-12-31|06635|Waldeck-Frankenberg, Landkreis|1848.7
+2023-12-31|06636|Werra-Meißner-Kreis|1024.83
+2023-12-31|07111|Koblenz, kreisfreie Stadt|105.25
+2023-12-31|07131|Ahrweiler, Landkreis|787.03
+2023-12-31|07132|Altenkirchen (Westerwald), Landkreis|642.38
+2023-12-31|07133|Bad Kreuznach, Landkreis|863.89
+2023-12-31|07134|Birkenfeld, Landkreis|776.83
+2023-12-31|07135|Cochem-Zell, Landkreis|692.44
+2023-12-31|07137|Mayen-Koblenz, Landkreis|817.72
+2023-12-31|07138|Neuwied, Landkreis|627.06
+2023-12-31|07140|Rhein-Hunsrück-Kreis|991.06
+2023-12-31|07141|Rhein-Lahn-Kreis|782.24
+2023-12-31|07143|Westerwaldkreis|989.04
+2023-12-31|07211|Trier, kreisfreie Stadt|117.06
+2023-12-31|07231|Bernkastel-Wittlich, Landkreis|1167.93
+2023-12-31|07232|Eifelkreis Bitburg-Prüm|1626.95
+2023-12-31|07233|Vulkaneifel, Landkreis|911.64
+2023-12-31|07235|Trier-Saarburg, Landkreis|1102.24
+2023-12-31|07311|Frankenthal (Pfalz), kreisfreie Stadt|43.88
+2023-12-31|07312|Kaiserslautern, kreisfreie Stadt|139.7
+2023-12-31|07313|Landau in der Pfalz, kreisfreie Stadt|82.94
+2023-12-31|07314|Ludwigshafen am Rhein, kreisfreie Stadt|77.43
+2023-12-31|07315|Mainz, kreisfreie Stadt|97.73
+2023-12-31|07316|Neustadt an der Weinstraße, kreisfreie Stadt|117.09
+2023-12-31|07317|Pirmasens, kreisfreie Stadt|61.35
+2023-12-31|07318|Speyer, kreisfreie Stadt|42.71
+2023-12-31|07319|Worms, kreisfreie Stadt|108.73
+2023-12-31|07320|Zweibrücken, kreisfreie Stadt|70.64
+2023-12-31|07331|Alzey-Worms, Landkreis|588.07
+2023-12-31|07332|Bad Dürkheim, Landkreis|594.64
+2023-12-31|07333|Donnersbergkreis|645.41
+2023-12-31|07334|Germersheim, Landkreis|463.32
+2023-12-31|07335|Kaiserslautern, Landkreis|640.0
+2023-12-31|07336|Kusel, Landkreis|573.61
+2023-12-31|07337|Südliche Weinstraße, Landkreis|639.93
+2023-12-31|07338|Rhein-Pfalz-Kreis|304.99
+2023-12-31|07339|Mainz-Bingen, Landkreis|605.33
+2023-12-31|07340|Südwestpfalz, Landkreis|953.52
+2023-12-31|08111|Stuttgart, kreisfreie Stadt|207.33
+2023-12-31|08115|Böblingen, Landkreis|617.76
+2023-12-31|08116|Esslingen, Landkreis|641.28
+2023-12-31|08117|Göppingen, Landkreis|642.34
+2023-12-31|08118|Ludwigsburg, Landkreis|686.77
+2023-12-31|08119|Rems-Murr-Kreis|858.08
+2023-12-31|08121|Heilbronn, kreisfreie Stadt|99.89
+2023-12-31|08125|Heilbronn, Landkreis|1099.91
+2023-12-31|08126|Hohenlohekreis|776.75
+2023-12-31|08127|Schwäbisch Hall, Landkreis|1484.08
+2023-12-31|08128|Main-Tauber-Kreis|1304.12
+2023-12-31|08135|Heidenheim, Landkreis|627.14
+2023-12-31|08136|Ostalbkreis|1511.39
+2023-12-31|08211|Baden-Baden, kreisfreie Stadt|140.19
+2023-12-31|08212|Karlsruhe, kreisfreie Stadt|173.42
+2023-12-31|08215|Karlsruhe, Landkreis|1084.98
+2023-12-31|08216|Rastatt, Landkreis|738.43
+2023-12-31|08221|Heidelberg, kreisfreie Stadt|108.83
+2023-12-31|08222|Mannheim, kreisfreie Stadt|144.97
+2023-12-31|08225|Neckar-Odenwald-Kreis|1125.95
+2023-12-31|08226|Rhein-Neckar-Kreis|1061.55
+2023-12-31|08231|Pforzheim, kreisfreie Stadt|97.99
+2023-12-31|08235|Calw, Landkreis|797.29
+2023-12-31|08236|Enzkreis|573.6
+2023-12-31|08237|Freudenstadt, Landkreis|870.4
+2023-12-31|08311|Freiburg im Breisgau, kreisfreie Stadt|153.04
+2023-12-31|08315|Breisgau-Hochschwarzwald, Landkreis|1378.32
+2023-12-31|08316|Emmendingen, Landkreis|679.8
+2023-12-31|08317|Ortenaukreis|1860.29
+2023-12-31|08325|Rottweil, Landkreis|769.42
+2023-12-31|08326|Schwarzwald-Baar-Kreis|1025.34
+2023-12-31|08327|Tuttlingen, Landkreis|734.38
+2023-12-31|08335|Konstanz, Landkreis|817.98
+2023-12-31|08336|Lörrach, Landkreis|806.66
+2023-12-31|08337|Waldshut, Landkreis|1131.15
+2023-12-31|08415|Reutlingen, Landkreis|1092.48
+2023-12-31|08416|Tübingen, Landkreis|519.12
+2023-12-31|08417|Zollernalbkreis|917.58
+2023-12-31|08421|Ulm, kreisfreie Stadt|118.68
+2023-12-31|08425|Alb-Donau-Kreis|1358.54
+2023-12-31|08426|Biberach, Landkreis|1409.52
+2023-12-31|08435|Bodenseekreis|664.77
+2023-12-31|08436|Ravensburg, Landkreis|1632.08
+2023-12-31|08437|Sigmaringen, Landkreis|1204.24
+2023-12-31|09161|Ingolstadt, kreisfreie Stadt|133.35
+2023-12-31|09162|München, kreisfreie Stadt|310.7
+2023-12-31|09163|Rosenheim, kreisfreie Stadt|37.22
+2023-12-31|09171|Altötting, Landkreis|569.28
+2023-12-31|09172|Berchtesgadener Land, Landkreis|839.83
+2023-12-31|09173|Bad Tölz-Wolfratshausen, Landkreis|1110.67
+2023-12-31|09174|Dachau, Landkreis|579.16
+2023-12-31|09175|Ebersberg, Landkreis|549.39
+2023-12-31|09176|Eichstätt, Landkreis|1213.85
+2023-12-31|09177|Erding, Landkreis|870.74
+2023-12-31|09178|Freising, Landkreis|799.85
+2023-12-31|09179|Fürstenfeldbruck, Landkreis|434.8
+2023-12-31|09180|Garmisch-Partenkirchen, Landkreis|1012.17
+2023-12-31|09181|Landsberg am Lech, Landkreis|804.36
+2023-12-31|09182|Miesbach, Landkreis|866.21
+2023-12-31|09183|Mühldorf am Inn, Landkreis|805.33
+2023-12-31|09184|München, Landkreis|664.25
+2023-12-31|09185|Neuburg-Schrobenhausen, Landkreis|739.71
+2023-12-31|09186|Pfaffenhofen an der Ilm, Landkreis|761.05
+2023-12-31|09187|Rosenheim, Landkreis|1439.44
+2023-12-31|09188|Starnberg, Landkreis|487.71
+2023-12-31|09189|Traunstein, Landkreis|1533.76
+2023-12-31|09190|Weilheim-Schongau, Landkreis|966.28
+2023-12-31|09261|Landshut, kreisfreie Stadt|65.83
+2023-12-31|09262|Passau, kreisfreie Stadt|69.56
+2023-12-31|09263|Straubing, kreisfreie Stadt|67.59
+2023-12-31|09271|Deggendorf, Landkreis|861.17
+2023-12-31|09272|Freyung-Grafenau, Landkreis|983.85
+2023-12-31|09273|Kelheim, Landkreis|1065.13
+2023-12-31|09274|Landshut, Landkreis|1347.55
+2023-12-31|09275|Passau, Landkreis|1530.1
+2023-12-31|09276|Regen, Landkreis|974.78
+2023-12-31|09277|Rottal-Inn, Landkreis|1281.2
+2023-12-31|09278|Straubing-Bogen, Landkreis|1201.62
+2023-12-31|09279|Dingolfing-Landau, Landkreis|877.58
+2023-12-31|09361|Amberg, kreisfreie Stadt|50.14
+2023-12-31|09362|Regensburg, kreisfreie Stadt|80.86
+2023-12-31|09363|Weiden in der Oberpfalz, kreisfreie Stadt|70.57
+2023-12-31|09371|Amberg-Sulzbach, Landkreis|1255.85
+2023-12-31|09372|Cham, Landkreis|1526.83
+2023-12-31|09373|Neumarkt in der Oberpfalz, Landkreis|1343.96
+2023-12-31|09374|Neustadt an der Waldnaab, Landkreis|1425.81
+2023-12-31|09375|Regensburg, Landkreis|1391.65
+2023-12-31|09376|Schwandorf, Landkreis|1458.34
+2023-12-31|09377|Tirschenreuth, Landkreis|1084.25
+2023-12-31|09461|Bamberg, kreisfreie Stadt|54.62
+2023-12-31|09462|Bayreuth, kreisfreie Stadt|66.89
+2023-12-31|09463|Coburg, kreisfreie Stadt|48.29
+2023-12-31|09464|Hof, kreisfreie Stadt|58.02
+2023-12-31|09471|Bamberg, Landkreis|1167.81
+2023-12-31|09472|Bayreuth, Landkreis|1275.5
+2023-12-31|09473|Coburg, Landkreis|590.42
+2023-12-31|09474|Forchheim, Landkreis|642.83
+2023-12-31|09475|Hof, Landkreis|892.52
+2023-12-31|09476|Kronach, Landkreis|651.49
+2023-12-31|09477|Kulmbach, Landkreis|658.33
+2023-12-31|09478|Lichtenfels, Landkreis|519.94
+2023-12-31|09479|Wunsiedel im Fichtelgebirge, Landkreis|606.37
+2023-12-31|09561|Ansbach, kreisfreie Stadt|99.91
+2023-12-31|09562|Erlangen, kreisfreie Stadt|76.96
+2023-12-31|09563|Fürth, kreisfreie Stadt|63.35
+2023-12-31|09564|Nürnberg, kreisfreie Stadt|186.44
+2023-12-31|09565|Schwabach, kreisfreie Stadt|40.8
+2023-12-31|09571|Ansbach, Landkreis|1971.32
+2023-12-31|09572|Erlangen-Höchstadt, Landkreis|564.55
+2023-12-31|09573|Fürth, Landkreis|307.44
+2023-12-31|09574|Nürnberger Land, Landkreis|799.52
+2023-12-31|09575|Neustadt an der Aisch-Bad Windsheim, Landkreis|1267.45
+2023-12-31|09576|Roth, Landkreis|895.16
+2023-12-31|09577|Weißenburg-Gunzenhausen, Landkreis|970.78
+2023-12-31|09661|Aschaffenburg, kreisfreie Stadt|62.45
+2023-12-31|09662|Schweinfurt, kreisfreie Stadt|35.7
+2023-12-31|09663|Würzburg, kreisfreie Stadt|87.6
+2023-12-31|09671|Aschaffenburg, Landkreis|698.9
+2023-12-31|09672|Bad Kissingen, Landkreis|1136.9
+2023-12-31|09673|Rhön-Grabfeld, Landkreis|1021.68
+2023-12-31|09674|Haßberge, Landkreis|956.19
+2023-12-31|09675|Kitzingen, Landkreis|684.14
+2023-12-31|09676|Miltenberg, Landkreis|715.58
+2023-12-31|09677|Main-Spessart, Landkreis|1321.2
+2023-12-31|09678|Schweinfurt, Landkreis|841.39
+2023-12-31|09679|Würzburg, Landkreis|968.35
+2023-12-31|09761|Augsburg, kreisfreie Stadt|146.85
+2023-12-31|09762|Kaufbeuren, kreisfreie Stadt|40.02
+2023-12-31|09763|Kempten (Allgäu), kreisfreie Stadt|63.28
+2023-12-31|09764|Memmingen, kreisfreie Stadt|70.11
+2023-12-31|09771|Aichach-Friedberg, Landkreis|780.23
+2023-12-31|09772|Augsburg, Landkreis|1070.74
+2023-12-31|09773|Dillingen an der Donau, Landkreis|792.23
+2023-12-31|09774|Günzburg, Landkreis|762.4
+2023-12-31|09775|Neu-Ulm, Landkreis|515.84
+2023-12-31|09776|Lindau (Bodensee), Landkreis|323.39
+2023-12-31|09777|Ostallgäu, Landkreis|1394.44
+2023-12-31|09778|Unterallgäu, Landkreis|1229.57
+2023-12-31|09779|Donau-Ries, Landkreis|1274.57
+2023-12-31|09780|Oberallgäu, Landkreis|1527.97
+2023-12-31|10041|Regionalverband Saarbrücken, Landkreis|410.95
+2023-12-31|10042|Merzig-Wadern, Landkreis|557.11
+2023-12-31|10043|Neunkirchen, Landkreis|249.8
+2023-12-31|10044|Saarlouis, Landkreis|459.36
+2023-12-31|10045|Saarpfalz-Kreis|418.28
+2023-12-31|10046|Sankt Wendel, Landkreis|476.51
+2023-12-31|11000|Berlin, kreisfreie Stadt|891.12
+2023-12-31|12051|Brandenburg an der Havel, kreisfreie Stadt|229.73
+2023-12-31|12052|Cottbus, kreisfreie Stadt|165.61
+2023-12-31|12053|Frankfurt (Oder), kreisfreie Stadt|147.85
+2023-12-31|12054|Potsdam, kreisfreie Stadt|188.24
+2023-12-31|12060|Barnim, Landkreis|1479.58
+2023-12-31|12061|Dahme-Spreewald, Landkreis|2274.5
+2023-12-31|12062|Elbe-Elster, Landkreis|1899.18
+2023-12-31|12063|Havelland, Landkreis|1727.31
+2023-12-31|12064|Märkisch-Oderland, Landkreis|2158.66
+2023-12-31|12065|Oberhavel, Landkreis|1808.18
+2023-12-31|12066|Oberspreewald-Lausitz, Landkreis|1223.48
+2023-12-31|12067|Oder-Spree, Landkreis|2256.76
+2023-12-31|12068|Ostprignitz-Ruppin, Landkreis|2526.46
+2023-12-31|12069|Potsdam-Mittelmark, Landkreis|2592.03
+2023-12-31|12070|Prignitz, Landkreis|2138.58
+2023-12-31|12071|Spree-Neiße, Landkreis|1657.0
+2023-12-31|12072|Teltow-Fläming, Landkreis|2104.2
+2023-12-31|12073|Uckermark, Landkreis|3077.02
+2023-12-31|13003|Rostock, kreisfreie Stadt|181.36
+2023-12-31|13004|Schwerin, kreisfreie Stadt|130.52
+2023-12-31|13071|Mecklenburgische Seenplatte, Landkreis|5495.58
+2023-12-31|13072|Rostock, Landkreis|3431.14
+2023-12-31|13073|Vorpommern-Rügen, Landkreis|3215.73
+2023-12-31|13074|Nordwestmecklenburg, Landkreis|2127.07
+2023-12-31|13075|Vorpommern-Greifswald, Landkreis|3945.66
+2023-12-31|13076|Ludwigslust-Parchim, Landkreis|4766.76
+2023-12-31|14511|Chemnitz, kreisfreie Stadt|221.03
+2023-12-31|14521|Erzgebirgskreis|1827.91
+2023-12-31|14522|Mittelsachsen, Landkreis|2116.84
+2023-12-31|14523|Vogtlandkreis|1412.39
+2023-12-31|14524|Zwickau, Landkreis|949.8
+2023-12-31|14612|Dresden, kreisfreie Stadt|328.48
+2023-12-31|14625|Bautzen, Landkreis|2395.59
+2023-12-31|14626|Görlitz, Landkreis|2111.4
+2023-12-31|14627|Meißen, Landkreis|1454.58
+2023-12-31|14628|Sächsische Schweiz-Osterzgebirge, Landkreis|1654.24
+2023-12-31|14713|Leipzig, kreisfreie Stadt|297.8
+2023-12-31|14729|Leipzig, Landkreis|1651.27
+2023-12-31|14730|Nordsachsen, Landkreis|2028.55
+2023-12-31|15001|Dessau-Roßlau, kreisfreie Stadt|245.78
+2023-12-31|15002|Halle (Saale), kreisfreie Stadt|135.56
+2023-12-31|15003|Magdeburg, kreisfreie Stadt|201.68
+2023-12-31|15081|Altmarkkreis Salzwedel|2304.44
+2023-12-31|15082|Anhalt-Bitterfeld, Landkreis|1461.47
+2023-12-31|15083|Börde, Landkreis|2376.9
+2023-12-31|15084|Burgenlandkreis|1419.92
+2023-12-31|15085|Harz, Landkreis|2110.4
+2023-12-31|15086|Jerichower Land, Landkreis|1589.34
+2023-12-31|15087|Mansfeld-Südharz, Landkreis|1456.33
+2023-12-31|15088|Saalekreis|1440.45
+2023-12-31|15089|Salzlandkreis|1433.6
+2023-12-31|15090|Stendal, Landkreis|2436.2
+2023-12-31|15091|Wittenberg, Landkreis|1942.75
+2023-12-31|16051|Erfurt, kreisfreie Stadt|269.91
+2023-12-31|16052|Gera, kreisfreie Stadt|152.18
+2023-12-31|16053|Jena, kreisfreie Stadt|114.77
+2023-12-31|16054|Suhl, kreisfreie Stadt|141.62
+2023-12-31|16055|Weimar, kreisfreie Stadt|84.47
+2023-12-31|16061|Eichsfeld, Landkreis|991.15
+2023-12-31|16062|Nordhausen, Landkreis|713.91
+2023-12-31|16063|Wartburgkreis|1371.13
+2023-12-31|16064|Unstrut-Hainich-Kreis|931.6
+2023-12-31|16065|Kyffhäuserkreis|1037.91
+2023-12-31|16066|Schmalkalden-Meiningen, Landkreis|1251.21
+2023-12-31|16067|Gotha, Landkreis|936.08
+2023-12-31|16068|Sömmerda, Landkreis|806.85
+2023-12-31|16069|Hildburghausen, Landkreis|938.42
+2023-12-31|16070|Ilm-Kreis|805.11
+2023-12-31|16071|Weimarer Land, Landkreis|804.48
+2023-12-31|16072|Sonneberg, Landkreis|460.85
+2023-12-31|16073|Saalfeld-Rudolstadt, Landkreis|1008.78
+2023-12-31|16074|Saale-Holzland-Kreis|815.24
+2023-12-31|16075|Saale-Orla-Kreis|1151.31
+2023-12-31|16076|Greiz, Landkreis|845.98
+2023-12-31|16077|Altenburger Land, Landkreis|569.42
