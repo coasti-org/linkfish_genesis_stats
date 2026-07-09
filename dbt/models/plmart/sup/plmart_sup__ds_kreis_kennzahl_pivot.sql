@@ -14,11 +14,22 @@
         "Zuzüge",
         "Wanderung",
         "[sys] Durchschnittsalter (Zähler)",
-        "[sys] Durchschnittsalter (Nenner)",
-    ]
-%}
-{{ log_debug('Kennzahlen für pivot:\n\t' ~kennzahlen | join('\n\t')) }}
-{# we could use dbt_utils.get_column_values(), but this is more readable #}
+{% set kennzahlen = [
+    "Gebietsfläche",
+    "Anzahl Einwohner:innen",
+    "Sterbefälle",
+    "Lebendgeburten",
+    "Fortzüge",
+    "Zuzüge",
+    "Wanderung",
+    "[sys] Durchschnittsalter (Zähler)",
+    "[sys] Durchschnittsalter (Nenner)",
+    "[sys] Altenquotient (Zähler)",
+    "[sys] Altenquotient (Nenner)",
+] %}
+{# we could use dbt_utils.get_column_values(), but this is readable and gives control #}
+
+{{ log_info('Kennzahlen für pivot:\n\t' ~kennzahlen | join('\n\t')) }}
 
 
 with
