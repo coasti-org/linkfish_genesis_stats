@@ -1,5 +1,19 @@
--- Hier ermitteln wir die Kennzahlen inklusive ihrer Vorjahreswerte
--- und ergänzen sie um die Stammdaten aus kreis_polygon
+{#
+
+Kombiniere alle Basis-Kennzahlen, und erstelle Vorjahres-Werte.
+
+# Notizen
+- Hier vorerst Kennzahlen, die ohne (komplexe) Berechnungen auskommen.
+- Kennzahlen sind hier noch sparse und als Dimension geführt.
+  Das erlaubt einfaches Kombinieren via `union all`
+- Um eine breite Darstellung zu erhalten, wo jede Kennzahl eine eigene Spalte hat,
+  wird dann später in der Presentation Layer (plmart) pivotisiert.
+- Für die union müssen immer die selben Spalten in den Source-Modellen vorhanden sein,
+  aber können Null enthalten.
+- Hier und in den anderen Inter-Modellen wird nicht mehr gecastet,
+  das passiert komplett im Staging.
+
+#}
 
 {% set models_to_combine = [
     "int_pystatis__basis_kreis_anzahl_einwohner",
@@ -11,7 +25,6 @@
     "int_pystatis__basis_kreis_wanderungen",
 ] %}
 
-{# Make 1 - N into CTEs #}
 
 with
     {# Wir haben Duplikate in code_altersgruppe_18_65, aber wollen ab hier unique  #}
@@ -23,7 +36,7 @@ with
         group by code_altersgruppe_18_65
     ),
 
-    {# 1. union alle basis kennzahlen #}
+    {# 1. union aller Basis-Kennzahlen #}
     basis_union as (
         {% for model in models_to_combine %}
             select
@@ -43,8 +56,9 @@ with
 
 
 
-    {# 2. Für Superset müssen Zeitvergleiche vorberechnet werden.
-    Lag-Funktion sollte ausreichen, da wir wissen, dass alle jahre vorhanden sind.
+    {# 2. Für Superset müssen Zeitvergleiche oft vorberechnet werden.
+    Lag-Funktion sollte ausreichen, da wir wissen, dass pro Dimensions-Kombination
+    alle Jahre vorhanden sind.
     (Andernfalls kommt es zu Verschiebungen entlang der übrigen Dimensionen)
     Lag ist am linken Rand auch okay, da wird der Vorjahreswert dann null #}
     basis_lag as (

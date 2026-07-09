@@ -1,19 +1,30 @@
-{# baut auf fact_kennzahl auf und macht nur leichte renames der spalten namen und enthaltenen werte #}
--- und joint die dim_kreis mit polygonen zu one-big-table
--- hier nehmen wir nur Kennzahlen mit, die direkt summiert werden können
+{#
 
-{%
-    set kennzahlen = [
-        "Gebietsfläche",
-        "Anzahl Einwohner:innen",
-        "Sterbefälle",
-        "Lebendgeburten",
-        "Fortzüge",
-        "Zuzüge",
-        "Wanderung",
-    ]
-%}
-{{ log_debug('Kennzahlen für non-pivot:\n\t' ~kennzahlen | join('\n\t')) }}
+Nicht-pivotisierte Sicht der Kennzahlen.
+
+# Notizen
+- Baut sehr nah auf `fact_kennzahl` auf.
+- Kennzahlen werden als Dimension geführt (unpivotisiert, mit zweiter Spalte `Wert`)
+- Es werden nur Kennzahlen mitgenommen, die direkt summiert werden können
+  (siehe benachbartes Modell `kennzahl_pivot`)
+- Ergänzt GeoJSON Polygone aus `dim_kreis` um Karten-Ansichten zu ermöglichen
+- Benennt Spalten um, von technischer Sicht (dbt) zu user-facing und lesbar (Superset)
+- Bereitet weitere Datums-Formate aus der Stichtag-Spalte auf
+
+#}
+
+{% set kennzahlen = [
+    "Gebietsfläche",
+    "Anzahl Einwohner:innen",
+    "Sterbefälle",
+    "Lebendgeburten",
+    "Fortzüge",
+    "Zuzüge",
+    "Wanderung",
+] %}
+{# we could use dbt_utils.get_column_values(), but this is readable and gives control #}
+
+{{ log_info('Kennzahlen für non-pivot:\n\t' ~kennzahlen | join('\n\t')) }}
 
 with
     dim_kreis     as ( select * from {{ ref("mart__dim_kreis") }} ),

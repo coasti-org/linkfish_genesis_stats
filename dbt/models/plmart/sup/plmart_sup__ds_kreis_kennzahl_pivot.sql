@@ -1,19 +1,17 @@
-{# baut auf fact_kennzahl auf und pivotiert code_kennzahl in eigene Spalten #}
--- jede Kennzahl wird zu zwei Spalten: _Wert und _Wert_Vorjahr
--- joint die dim_kreis mit Polygonen zu one-big-table
+{#
 
--- in der Pivot Ansicht nehmen wir auch Kennzahlen, die aus Helfern berechnet werden [sys]
+Pivotisierte Sicht der Kennzahlen.
 
-{%
-    set kennzahlen = [
-        "Gebietsfläche",
-        "Anzahl Einwohner:innen",
-        "Sterbefälle",
-        "Lebendgeburten",
-        "Fortzüge",
-        "Zuzüge",
-        "Wanderung",
-        "[sys] Durchschnittsalter (Zähler)",
+# Notizen
+- Gleiche Transformationen wie `ds_kreis_kennzahl`, aber zusätzlich:
+- Pivotisierung der Kennzahlen, sodass jede Kennzahl als eigene Spalte auftaucht.
+  Dies ermöglich in Superset Metriken zu erstellen, die pro Zeile Berechnungen anstellen.
+  Dies wiederum ermöglicht, dass Filter einfließen, und nicht-additive Metriken trotzdem
+  richtig berechnet werden (z.b. Durchschnittsalter)
+- Dafür nehmen wir auch Kennzahlen mit, die als Helfern berechnet werden ([sys])
+
+#}
+
 {% set kennzahlen = [
     "Gebietsfläche",
     "Anzahl Einwohner:innen",
