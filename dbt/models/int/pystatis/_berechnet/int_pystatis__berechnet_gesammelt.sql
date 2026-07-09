@@ -7,7 +7,7 @@
 {% set models_to_combine = [
     "int_pystatis__basis_gesammelt",
     "int_pystatis__berechnet_altenquotient",
-    "int_pystatis__sys_durchschnittsalter_helfer",
+    "int_pystatis__berechnet_durchschnittsalter",
 ] %}
 
 {# Make 1 - N into CTEs #}
