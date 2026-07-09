@@ -125,58 +125,56 @@ params:
   js_onclick_href: ''
   extra_form_data: {}
   dashboards: []
-query_context: "{\"datasource\":{\"id\":4,\"type\":\"table\"},\"force\":false,\"queries\"\
-  :[{\"filters\":[{\"col\":\"Stichtag\",\"op\":\"TEMPORAL_RANGE\",\"val\":\"No filter\"\
-  },{\"col\":\"Kennzahl\",\"op\":\"==\",\"val\":\"Durchschnittsalter (Kreis)\"},{\"\
-  col\":\"Jahr\",\"op\":\"IN\",\"val\":[2023]},{\"col\":\"Kreis GeoJson\",\"op\":\"\
-  IS NOT NULL\"},{\"col\":\"Kennzahl\",\"op\":\"IS NOT NULL\"}],\"extras\":{\"having\"\
-  :\"\",\"where\":\"\"},\"applied_time_extras\":{},\"columns\":[\"Kreis GeoJson\"\
-  ],\"metrics\":[{\"aggregate\":null,\"column\":null,\"datasourceWarning\":false,\"\
-  expressionType\":\"SQL\",\"hasCustomLabel\":true,\"label\":\"Kennzahl\",\"optionName\"\
-  :\"metric_hwp2e08durg_a63ed1ch7gr\",\"sqlExpression\":\"-- pro Kreis gibt es nur\
-  \ einen Wert.\\n-- `max` nur n\xF6tig um kompatibel mit dem\\n-- unterliegenden\
-  \ group by zu sein\\nround(max(Wert), 2)\"}],\"annotation_layers\":[],\"row_limit\"\
-  :1000,\"series_limit\":0,\"group_others_when_limit_reached\":false,\"order_desc\"\
-  :true,\"url_params\":{},\"custom_params\":{},\"custom_form_data\":{},\"is_timeseries\"\
-  :false}],\"form_data\":{\"datasource\":\"4__table\",\"viz_type\":\"deck_polygon\"\
-  ,\"slice_id\":7,\"matrixify_enable\":false,\"matrixify_mode_columns\":\"disabled\"\
-  ,\"matrixify_dimension_selection_mode_columns\":\"members\",\"matrixify_dimension_columns\"\
-  :{\"dimension\":\"\",\"values\":[]},\"matrixify_topn_value_columns\":10,\"matrixify_all_sort_by_columns\"\
-  :\"a_to_z\",\"matrixify_topn_order_columns\":true,\"matrixify_show_column_headers\"\
-  :true,\"matrixify_fit_columns_dynamically\":true,\"matrixify_mode_rows\":\"disabled\"\
-  ,\"matrixify_dimension_selection_mode_rows\":\"members\",\"matrixify_dimension_rows\"\
-  :{\"dimension\":\"\",\"values\":[]},\"matrixify_topn_value_rows\":10,\"matrixify_all_sort_by_rows\"\
-  :\"a_to_z\",\"matrixify_topn_order_rows\":true,\"matrixify_show_row_labels\":true,\"\
-  matrixify_row_height\":300,\"matrixify_charts_per_row\":4,\"matrixify_cell_title_template\"\
-  :\"\",\"line_column\":\"Kreis GeoJson\",\"line_type\":\"json\",\"adhoc_filters\"\
-  :[{\"clause\":\"WHERE\",\"comparator\":\"No filter\",\"datasourceWarning\":false,\"\
-  expressionType\":\"SIMPLE\",\"filterOptionName\":\"filter_qq82beb66_x2f255ymhw\"\
-  ,\"isExtra\":false,\"isNew\":false,\"operator\":\"TEMPORAL_RANGE\",\"sqlExpression\"\
-  :null,\"subject\":\"Stichtag\"},{\"clause\":\"WHERE\",\"comparator\":\"Durchschnittsalter\
-  \ (Kreis)\",\"datasourceWarning\":false,\"expressionType\":\"SIMPLE\",\"filterOptionName\"\
-  :\"filter_gvcx27p1vos_dz5ll0j9uhg\",\"isExtra\":false,\"isNew\":false,\"operator\"\
-  :\"==\",\"operatorId\":\"EQUALS\",\"sqlExpression\":null,\"subject\":\"Kennzahl\"\
-  },{\"clause\":\"WHERE\",\"comparator\":[2023],\"datasourceWarning\":false,\"expressionType\"\
-  :\"SIMPLE\",\"filterOptionName\":\"filter_djhjyhe8qnp_c3kn1ntcoj7\",\"isExtra\"\
-  :false,\"isNew\":false,\"operator\":\"IN\",\"operatorId\":\"IN\",\"sqlExpression\"\
-  :null,\"subject\":\"Jahr\"}],\"metric\":{\"aggregate\":null,\"column\":null,\"datasourceWarning\"\
-  :false,\"expressionType\":\"SQL\",\"hasCustomLabel\":true,\"label\":\"Kennzahl\"\
-  ,\"optionName\":\"metric_hwp2e08durg_a63ed1ch7gr\",\"sqlExpression\":\"-- pro Kreis\
-  \ gibt es nur einen Wert.\\n-- `max` nur n\xF6tig um kompatibel mit dem\\n-- unterliegenden\
-  \ group by zu sein\\nround(max(Wert), 2)\"},\"point_radius_fixed\":{\"type\":\"\
-  fix\",\"value\":1000},\"row_limit\":1000,\"reverse_long_lat\":false,\"filter_nulls\"\
-  :true,\"tooltip_contents\":[],\"tooltip_template\":\"\",\"mapbox_style\":\"https://tile.openstreetmap.org/{z}/{x}/{y}.png\"\
-  ,\"viewport\":{\"bearing\":0,\"latitude\":31.222656842808707,\"longitude\":6.85236157047845,\"\
-  pitch\":0,\"zoom\":1},\"autozoom\":true,\"color_scheme_type\":\"linear_palette\"\
-  ,\"fill_color_picker\":{\"a\":1,\"b\":135,\"g\":122,\"r\":0},\"linear_color_scheme\"\
-  :\"superset_seq_1\",\"default_breakpoint_color\":{\"a\":1,\"b\":158,\"g\":158,\"\
-  r\":158},\"stroke_color_picker\":{\"a\":1,\"b\":255,\"g\":255,\"r\":255},\"filled\"\
-  :true,\"stroked\":true,\"extruded\":false,\"multiplier\":1,\"line_width\":250,\"\
-  line_width_unit\":\"meters\",\"opacity\":87,\"num_buckets\":10,\"legend_position\"\
-  :\"tr\",\"legend_format\":\"SMART_NUMBER\",\"js_columns\":[],\"js_data_mutator\"\
-  :\"\",\"js_tooltip\":\"\",\"js_onclick_href\":\"\",\"extra_form_data\":{},\"dashboards\"\
-  :[],\"force\":false,\"result_format\":\"json\",\"result_type\":\"full\"},\"result_format\"\
-  :\"json\",\"result_type\":\"full\"}"
+  annotation_layers: []
+query_context: '{"datasource": {"id": 4, "type": "table"}, "force": false, "queries":
+  [{"filters": [{"col": "Stichtag", "op": "TEMPORAL_RANGE", "val": "No filter"}, {"col":
+  "Kennzahl", "op": "==", "val": "Durchschnittsalter (Kreis)"}, {"col": "Jahr", "op":
+  "IN", "val": [2023]}, {"col": "Kreis GeoJson", "op": "IS NOT NULL"}, {"col": "Kennzahl",
+  "op": "IS NOT NULL"}], "extras": {"having": "", "where": ""}, "applied_time_extras":
+  {}, "columns": ["Kreis GeoJson"], "metrics": [{"aggregate": null, "column": null,
+  "datasourceWarning": false, "expressionType": "SQL", "hasCustomLabel": true, "label":
+  "Kennzahl", "optionName": "metric_hwp2e08durg_a63ed1ch7gr", "sqlExpression": "--
+  pro Kreis gibt es nur einen Wert.\n-- `max` nur n\u00f6tig um kompatibel mit dem\n--
+  unterliegenden group by zu sein\nround(max(Wert), 2)"}], "annotation_layers": [],
+  "row_limit": 1000, "series_limit": 0, "group_others_when_limit_reached": false,
+  "order_desc": true, "url_params": {}, "custom_params": {}, "custom_form_data": {},
+  "is_timeseries": false}], "form_data": {"datasource": "4__table", "viz_type": "deck_polygon",
+  "slice_id": 7, "matrixify_enable": false, "matrixify_mode_columns": "disabled",
+  "matrixify_dimension_selection_mode_columns": "members", "matrixify_dimension_columns":
+  {"dimension": "", "values": []}, "matrixify_topn_value_columns": 10, "matrixify_all_sort_by_columns":
+  "a_to_z", "matrixify_topn_order_columns": true, "matrixify_show_column_headers":
+  true, "matrixify_fit_columns_dynamically": true, "matrixify_mode_rows": "disabled",
+  "matrixify_dimension_selection_mode_rows": "members", "matrixify_dimension_rows":
+  {"dimension": "", "values": []}, "matrixify_topn_value_rows": 10, "matrixify_all_sort_by_rows":
+  "a_to_z", "matrixify_topn_order_rows": true, "matrixify_show_row_labels": true,
+  "matrixify_row_height": 300, "matrixify_charts_per_row": 4, "matrixify_cell_title_template":
+  "", "line_column": "Kreis GeoJson", "line_type": "json", "adhoc_filters": [{"clause":
+  "WHERE", "comparator": "No filter", "datasourceWarning": false, "expressionType":
+  "SIMPLE", "filterOptionName": "filter_qq82beb66_x2f255ymhw", "isExtra": false, "isNew":
+  false, "operator": "TEMPORAL_RANGE", "sqlExpression": null, "subject": "Stichtag"},
+  {"clause": "WHERE", "comparator": "Durchschnittsalter (Kreis)", "datasourceWarning":
+  false, "expressionType": "SIMPLE", "filterOptionName": "filter_gvcx27p1vos_dz5ll0j9uhg",
+  "isExtra": false, "isNew": false, "operator": "==", "operatorId": "EQUALS", "sqlExpression":
+  null, "subject": "Kennzahl"}, {"clause": "WHERE", "comparator": [2023], "datasourceWarning":
+  false, "expressionType": "SIMPLE", "filterOptionName": "filter_djhjyhe8qnp_c3kn1ntcoj7",
+  "isExtra": false, "isNew": false, "operator": "IN", "operatorId": "IN", "sqlExpression":
+  null, "subject": "Jahr"}], "metric": {"aggregate": null, "column": null, "datasourceWarning":
+  false, "expressionType": "SQL", "hasCustomLabel": true, "label": "Kennzahl", "optionName":
+  "metric_hwp2e08durg_a63ed1ch7gr", "sqlExpression": "-- pro Kreis gibt es nur einen
+  Wert.\n-- `max` nur n\u00f6tig um kompatibel mit dem\n-- unterliegenden group by
+  zu sein\nround(max(Wert), 2)"}, "point_radius_fixed": {"type": "fix", "value": 1000},
+  "row_limit": 1000, "reverse_long_lat": false, "filter_nulls": true, "tooltip_contents":
+  [], "tooltip_template": "", "mapbox_style": "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+  "viewport": {"bearing": 0, "latitude": 31.222656842808707, "longitude": 6.85236157047845,
+  "pitch": 0, "zoom": 1}, "autozoom": true, "color_scheme_type": "linear_palette",
+  "fill_color_picker": {"a": 1, "b": 135, "g": 122, "r": 0}, "linear_color_scheme":
+  "superset_seq_1", "default_breakpoint_color": {"a": 1, "b": 158, "g": 158, "r":
+  158}, "stroke_color_picker": {"a": 1, "b": 255, "g": 255, "r": 255}, "filled": true,
+  "stroked": true, "extruded": false, "multiplier": 1, "line_width": 250, "line_width_unit":
+  "meters", "opacity": 87, "num_buckets": 10, "legend_position": "tr", "legend_format":
+  "SMART_NUMBER", "js_columns": [], "js_data_mutator": "", "js_tooltip": "", "js_onclick_href":
+  "", "extra_form_data": {}, "dashboards": [], "force": false, "result_format": "json",
+  "result_type": "full"}, "result_format": "json", "result_type": "full"}'
 cache_timeout: null
 uuid: 9afa60d2-cbd8-48be-8c33-798a5fab064a
 version: 1.0.0

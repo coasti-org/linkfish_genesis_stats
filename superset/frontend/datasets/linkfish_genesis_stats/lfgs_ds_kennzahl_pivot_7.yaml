@@ -18,6 +18,20 @@ always_filter_main_dttm: false
 folders: null
 uuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
 metrics:
+- metric_name: Sortierung Altersgruppe
+  verbose_name: Sortierung Altersgruppe
+  metric_type: null
+  expression: "min(\n  case\n    when \"Altersgruppe\" = 'unter 18 Jahre' then 0\n\
+    \    when \"Altersgruppe\" = '18 bis unter 25 Jahre' then 1\n    when \"Altersgruppe\"\
+    \ = '25 bis unter 30 Jahre' then 2\n    when \"Altersgruppe\" = '30 bis unter\
+    \ 50 Jahre' then 3\n    when \"Altersgruppe\" = '50 bis unter 65 Jahre' then 4\n\
+    \    when \"Altersgruppe\" = '65 Jahre und mehr' then 5\n    else 6\n  end\n)"
+  description: null
+  d3format: null
+  currency: null
+  extra:
+    warning_markdown: ''
+  warning_text: null
 - metric_name: Altenquotient
   verbose_name: Altenquotient
   metric_type: null

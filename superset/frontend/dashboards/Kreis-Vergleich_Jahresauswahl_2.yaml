@@ -14,6 +14,7 @@ position:
       chartId: 12
       height: 50
       sliceName: '[BC] Anzahl Einwohner:innen'
+      sliceNameOverride: Anzahl Einwohner:innen
       uuid: ec32905c-3cac-4658-bcb8-23c408d70a69
       width: 6
     parents:
@@ -22,6 +23,57 @@ position:
     - TABS-2GmYGZTDyjW7jgqfdzHa4
     - TAB-X1l-4Ny5Z31Ho0xjk46MK
     - ROW-NI9oeU1N-3TtemV-gDMDw
+    type: CHART
+  CHART-13:
+    children: []
+    id: CHART-13
+    meta:
+      chartId: 13
+      height: 50
+      sliceName: '[BC] Wanderung'
+      sliceNameOverride: Wanderung
+      uuid: 7c436eb3-de15-459c-ae2e-57d3828afb63
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    - ROW-NI9oeU1N-3TtemV-gDMDw
+    type: CHART
+  CHART-14:
+    children: []
+    id: CHART-14
+    meta:
+      chartId: 14
+      height: 50
+      sliceName: '[BC] Durchschnittsalter'
+      sliceNameOverride: Durchschnittsalter
+      uuid: 7c59696b-46d3-4713-8e8e-8bcd7a97dbbd
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    - ROW-TtyMLOtO7AckrjgNq46jI
+    type: CHART
+  CHART-15:
+    children: []
+    id: CHART-15
+    meta:
+      chartId: 15
+      height: 50
+      sliceName: '[BC] Altenquotient'
+      sliceNameOverride: Altenquotient
+      uuid: 4f8492b1-bff6-4953-b2c9-a16a9da4c57b
+      width: 6
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    - ROW-TtyMLOtO7AckrjgNq46jI
     type: CHART
   CHART-P_3CvtZx2g8YdZmg2dHXU:
     children: []
@@ -112,7 +164,21 @@ position:
   ROW-NI9oeU1N-3TtemV-gDMDw:
     children:
     - CHART-12
+    - CHART-13
     id: ROW-NI9oeU1N-3TtemV-gDMDw
+    meta:
+      background: BACKGROUND_TRANSPARENT
+    parents:
+    - ROOT_ID
+    - GRID_ID
+    - TABS-2GmYGZTDyjW7jgqfdzHa4
+    - TAB-X1l-4Ny5Z31Ho0xjk46MK
+    type: ROW
+  ROW-TtyMLOtO7AckrjgNq46jI:
+    children:
+    - CHART-14
+    - CHART-15
+    id: ROW-TtyMLOtO7AckrjgNq46jI
     meta:
       background: BACKGROUND_TRANSPARENT
     parents:
@@ -164,6 +230,7 @@ position:
   TAB-X1l-4Ny5Z31Ho0xjk46MK:
     children:
     - ROW-NI9oeU1N-3TtemV-gDMDw
+    - ROW-TtyMLOtO7AckrjgNq46jI
     id: TAB-X1l-4Ny5Z31Ho0xjk46MK
     meta:
       defaultText: Tab title
@@ -195,6 +262,9 @@ metadata:
         - 10
         - 11
         - 12
+        - 13
+        - 14
+        - 15
     '9':
       id: 9
       crossFilters:
@@ -204,6 +274,9 @@ metadata:
         - 10
         - 11
         - 12
+        - 13
+        - 14
+        - 15
     '10':
       id: 10
       crossFilters:
@@ -213,6 +286,9 @@ metadata:
         - 9
         - 11
         - 12
+        - 13
+        - 14
+        - 15
     '11':
       id: 11
       crossFilters:
@@ -222,6 +298,9 @@ metadata:
         - 9
         - 10
         - 12
+        - 13
+        - 14
+        - 15
     '12':
       id: 12
       crossFilters:
@@ -231,6 +310,45 @@ metadata:
         - 9
         - 10
         - 11
+        - 13
+        - 14
+        - 15
+    '13':
+      id: 13
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 9
+        - 10
+        - 11
+        - 12
+        - 14
+        - 15
+    '14':
+      id: 14
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 15
+    '15':
+      id: 15
+      crossFilters:
+        scope: global
+        chartsInScope:
+        - 6
+        - 9
+        - 10
+        - 11
+        - 12
+        - 13
+        - 14
   global_chart_configuration:
     scope:
       rootPath:
@@ -242,6 +360,9 @@ metadata:
     - 10
     - 11
     - 12
+    - 13
+    - 14
+    - 15
   native_filter_configuration:
   - id: NATIVE_FILTER-Y2k1cNVj3E5YyWLkK4QR5
     type: NATIVE_FILTER
@@ -280,6 +401,13 @@ metadata:
         - 2023
     cascadeParentIds: []
     sortMetric: null
+    chartsInScope:
+    - 9
+    - 10
+    - 6
+    - 11
+    tabsInScope:
+    - TAB-Qf6wE4w2VgfSmdW0kv7mF
   - id: NATIVE_FILTER-UClys1nwqbBXnr9sV7iHI
     type: NATIVE_FILTER
     name: Jahr
@@ -324,6 +452,13 @@ metadata:
         - 2024
     cascadeParentIds: []
     sortMetric: null
+    chartsInScope:
+    - 12
+    - 13
+    - 14
+    - 15
+    tabsInScope:
+    - TAB-X1l-4Ny5Z31Ho0xjk46MK
   - id: NATIVE_FILTER-s1zyR9wdYunr-_7CNfWFR
     type: NATIVE_FILTER
     name: Kreis
@@ -351,6 +486,13 @@ metadata:
       ownState: {}
     cascadeParentIds: []
     sortMetric: null
+    chartsInScope:
+    - 9
+    - 10
+    - 6
+    - 11
+    tabsInScope:
+    - TAB-Qf6wE4w2VgfSmdW0kv7mF
   - id: NATIVE_FILTER-bq3LQf0LliEekOjhkzbHu
     type: NATIVE_FILTER
     name: Kreis
@@ -379,6 +521,11 @@ metadata:
           op: IN
           val:
           - Berlin
+          - Hamburg
+          - Hannover
+          - Leipzig
+          - "M\xFCnchen"
+          - "K\xF6ln"
       filterState:
         excludeFilterValues: true
         label: Berlin
@@ -386,8 +533,20 @@ metadata:
         validateStatus: false
         value:
         - Berlin
+        - Hamburg
+        - Hannover
+        - Leipzig
+        - "M\xFCnchen"
+        - "K\xF6ln"
     cascadeParentIds: []
     sortMetric: null
+    chartsInScope:
+    - 12
+    - 13
+    - 14
+    - 15
+    tabsInScope:
+    - TAB-X1l-4Ny5Z31Ho0xjk46MK
   - id: NATIVE_FILTER-Hx5IMgWEaWLk6ge_kKJeo
     type: NATIVE_FILTER
     name: Geschlecht
@@ -427,11 +586,14 @@ metadata:
     time_range: No filter
     sortMetric: null
     chartsInScope:
-    - 6
     - 9
     - 10
+    - 6
     - 11
     - 12
+    - 13
+    - 14
+    - 15
     tabsInScope:
     - TAB-Qf6wE4w2VgfSmdW0kv7mF
     - TAB-X1l-4Ny5Z31Ho0xjk46MK
@@ -457,6 +619,7 @@ metadata:
       multiSelect: true
       searchAllOptions: false
       inverseSelection: false
+      sortMetric: Sortierung Altersgruppe
     defaultDataMask:
       extraFormData: {}
       filterState: {}
@@ -480,6 +643,9 @@ metadata:
     - 10
     - 11
     - 12
+    - 13
+    - 14
+    - 15
     tabsInScope:
     - TAB-Qf6wE4w2VgfSmdW0kv7mF
     - TAB-X1l-4Ny5Z31Ho0xjk46MK
@@ -488,387 +654,19 @@ metadata:
     Berlin: '#1FA8C9'
     Hamburg: '#454E7C'
     "M\xFCnchen": '#5AC189'
-    Region Hannover: '#FF7F44'
     "K\xF6ln": '#666666'
     Leipzig: '#E04355'
-    Karlsruhe: '#FCC700'
-    Frankfurt am Main: '#A868B7'
-    Recklinghausen: '#3CCCCB'
-    "D\xFCsseldorf": '#A38F79'
-    Stuttgart: '#8FD3E4'
-    Rhein-Sieg-Kreis: '#A1A6BD'
-    Dortmund: '#ACE1C4'
-    Bremen: '#FEC0A1'
-    "St\xE4dteregion Aachen": '#B2B2B2'
-    Essen: '#EFA1AA'
-    Dresden: '#FDE380'
-    Augsburg: '#D3B3DA'
-    Rhein-Neckar-Kreis: '#9EE5E5'
-    Esslingen: '#D1C6BC'
-    Ludwigsburg: '#454E7C'
-    "N\xFCrnberg": '#5AC189'
-    "Osnabr\xFCck": '#FF7F44'
-    Duisburg: '#666666'
-    Mettmann: '#E04355'
-    Heilbronn: '#FCC700'
-    Rhein-Erft-Kreis: '#A868B7'
-    Wesel: '#3CCCCB'
-    Rhein-Kreis Neuss: '#A38F79'
-    Steinfurt: '#8FD3E4'
-    Ortenaukreis: '#A1A6BD'
-    Rems-Murr-Kreis: '#ACE1C4'
-    Kassel: '#FEC0A1'
-    Rostock: '#B2B2B2'
-    Main-Kinzig-Kreis: '#EFA1AA'
-    "M\xE4rkischer Kreis": '#FDE380'
-    Unna: '#D3B3DA'
-    "B\xF6blingen": '#9EE5E5'
-    Borken: '#D1C6BC'
-    "G\xFCtersloh": '#D1C6BC'
-    Wuppertal: '#454E7C'
-    Bochum: '#5AC189'
-    Offenbach: '#FF7F44'
-    Lippe: '#666666'
-    Regensburg: '#E04355'
-    Emsland: '#FCC700'
-    "Regionalverband Saarbr\xFCcken": '#A868B7'
-    Bielefeld: '#3CCCCB'
-    "G\xF6ttingen": '#A38F79'
-    Pinneberg: '#8FD3E4'
-    Erzgebirgskreis: '#A1A6BD'
-    Bonn: '#ACE1C4'
-    Rosenheim: '#FEC0A1'
-    "Minden-L\xFCbbecke": '#B2B2B2'
-    Kleve: '#EFA1AA'
-    Ostalbkreis: '#FDE380'
-    Mannheim: '#D3B3DA'
-    Paderborn: '#9EE5E5'
-    Ennepe-Ruhr-Kreis: '#9EE5E5'
-    Wetteraukreis: '#D1C6BC'
-    Zwickau: '#454E7C'
-    "M\xFCnster": '#5AC189'
-    Darmstadt-Dieburg: '#FF7F44'
-    Soest: '#666666'
-    Mittelsachsen: '#E04355'
-    Viersen: '#FCC700'
-    Bautzen: '#A868B7'
-    Reutlingen: '#3CCCCB'
-    "W\xFCrzburg": '#A38F79'
-    Konstanz: '#8FD3E4'
-    Ravensburg: '#A1A6BD'
-    Wiesbaden: '#ACE1C4'
-    Rheinisch-Bergischer Kreis: '#FEC0A1'
-    Segeberg: '#B2B2B2'
-    Warendorf: '#EFA1AA'
-    "D\xFCren": '#FDE380'
-    "Rendsburg-Eckernf\xF6rde": '#D3B3DA'
-    "Bergstra\xDFe": '#D3B3DA'
-    Siegen-Wittgenstein: '#9EE5E5'
-    Oberbergischer Kreis: '#D1C6BC'
-    Breisgau-Hochschwarzwald: '#454E7C'
-    Hildesheim: '#5AC189'
-    "Gie\xDFen": '#FF7F44'
-    "Gro\xDF-Gerau": '#666666'
-    "M\xF6nchengladbach": '#E04355'
-    Gelsenkirchen: '#FCC700'
-    Harburg: '#A868B7'
-    Heinsberg: '#3CCCCB'
-    Hochsauerlandkreis: '#A38F79'
-    "G\xF6ppingen": '#8FD3E4'
-    Herford: '#A1A6BD'
-    Lahn-Dill-Kreis: '#ACE1C4'
-    Braunschweig: '#FEC0A1'
-    Kiel: '#B2B2B2'
-    "F\xFCrth": '#EFA1AA'
-    Mecklenburgische Seenplatte: '#FDE380'
-    Passau: '#FDE380'
-    Stormarn: '#D3B3DA'
-    "G\xF6rlitz": '#9EE5E5'
-    Chemnitz: '#D1C6BC'
-    "S\xE4chsische Schweiz-Osterzgebirge": '#454E7C'
-    Aschaffenburg: '#5AC189'
-    Marburg-Biedenkopf: '#FF7F44'
-    Magdeburg: '#666666'
-    Hochtaunuskreis: '#E04355'
-    "Mei\xDFen": '#FCC700'
-    Main-Taunus-Kreis: '#A868B7'
-    "L\xF6rrach": '#3CCCCB'
-    Freiburg im Breisgau: '#A38F79'
-    "T\xFCbingen": '#8FD3E4'
-    Rastatt: '#A1A6BD'
-    Krefeld: '#ACE1C4'
-    Landshut: '#FEC0A1'
-    Halle (Saale): '#B2B2B2'
-    Ansbach: '#EFA1AA'
-    Coesfeld: '#EFA1AA'
-    Vorpommern-Greifswald: '#FDE380'
-    Mainz: '#D3B3DA'
-    Bamberg: '#9EE5E5'
-    Fulda: '#D1C6BC'
-    Bodenseekreis: '#454E7C'
-    Vogtlandkreis: '#5AC189'
-    Diepholz: '#FF7F44'
-    Potsdam-Mittelmark: '#666666'
-    Erfurt: '#E04355'
-    Oberhavel: '#FCC700'
-    "L\xFCbeck": '#A868B7'
-    "F\xFCrstenfeldbruck": '#3CCCCB'
-    Mayen-Koblenz: '#A38F79'
-    "Vorpommern-R\xFCgen": '#8FD3E4'
-    Schwarzwald-Baar-Kreis: '#A1A6BD'
-    Oberhausen: '#ACE1C4'
-    Ludwigslust-Parchim: '#FEC0A1'
-    Stade: '#B2B2B2'
-    Westerwaldkreis: '#B2B2B2'
-    Harz: '#EFA1AA'
-    Biberach: '#FDE380'
-    Kaiserslautern: '#D3B3DA'
-    Mainz-Bingen: '#9EE5E5'
-    Saarlouis: '#D1C6BC'
-    Herzogtum Lauenburg: '#454E7C'
-    Schleswig-Flensburg: '#5AC189'
-    Euskirchen: '#FF7F44'
-    Alb-Donau-Kreis: '#666666'
-    Ostholstein: '#E04355'
-    Nordsachsen: '#FCC700'
-    "Schw\xE4bisch Hall": '#A868B7'
-    Enzkreis: '#3CCCCB'
-    Cuxhaven: '#A38F79'
-    "M\xE4rkisch-Oderland": '#8FD3E4'
-    Zollernalbkreis: '#A1A6BD'
-    Barnim: '#ACE1C4'
-    Hagen: '#FEC0A1'
-    Aurich: '#FEC0A1'
-    Neuwied: '#B2B2B2'
-    Rheingau-Taunus-Kreis: '#EFA1AA'
-    Potsdam: '#FDE380'
-    Freising: '#D3B3DA'
-    Saalekreis: '#9EE5E5'
-    Neu-Ulm: '#D1C6BC'
-    Salzlandkreis: '#454E7C'
-    Oder-Spree: '#5AC189'
-    Schwalm-Eder-Kreis: '#FF7F44'
-    "L\xFCneburg": '#666666'
-    Hamm: '#E04355'
-    Dahme-Spreewald: '#FCC700'
-    "Teltow-Fl\xE4ming": '#A868B7'
-    Cloppenburg: '#3CCCCB'
-    Bayreuth: '#A38F79'
-    Oldenburg (Oldenburg): '#8FD3E4'
-    Gifhorn: '#A1A6BD'
-    Ludwigshafen am Rhein: '#ACE1C4'
-    Burgenlandkreis: '#ACE1C4'
-    Limburg-Weilburg: '#FEC0A1'
-    "M\xFClheim an der Ruhr": '#B2B2B2'
-    Celle: '#EFA1AA'
-    Traunstein: '#FDE380'
-    Waldshut: '#D3B3DA'
-    Nordfriesland: '#9EE5E5'
-    Havelland: '#D1C6BC'
-    Emmendingen: '#454E7C'
-    "N\xFCrnberger Land": '#5AC189'
-    Leer: '#FF7F44'
-    "B\xF6rde": '#666666'
-    Schweinfurt: '#E04355'
-    Leverkusen: '#FCC700'
-    Solingen: '#A868B7'
-    "Rotenburg (W\xFCmme)": '#3CCCCB'
-    Darmstadt: '#A38F79'
-    Bad Kreuznach: '#8FD3E4'
-    Calw: '#A1A6BD'
-    Nordwestmecklenburg: '#A1A6BD'
-    Schaumburg: '#ACE1C4'
-    Wartburgkreis: '#FEC0A1'
-    Herne: '#B2B2B2'
-    Rhein-Pfalz-Kreis: '#EFA1AA'
-    Heidelberg: '#FDE380'
-    Waldeck-Frankenberg: '#D3B3DA'
-    Anhalt-Bitterfeld: '#9EE5E5'
-    "Oberallg\xE4u": '#D1C6BC'
-    Dachau: '#454E7C'
-    Hameln-Pyrmont: '#5AC189'
-    Trier-Saarburg: '#FF7F44'
-    Schwandorf: '#666666'
-    Vechta: '#E04355'
-    Neckar-Odenwald-Kreis: '#FCC700'
-    "Unterallg\xE4u": '#A868B7'
-    Tuttlingen: '#3CCCCB'
-    Saarpfalz-Kreis: '#A38F79'
-    Grafschaft Bentheim: '#8FD3E4'
-    Ebersberg: '#8FD3E4'
-    Heidekreis: '#A1A6BD'
-    "Ostallg\xE4u": '#ACE1C4'
-    Rottweil: '#FEC0A1'
-    Erding: '#B2B2B2'
-    Ingolstadt: '#EFA1AA'
-    Hof: '#FDE380'
-    "H\xF6xter": '#D3B3DA'
-    Starnberg: '#9EE5E5'
-    "Erlangen-H\xF6chstadt": '#D1C6BC'
-    Verden: '#454E7C'
-    Neumarkt in der Oberpfalz: '#5AC189'
-    Weilheim-Schongau: '#FF7F44'
-    Peine: '#666666'
-    Gotha: '#E04355'
-    Aichach-Friedberg: '#FCC700'
-    Heidenheim: '#A868B7'
-    "Eichst\xE4tt": '#3CCCCB'
-    Pforzheim: '#A38F79'
-    Donau-Ries: '#A38F79'
-    "Bad D\xFCrkheim": '#8FD3E4'
-    Neunkirchen: '#A1A6BD'
-    Dithmarschen: '#ACE1C4'
-    Main-Tauber-Kreis: '#FEC0A1'
-    Sigmaringen: '#B2B2B2'
-    Steinburg: '#EFA1AA'
-    Olpe: '#FDE380'
-    Altenkirchen (Westerwald): '#D3B3DA'
-    Oldenburg: '#9EE5E5'
-    Offenbach am Main: '#D1C6BC'
-    Germersheim: '#454E7C'
-    Alzey-Worms: '#5AC189'
-    "Pl\xF6n": '#FF7F44'
-    "Mansfeld-S\xFCdharz": '#666666'
-    "Bad T\xF6lz-Wolfratshausen": '#E04355'
-    "G\xFCnzburg": '#FCC700'
-    Pfaffenhofen an der Ilm: '#A868B7'
-    Wolfsburg: '#3CCCCB'
-    Ulm: '#3CCCCB'
-    Ahrweiler: '#A38F79'
-    Roth: '#8FD3E4'
-    Cham: '#A1A6BD'
-    Goslar: '#ACE1C4'
-    Ammerland: '#FEC0A1'
-    Miltenberg: '#B2B2B2'
-    Northeim: '#EFA1AA'
-    Main-Spessart: '#FDE380'
-    Kelheim: '#D3B3DA'
-    Coburg: '#9EE5E5'
-    Rhein-Lahn-Kreis: '#D1C6BC'
-    Wittenberg: '#454E7C'
-    Freudenstadt: '#5AC189'
-    Nienburg (Weser): '#FF7F44'
-    "M\xFChldorf am Inn": '#666666'
-    Schmalkalden-Meiningen: '#E04355'
-    Deggendorf: '#FCC700'
-    Landsberg am Lech: '#A868B7'
-    Rottal-Inn: '#A868B7'
-    Bottrop: '#3CCCCB'
-    "Wolfenb\xFCttel": '#A38F79'
-    Bremerhaven: '#8FD3E4'
-    Hersfeld-Rotenburg: '#A1A6BD'
-    Uckermark: '#ACE1C4'
-    Forchheim: '#FEC0A1'
-    Hohenlohekreis: '#B2B2B2'
-    Erlangen: '#EFA1AA'
-    Remscheid: '#FDE380'
-    Osterholz: '#D3B3DA'
-    Koblenz: '#9EE5E5'
-    Bernkastel-Wittlich: '#D1C6BC'
-    "S\xFCdliche Weinstra\xDFe": '#454E7C'
-    "Alt\xF6tting": '#5AC189'
-    "Spree-Nei\xDFe": '#FF7F44'
-    Jena: '#666666'
-    Merzig-Wadern: '#E04355'
-    Oberspreewald-Lausitz: '#FCC700'
-    Ilm-Kreis: '#FCC700'
-    Stendal: '#A868B7'
-    "Rhein-Hunsr\xFCck-Kreis": '#3CCCCB'
-    Berchtesgadener Land: '#A38F79'
-    Salzgitter: '#8FD3E4'
-    Amberg-Sulzbach: '#A1A6BD'
-    Trier: '#ACE1C4'
-    Bad Kissingen: '#FEC0A1'
-    Straubing-Bogen: '#B2B2B2'
-    Eichsfeld: '#EFA1AA'
-    Vogelsbergkreis: '#FDE380'
-    Saalfeld-Rudolstadt: '#D3B3DA'
-    Neustadt an der Aisch-Bad Windsheim: '#9EE5E5'
-    "Eifelkreis Bitburg-Pr\xFCm": '#D1C6BC'
-    Dingolfing-Landau: '#454E7C'
-    Friesland: '#5AC189'
-    Ostprignitz-Ruppin: '#FF7F44'
-    Neuburg-Schrobenhausen: '#666666'
-    Elbe-Elster: '#E04355'
-    Dillingen an der Donau: '#E04355'
-    "Werra-Mei\xDFner-Kreis": '#FCC700'
-    Schwerin: '#A868B7'
-    Miesbach: '#3CCCCB'
-    Unstrut-Hainich-Kreis: '#A38F79'
-    Flensburg: '#8FD3E4'
-    Neustadt an der Waldnaab: '#A1A6BD'
-    Gera: '#ACE1C4'
-    Cottbus: '#FEC0A1'
-    "Wei\xDFenburg-Gunzenhausen": '#B2B2B2'
-    Greiz: '#EFA1AA'
-    Odenwaldkreis: '#FDE380'
-    Uelzen: '#D3B3DA'
-    Kitzingen: '#9EE5E5'
-    Helmstedt: '#D1C6BC'
-    "S\xFCdwestpfalz": '#454E7C'
-    Garmisch-Partenkirchen: '#5AC189'
-    Wesermarsch: '#FF7F44'
-    Jerichower Land: '#666666'
-    Sankt Wendel: '#666666'
-    Altenburger Land: '#E04355'
-    Worms: '#FCC700'
-    Saale-Holzland-Kreis: '#A868B7'
-    "Ha\xDFberge": '#3CCCCB'
-    Weimarer Land: '#A38F79'
-    Birkenfeld: '#8FD3E4'
-    Lindau (Bodensee): '#A1A6BD'
-    Delmenhorst: '#ACE1C4'
-    Nordhausen: '#FEC0A1'
-    Altmarkkreis Salzwedel: '#B2B2B2'
-    "Neum\xFCnster": '#EFA1AA'
-    "Rh\xF6n-Grabfeld": '#FDE380'
-    Freyung-Grafenau: '#D3B3DA'
-    Saale-Orla-Kreis: '#9EE5E5'
-    Regen: '#D1C6BC'
-    Prignitz: '#454E7C'
-    "Dessau-Ro\xDFlau": '#5AC189'
-    Wilhelmshaven: '#FF7F44'
-    Donnersbergkreis: '#FF7F44'
-    Brandenburg an der Havel: '#666666'
-    "Kyffh\xE4userkreis": '#E04355'
-    Tirschenreuth: '#FCC700'
-    Kulmbach: '#A868B7'
-    Wunsiedel im Fichtelgebirge: '#3CCCCB'
-    Kusel: '#A38F79'
-    "S\xF6mmerda": '#8FD3E4'
-    Lichtenfels: '#A1A6BD'
-    Holzminden: '#ACE1C4'
-    "Kempten (Allg\xE4u)": '#FEC0A1'
-    Weimar: '#B2B2B2'
-    Kronach: '#EFA1AA'
-    Cochem-Zell: '#FDE380'
-    Hildburghausen: '#D3B3DA'
-    Vulkaneifel: '#9EE5E5'
-    Frankfurt (Oder): '#D1C6BC'
-    Baden-Baden: '#454E7C'
-    Wittmund: '#5AC189'
-    Sonneberg: '#5AC189'
-    "Neustadt an der Weinstra\xDFe": '#FF7F44'
-    Speyer: '#666666'
-    Emden: '#E04355'
-    Landau in der Pfalz: '#FCC700'
-    Frankenthal (Pfalz): '#A868B7'
-    Straubing: '#3CCCCB'
-    "L\xFCchow-Dannenberg": '#A38F79'
-    Kaufbeuren: '#8FD3E4'
-    Memmingen: '#A1A6BD'
-    Weiden in der Oberpfalz: '#ACE1C4'
-    Amberg: '#FEC0A1'
-    Schwabach: '#B2B2B2'
-    Pirmasens: '#EFA1AA'
-    Suhl: '#FDE380'
-    "Zweibr\xFCcken": '#D3B3DA'
   color_scheme: ''
   refresh_frequency: 0
   color_scheme_domain: []
   expanded_slices: {}
   label_colors: {}
-  shared_label_colors: []
+  shared_label_colors:
+  - Berlin
+  - Hamburg
+  - "K\xF6ln"
+  - Leipzig
+  - "M\xFCnchen"
   timed_refresh_immune_slices: []
   cross_filters_enabled: true
   default_filters: '{}'

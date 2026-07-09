@@ -122,13 +122,54 @@ params:
   extra_form_data: {}
   dashboards:
   - 2
-query_context: '{"datasource":{"id":7,"type":"table"},"force":false,"queries":[{"filters":[{"col":"Stichtag","op":"TEMPORAL_RANGE","val":"No
-  filter"},{"col":"Kreis GeoJson","op":"IS NOT NULL"},{"col":"Wanderung","op":"IS
-  NOT NULL"}],"extras":{"having":"","where":""},"applied_time_extras":{},"columns":["Kreis
-  GeoJson"],"metrics":[{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"Wanderung","description":null,"expression":null,"filterable":true,"groupby":true,"id":100,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"column","type_generic":null,"uuid":"ec5205bb-56a3-4322-a9d6-816c113ac03b","verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Wanderung","optionName":"metric_n3afx7xl1k_0o426nq0pgb","sqlExpression":null}],"annotation_layers":[],"row_limit":1000,"series_limit":0,"group_others_when_limit_reached":false,"order_desc":true,"url_params":{},"custom_params":{},"custom_form_data":{},"is_timeseries":false}],"form_data":{"datasource":"7__table","viz_type":"deck_polygon","slice_id":9,"matrixify_enable":false,"matrixify_mode_columns":"disabled","matrixify_dimension_selection_mode_columns":"members","matrixify_dimension_columns":{"dimension":"","values":[]},"matrixify_topn_value_columns":10,"matrixify_all_sort_by_columns":"a_to_z","matrixify_topn_order_columns":true,"matrixify_show_column_headers":true,"matrixify_fit_columns_dynamically":true,"matrixify_mode_rows":"disabled","matrixify_dimension_selection_mode_rows":"members","matrixify_dimension_rows":{"dimension":"","values":[]},"matrixify_topn_value_rows":10,"matrixify_all_sort_by_rows":"a_to_z","matrixify_topn_order_rows":true,"matrixify_show_row_labels":true,"matrixify_row_height":300,"matrixify_charts_per_row":4,"matrixify_cell_title_template":"","line_column":"Kreis
-  GeoJson","line_type":"json","adhoc_filters":[{"clause":"WHERE","comparator":"No
-  filter","datasourceWarning":false,"expressionType":"SIMPLE","filterOptionName":"filter_qq82beb66_x2f255ymhw","isExtra":false,"isNew":false,"operator":"TEMPORAL_RANGE","sqlExpression":null,"subject":"Stichtag"}],"metric":{"aggregate":"SUM","column":{"advanced_data_type":null,"certification_details":null,"certified_by":null,"column_name":"Wanderung","description":null,"expression":null,"filterable":true,"groupby":true,"id":100,"is_certified":false,"is_dttm":false,"python_date_format":null,"type":"column","type_generic":null,"uuid":"ec5205bb-56a3-4322-a9d6-816c113ac03b","verbose_name":null,"warning_markdown":null},"datasourceWarning":false,"expressionType":"SIMPLE","hasCustomLabel":true,"label":"Wanderung","optionName":"metric_n3afx7xl1k_0o426nq0pgb","sqlExpression":null},"point_radius_fixed":{"type":"fix","value":1000},"row_limit":1000,"reverse_long_lat":false,"filter_nulls":true,"tooltip_contents":[],"tooltip_template":"","mapbox_style":"https://tile.openstreetmap.org/{z}/{x}/{y}.png","viewport":{"bearing":0,"latitude":51.1,"longitude":13.2,"pitch":0,"zoom":4.3},"autozoom":false,"color_scheme_type":"linear_palette","linear_color_scheme":"red_yellow_blue","stroke_color_picker":{"a":1,"b":255,"g":255,"r":255},"filled":true,"stroked":true,"extruded":false,"multiplier":1,"line_width":250,"line_width_unit":"meters","opacity":87,"num_buckets":10,"break_points":["-100000","-50000","-10000","-5000","
-  -1000"," -500"," 500"," 1000"," 5000"," 10000"," 50000"," 100000"],"legend_position":"tr","legend_format":"SMART_NUMBER","js_columns":[],"js_data_mutator":"","js_tooltip":"","js_onclick_href":"","extra_form_data":{},"dashboards":[2],"force":false,"result_format":"json","result_type":"full"},"result_format":"json","result_type":"full"}'
+  annotation_layers: []
+query_context: '{"datasource": {"id": 7, "type": "table"}, "force": false, "queries":
+  [{"filters": [{"col": "Stichtag", "op": "TEMPORAL_RANGE", "val": "No filter"}, {"col":
+  "Kreis GeoJson", "op": "IS NOT NULL"}, {"col": "Wanderung", "op": "IS NOT NULL"}],
+  "extras": {"having": "", "where": ""}, "applied_time_extras": {}, "columns": ["Kreis
+  GeoJson"], "metrics": [{"aggregate": "SUM", "column": {"advanced_data_type": null,
+  "certification_details": null, "certified_by": null, "column_name": "Wanderung",
+  "description": null, "expression": null, "filterable": true, "groupby": true, "id":
+  100, "is_certified": false, "is_dttm": false, "python_date_format": null, "type":
+  "column", "type_generic": null, "uuid": "ec5205bb-56a3-4322-a9d6-816c113ac03b",
+  "verbose_name": null, "warning_markdown": null}, "datasourceWarning": false, "expressionType":
+  "SIMPLE", "hasCustomLabel": true, "label": "Wanderung", "optionName": "metric_n3afx7xl1k_0o426nq0pgb",
+  "sqlExpression": null}], "annotation_layers": [], "row_limit": 1000, "series_limit":
+  0, "group_others_when_limit_reached": false, "order_desc": true, "url_params": {},
+  "custom_params": {}, "custom_form_data": {}, "is_timeseries": false}], "form_data":
+  {"datasource": "7__table", "viz_type": "deck_polygon", "slice_id": 9, "matrixify_enable":
+  false, "matrixify_mode_columns": "disabled", "matrixify_dimension_selection_mode_columns":
+  "members", "matrixify_dimension_columns": {"dimension": "", "values": []}, "matrixify_topn_value_columns":
+  10, "matrixify_all_sort_by_columns": "a_to_z", "matrixify_topn_order_columns": true,
+  "matrixify_show_column_headers": true, "matrixify_fit_columns_dynamically": true,
+  "matrixify_mode_rows": "disabled", "matrixify_dimension_selection_mode_rows": "members",
+  "matrixify_dimension_rows": {"dimension": "", "values": []}, "matrixify_topn_value_rows":
+  10, "matrixify_all_sort_by_rows": "a_to_z", "matrixify_topn_order_rows": true, "matrixify_show_row_labels":
+  true, "matrixify_row_height": 300, "matrixify_charts_per_row": 4, "matrixify_cell_title_template":
+  "", "line_column": "Kreis GeoJson", "line_type": "json", "adhoc_filters": [{"clause":
+  "WHERE", "comparator": "No filter", "datasourceWarning": false, "expressionType":
+  "SIMPLE", "filterOptionName": "filter_qq82beb66_x2f255ymhw", "isExtra": false, "isNew":
+  false, "operator": "TEMPORAL_RANGE", "sqlExpression": null, "subject": "Stichtag"}],
+  "metric": {"aggregate": "SUM", "column": {"advanced_data_type": null, "certification_details":
+  null, "certified_by": null, "column_name": "Wanderung", "description": null, "expression":
+  null, "filterable": true, "groupby": true, "id": 100, "is_certified": false, "is_dttm":
+  false, "python_date_format": null, "type": "column", "type_generic": null, "uuid":
+  "ec5205bb-56a3-4322-a9d6-816c113ac03b", "verbose_name": null, "warning_markdown":
+  null}, "datasourceWarning": false, "expressionType": "SIMPLE", "hasCustomLabel":
+  true, "label": "Wanderung", "optionName": "metric_n3afx7xl1k_0o426nq0pgb", "sqlExpression":
+  null}, "point_radius_fixed": {"type": "fix", "value": 1000}, "row_limit": 1000,
+  "reverse_long_lat": false, "filter_nulls": true, "tooltip_contents": [], "tooltip_template":
+  "", "mapbox_style": "https://tile.openstreetmap.org/{z}/{x}/{y}.png", "viewport":
+  {"bearing": 0, "latitude": 51.1, "longitude": 13.2, "pitch": 0, "zoom": 4.3}, "autozoom":
+  false, "color_scheme_type": "linear_palette", "linear_color_scheme": "red_yellow_blue",
+  "stroke_color_picker": {"a": 1, "b": 255, "g": 255, "r": 255}, "filled": true, "stroked":
+  true, "extruded": false, "multiplier": 1, "line_width": 250, "line_width_unit":
+  "meters", "opacity": 87, "num_buckets": 10, "break_points": ["-100000", "-50000",
+  "-10000", "-5000", " -1000", " -500", " 500", " 1000", " 5000", " 10000", " 50000",
+  " 100000"], "legend_position": "tr", "legend_format": "SMART_NUMBER", "js_columns":
+  [], "js_data_mutator": "", "js_tooltip": "", "js_onclick_href": "", "extra_form_data":
+  {}, "dashboards": [2], "force": false, "result_format": "json", "result_type": "full"},
+  "result_format": "json", "result_type": "full"}'
 cache_timeout: null
 uuid: d65fb03f-ccd8-4309-9181-a3e74c61e4aa
 version: 1.0.0
