@@ -29,6 +29,7 @@ _skip_if_exists:
 _external_data:
     coasti: "coasti.yml"
 
+# Wird nach der fertigen Installation angezeigt (nach den Tasks weiter unten)
 _message_after_copy: |
 
     "{{_external_data.coasti.id}}" installiert nach "{{ _copier_conf.dst_path }}"
@@ -37,3 +38,13 @@ _message_after_copy: |
     ================
 
     - Kurzer Blick in die Readme :)
+
+# Tasks werden automatisch nach dem Kopieren des Repos ausgeführt
+# (Sowohl bei Installation als auch Updates)
+_tasks:
+
+    # Install Python dependencies
+    - command: 'uv --directory ./python sync'
+
+    # create config files from samples
+    - command: 'uv run --project python ./python/rollout.py'

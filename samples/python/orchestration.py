@@ -4,22 +4,23 @@ Entrypoint to run the whole Content Package after installation
 
 Typical command:
 ```
-python ./python/orchestration.py run --env-file ./config/.env --omit download_seeds --select all
+uv run --project python ./python/orchestration.py run --env-file ./config/.env --omit download_seeds --select all
 ```
 
 For help, see
 ```
-python ./python/orchestration.py --help
+uv run --project python ./python/orchestration.py --help
 ```
 
 This example uses the following environment variables:
 
 LFGS_DUCKDB_DATAMART_PATH
+LFGS_DUCKDB_FRONTEND_PATH
 
 LFPY_LOG_LEVEL
 LFPY_LOG_FILE
 
-TODO: lets call this orchestration.sample.py and have copier optionally make a copy
+PYSTATIS_* (if downloading seeds from Gestatis)
 """
 
 import os
@@ -64,6 +65,8 @@ def list_versions(dbt_deps: StepResult) -> StepResult:
 
 def download_seeds(list_versions: StepResult) -> StepResult:
     """Use pystatis to (re-) download seeds"""
+    # Does not download fresh GeoJSON, this has to be done manually
+    # (but maps dont change often :P )
 
     # we want to use the same python runtime and launch a script that sits next to this
     python = sys.executable
@@ -146,9 +149,15 @@ def deploy_to_frontend(minimize_duckdb: StepResult) -> StepResult:
             "SKIP",
             "Skipped copying. Set the env var LFGS_DUCKDB_FRONTEND_PATH to the "
             "file path needed by superset. "
-            "Likely /coasti/products/superset_docker/data/linkfish_genesis_stats.duckdb"
+            "Likely /coasti/products/superset_docker/data/linkfish_genesis_stats.duckdb",
         )
     output = Path(_output)
+
+    # if you want to auotmatically reload superset after copying the data:
+    # run_cli_command(
+    #     "cd /path/to/superset_docker/; "
+    #     "/path/to/superset_docker/scripts/reset_cache.sh"
+    # )
 
     try:
         shutil.copy(mini, output)
