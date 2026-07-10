@@ -1,6 +1,7 @@
 target/
 .venv
 .venv_agent
+.qwen
 .env
 .env-local
 .credentials

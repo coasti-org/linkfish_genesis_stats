@@ -10,15 +10,14 @@ authors = [
 ]
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    # In this example, ingestion uses pystatis.
-    # Dependencies will differ for your package.
-    "pystatis>=0.5.5",
-    "pyproj>=3.7.0",
+    "pystatis>=0.5.5", # Ingestion of source data from Gestatis
+    "pyproj>=3.7.0",   # GeoJSON transforms
+    "shapely>=2.1.2",  # GeoJSON transforms
 
     # you have to ensure the .venv that is created provides the full runtime
-    # for your ETL. Here, this is DBT and comes as part of our preconfigured stack
-    # along with tools needed for orchestration
-    "lf-py-stack @ git+https://github.com/linkFISH-Consulting/python-dbt-stack",
+    # for your ETL. Here, this is DBT, and it comes as part of our preconfigured stack
+    # along with tools needed for orchestration:
+    "lf-py-stack @ git+https://github.com/linkFISH-Consulting/python-dbt-stack@v1.0.1",
 ]
 
 # Tools for python code quality

@@ -1,8 +1,16 @@
 """
 Entrypoint to run the whole Content Package after installation
 
-see
+
+Typical command:
+```
+python ./python/orchestration.py run --env-file ./config/.env --omit download_seeds --select all
+```
+
+For help, see
+```
 python ./python/orchestration.py --help
+```
 
 This example uses the following environment variables:
 
