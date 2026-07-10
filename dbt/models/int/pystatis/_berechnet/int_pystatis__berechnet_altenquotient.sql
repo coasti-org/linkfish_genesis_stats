@@ -1,59 +1,63 @@
+{#
+
+Erzeuge Helfer Kennzahlen für Altenquotient ([sys])
+
+Der Altenquotient ist: (65+ Bevölkerung / 18-64 Bevölkerung) * 100
+
+Zum Erzeugen der Metriken müssen wir die addierbaren Teile als eigene Spalten
+mitnehmen, damit Filter in Superset berücksichtigt werden können.
+(Für den Altenquotient bisher nur Geschlecht)
+
+Als Frontend-Metrik ergibt sich dann:
+```sql
+Altenquotient = sum("[sys] Altenquotient (Zähler)")
+       / nullif(sum("[sys] Altenquotient (Nenner)"), 0)
+       * 100
+```
+#}
+
 with
 
-kennz_basis as(
-  select *
-  from {{ ref("int_pystatis__basis_gesammelt") }}
-),
+    kennz_basis as (select * from {{ ref("int_pystatis__basis_gesammelt") }}),
 
-einwohner_18_64 as(
-  select *
-  from kennz_basis
-  where code_kennzahl = 'Anzahl Einwohner (Kreis)'
-  and code_altersgruppe_2 = '18-64'
-),
+    einwohner_65plus as (
+        select
+            '[sys] Altenquotient (Zähler)' as code_kennzahl,
+            code_kreis,
+            code_stichtag,
+            code_geschlecht,
+            null as code_altersgruppe_18_65,
+            null as code_altersgruppe_grob,
+            sum(fact_kennzahl) as fact_kennzahl,
+            sum(fact_kennzahl_vorjahr) as fact_kennzahl_vorjahr
+        from kennz_basis
+        where
+            code_kennzahl = 'Anzahl Einwohner:innen'
+            and code_altersgruppe_grob = '65+'
+        group by code_kreis, code_stichtag, code_geschlecht
+    ),
 
-einwohner_65plus as(
-  select *
-  from kennz_basis
-  where code_kennzahl = 'Anzahl Einwohner (Kreis)'
-  and code_altersgruppe_2 = '65+'
-),
-
-kennzahl as(
-  select
-  'Altenquotient (Kreis)' as code_kennzahl,
-  einwohner_65plus.code_kreis,
-  einwohner_65plus.code_stichtag,
-  einwohner_65plus.code_geschlecht,
-  /* wir betrachten nur die aggregierten Werte für 18-64 und 65+, daher keine AG */
-  null as code_altersgruppe,
-  null as code_altersgruppe_1,
-  null as code_altersgruppe_2,
-  sum(einwohner_65plus.fact_kennzahl)
-  /
-  nullif(sum(einwohner_18_64.fact_kennzahl), 0)
-  * 100 as fact_kennzahl
-  from einwohner_65plus
-  inner join einwohner_18_64
-    on einwohner_65plus.code_stichtag = einwohner_18_64.code_stichtag
-    and einwohner_65plus.code_kreis = einwohner_18_64.code_kreis
-    and einwohner_65plus.code_geschlecht = einwohner_18_64.code_geschlecht
-  group by all
-),
-
-kennzahl_lag as (
-    select *,
-        lag(fact_kennzahl) over (
-            partition by
-                code_kennzahl,
-                code_kreis,
-                code_geschlecht,
-                code_altersgruppe
-            order by
-                code_stichtag
-        ) as fact_kennzahl_vorjahr
-      from kennzahl
-)
+    einwohner_18_64 as (
+        select
+            '[sys] Altenquotient (Nenner)' as code_kennzahl,
+            code_kreis,
+            code_stichtag,
+            code_geschlecht,
+            null as code_altersgruppe_18_65,
+            null as code_altersgruppe_grob,
+            sum(fact_kennzahl) as fact_kennzahl,
+            sum(fact_kennzahl_vorjahr) as fact_kennzahl_vorjahr
+        from kennz_basis
+        where
+            code_kennzahl = 'Anzahl Einwohner:innen'
+            and code_altersgruppe_grob = '18-64'
+        group by code_kreis, code_stichtag, code_geschlecht
+    )
 
 select *
-from kennzahl_lag
+from einwohner_65plus
+
+union all
+
+select *
+from einwohner_18_64

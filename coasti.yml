@@ -2,13 +2,13 @@
 
 # Einzigartige ID, sollte company_my_product folgen, keine Sonderzeichen außer _
 id: linkfish_genesis_stats
+
+# Shorthands sind z.b. Präfixe für Environment-Variablen und Frontend-Datasets
 id_shorthand: lfgs
 
-# Version folgt SemVer und muss in dbt_project.yml und pyproject.toml gespiegelt sein
-# Dies muss manuell erfolgen.
-version: 0.1.0
+# Der Name taucht z.b. im Frontend Dashboard auf (muss manuell konsistent gehalten werden)
+name: Genesis Statistik
 
-# Überlegung: Einstiegspunkt wird hier angegeben, was ermöglich die Details
-# nicht im Coasti Standard festzulegen. Jedes Paket kann es handhaben wie nötig,
-# und muss nur informieren wo eingestiegen wird.
-entrypoint: some way to launch... shell|python|whatever
+# Version folgt SemVer und muss in dbt_project.yml und pyproject.toml gespiegelt sein.
+# Das muss bisher manuell erfolgen.
+version: 1.0.0

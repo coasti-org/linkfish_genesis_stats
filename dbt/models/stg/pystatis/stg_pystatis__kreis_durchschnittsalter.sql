@@ -1,10 +1,10 @@
 with casted as (
     select
-        cast(code_stichtag          as {{ dbt.type_string() }}) as code_stichtag,
-        cast(code_ags               as {{ dbt.type_string() }}) as code_ags,
-        cast(desc_ags               as {{ dbt.type_string() }}) as desc_ags,
-        cast(code_geschlecht        as {{ dbt.type_string() }}) as code_geschlecht,
-        cast(fact_alter_durchschnit as {{ dbt.type_float() }})  as fact_alter_durchschnitt
+        cast(code_stichtag           as {{ dbt.type_string() }}) as code_stichtag,
+        cast(code_ags                as {{ dbt.type_string() }}) as code_ags,
+        cast(desc_ags                as {{ dbt.type_string() }}) as desc_ags,
+        cast(code_geschlecht         as {{ dbt.type_string() }}) as code_geschlecht,
+        cast(fact_alter_durchschnitt as {{ dbt.type_float() }})  as fact_alter_durchschnitt
     from
         {{ ref("seed_pystatis__kreis_12411_07_01_4_durchschnittsalter") }}
 ),

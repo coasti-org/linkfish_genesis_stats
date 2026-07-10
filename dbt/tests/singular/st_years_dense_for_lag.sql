@@ -19,7 +19,7 @@ with
             code_kreis,
             cast(left(code_stichtag, 4) as int) as code_jahr,
             code_geschlecht,
-            code_altersgruppe
+            code_altersgruppe_18_65
         from
             basis_gesammelt
     ),
@@ -30,7 +30,7 @@ with
             code_kennzahl,
             code_kreis,
             code_geschlecht,
-            code_altersgruppe,
+            code_altersgruppe_18_65,
             min(code_jahr) as min_jahr,
             max(code_jahr) as max_jahr,
             count(distinct code_jahr) as distinct_count
@@ -39,7 +39,7 @@ with
             code_kennzahl,
             code_kreis,
             code_geschlecht,
-            code_altersgruppe
+            code_altersgruppe_18_65
     ),
 
     {# gaps: where observed distinct count < expected consecutive range #}
@@ -48,7 +48,7 @@ with
             code_kennzahl,
             code_kreis,
             code_geschlecht,
-            code_altersgruppe,
+            code_altersgruppe_18_65,
             min_jahr,
             max_jahr,
             distinct_count,

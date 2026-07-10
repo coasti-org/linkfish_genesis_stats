@@ -1,21 +1,19 @@
 
 {#
 
-injection of values to plot in superset happens later.
-they have to go into the `properties` field of the fact_geojson
+Dimensionstabelle der Kreise.
 
-SELECT REPLACE(
-    fact_geojson,
-    'properties: { }',
-    'properties: {'
-        + CASE
-            WHEN foo_col IS NOT NULL
-            THEN ' foo: ' + CAST(foo_col AS VARCHAR)
-            ELSE ''
-          END
-    + ' }'
-)
-FROM your_table;
+Kombiniert die Übersicht aller Kreise aus Pystatis (Gebietsfläche) mit den
+GeoJSON Daten vom Regionalatals.
+
+Die GeoJSON Kann geladen werden unter https://regionalatlas.statistikportal.de
+Dann zum Erstellen oder Updaten der CSV unser Python-Script nutzen:
+
+```bash
+python ./python/prepare_geojson.py \
+    -i ~/Downloads/kreise-2026-04-29_raw.geojson \
+    -o ./dbt/seeds/seed__kreis_geojson.csv
+```
 
 #}
 

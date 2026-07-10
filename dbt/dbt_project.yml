@@ -1,5 +1,5 @@
 name: "linkfish_genesis_stats" # cannot contain dots
-version: "0.1.0" # should match coasti.yml and pyproject.toml
+version: "1.0.0" # should match coasti.yml and pyproject.toml
 
 profile: "lfgs_duckdb" # needs to be found in `config/profiles.yml`
 
@@ -20,21 +20,22 @@ models:
     +materialized: table
 
     stg:
-      huh:
-        +schema: stg_huh
-      board:
-        +schema: stg_board
+      pystatis:
+        +schema: stg_pystatis
     int:
-      huh:
-        +schema: int_huh
+      pystatis:
+        +schema: int_pystatis
+
     mart:
       +schema: mart
+
     plmart:
       sup:
         +schema: plmart_sup
 
 seeds:
-  +schema: seed_lfgs
-  # seeds have our shorthand, because we define (and ship them).
-  # Another good convention you might want to follow is to use the actual source
-  # here (`genesis` or `regio`) but then you need to do more book-keeping.
+    linkfish_genesis_stats:
+        +schema: seed
+
+        pystatis:
+            +schema: seed_pystatis

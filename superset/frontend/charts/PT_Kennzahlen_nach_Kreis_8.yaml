@@ -1,0 +1,162 @@
+slice_name: '[PT] Kennzahlen nach Kreis'
+description: null
+certified_by: null
+certification_details: null
+viz_type: pivot_table_v2
+params:
+  datasource: 7__table
+  viz_type: pivot_table_v2
+  slice_id: 8
+  matrixify_enable: false
+  matrixify_mode_columns: disabled
+  matrixify_dimension_selection_mode_columns: members
+  matrixify_dimension_columns:
+    dimension: ''
+    values: []
+  matrixify_topn_value_columns: 10
+  matrixify_all_sort_by_columns: a_to_z
+  matrixify_topn_order_columns: true
+  matrixify_show_column_headers: true
+  matrixify_fit_columns_dynamically: true
+  matrixify_mode_rows: disabled
+  matrixify_dimension_selection_mode_rows: members
+  matrixify_dimension_rows:
+    dimension: ''
+    values: []
+  matrixify_topn_value_rows: 10
+  matrixify_all_sort_by_rows: a_to_z
+  matrixify_topn_order_rows: true
+  matrixify_show_row_labels: true
+  matrixify_row_height: 300
+  matrixify_charts_per_row: 4
+  matrixify_cell_title_template: ''
+  groupbyColumns: []
+  groupbyRows:
+  - Kreis Bezeichnung
+  temporal_columns_lookup:
+    Stichtag: true
+  metrics:
+  - expressionType: SIMPLE
+    column:
+      advanced_data_type: null
+      changed_on: '2026-07-07T15:09:25.994185'
+      column_name: Anzahl Einwohner:innen
+      created_on: '2026-07-07T15:09:25.994182'
+      description: null
+      expression: null
+      extra: '{}'
+      filterable: true
+      groupby: true
+      id: 98
+      is_active: true
+      is_dttm: false
+      python_date_format: null
+      type: FLOAT
+      type_generic: 0
+      uuid: 336a56d3-4a80-48e2-8a2c-11e19e5d588c
+      verbose_name: null
+    aggregate: SUM
+    sqlExpression: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Anzahl Einwohner:innen
+    optionName: metric_vbin5gnbb8i_bs5ozew0l0s
+  - Durchschnittsalter
+  metricsLayout: COLUMNS
+  adhoc_filters:
+  - clause: WHERE
+    comparator: No filter
+    expressionType: SIMPLE
+    operator: TEMPORAL_RANGE
+    subject: Stichtag
+  row_limit: 5000
+  series_limit_metric:
+    expressionType: SQL
+    sqlExpression: 'max("Kreis Bezeichnung")
+
+      -- workaround for sorting
+
+      -- query does not like predefined metrics'
+    column: null
+    aggregate: null
+    datasourceWarning: false
+    hasCustomLabel: true
+    label: Kreis
+    optionName: metric_4diehbz491h_onhb18y4bgl
+  order_desc: false
+  aggregateFunction: First
+  rowTotals: false
+  rowSubTotals: false
+  colTotals: false
+  colSubTotals: false
+  transposePivot: false
+  combineMetric: false
+  valueFormat: SMART_NUMBER
+  date_format: smart_date
+  rowOrder: key_a_to_z
+  colOrder: key_a_to_z
+  rowSubtotalPosition: false
+  colSubtotalPosition: false
+  conditional_formatting: []
+  allow_render_html: true
+  extra_form_data: {}
+  dashboards:
+  - 2
+  annotation_layers: []
+query_context: '{"datasource": {"id": 7, "type": "table"}, "force": false, "queries":
+  [{"filters": [{"col": "Stichtag", "op": "TEMPORAL_RANGE", "val": "No filter"}],
+  "extras": {"having": "", "where": ""}, "applied_time_extras": {}, "columns": ["Kreis
+  Bezeichnung"], "metrics": [{"expressionType": "SIMPLE", "column": {"advanced_data_type":
+  null, "changed_on": "2026-07-07T15:09:25.994185", "column_name": "Anzahl Einwohner:innen",
+  "created_on": "2026-07-07T15:09:25.994182", "description": null, "expression": null,
+  "extra": "{}", "filterable": true, "groupby": true, "id": 98, "is_active": true,
+  "is_dttm": false, "python_date_format": null, "type": "FLOAT", "type_generic": 0,
+  "uuid": "336a56d3-4a80-48e2-8a2c-11e19e5d588c", "verbose_name": null}, "aggregate":
+  "SUM", "sqlExpression": null, "datasourceWarning": false, "hasCustomLabel": true,
+  "label": "Anzahl Einwohner:innen", "optionName": "metric_vbin5gnbb8i_bs5ozew0l0s"},
+  "Durchschnittsalter"], "orderby": [[{"expressionType": "SQL", "sqlExpression": "max(\"Kreis
+  Bezeichnung\")\n-- workaround for sorting\n-- query does not like predefined metrics",
+  "column": null, "aggregate": null, "datasourceWarning": false, "hasCustomLabel":
+  true, "label": "Kreis", "optionName": "metric_4diehbz491h_onhb18y4bgl"}, true]],
+  "annotation_layers": [], "row_limit": 5000, "series_limit": 0, "series_limit_metric":
+  {"expressionType": "SQL", "sqlExpression": "max(\"Kreis Bezeichnung\")\n-- workaround
+  for sorting\n-- query does not like predefined metrics", "column": null, "aggregate":
+  null, "datasourceWarning": false, "hasCustomLabel": true, "label": "Kreis", "optionName":
+  "metric_4diehbz491h_onhb18y4bgl"}, "group_others_when_limit_reached": false, "order_desc":
+  false, "url_params": {}, "custom_params": {}, "custom_form_data": {}}], "form_data":
+  {"datasource": "7__table", "viz_type": "pivot_table_v2", "slice_id": 8, "matrixify_enable":
+  false, "matrixify_mode_columns": "disabled", "matrixify_dimension_selection_mode_columns":
+  "members", "matrixify_dimension_columns": {"dimension": "", "values": []}, "matrixify_topn_value_columns":
+  10, "matrixify_all_sort_by_columns": "a_to_z", "matrixify_topn_order_columns": true,
+  "matrixify_show_column_headers": true, "matrixify_fit_columns_dynamically": true,
+  "matrixify_mode_rows": "disabled", "matrixify_dimension_selection_mode_rows": "members",
+  "matrixify_dimension_rows": {"dimension": "", "values": []}, "matrixify_topn_value_rows":
+  10, "matrixify_all_sort_by_rows": "a_to_z", "matrixify_topn_order_rows": true, "matrixify_show_row_labels":
+  true, "matrixify_row_height": 300, "matrixify_charts_per_row": 4, "matrixify_cell_title_template":
+  "", "groupbyColumns": [], "groupbyRows": ["Kreis Bezeichnung"], "temporal_columns_lookup":
+  {"Stichtag": true}, "metrics": [{"expressionType": "SIMPLE", "column": {"advanced_data_type":
+  null, "changed_on": "2026-07-07T15:09:25.994185", "column_name": "Anzahl Einwohner:innen",
+  "created_on": "2026-07-07T15:09:25.994182", "description": null, "expression": null,
+  "extra": "{}", "filterable": true, "groupby": true, "id": 98, "is_active": true,
+  "is_dttm": false, "python_date_format": null, "type": "FLOAT", "type_generic": 0,
+  "uuid": "336a56d3-4a80-48e2-8a2c-11e19e5d588c", "verbose_name": null}, "aggregate":
+  "SUM", "sqlExpression": null, "datasourceWarning": false, "hasCustomLabel": true,
+  "label": "Anzahl Einwohner:innen", "optionName": "metric_vbin5gnbb8i_bs5ozew0l0s"},
+  "Durchschnittsalter"], "metricsLayout": "COLUMNS", "adhoc_filters": [{"clause":
+  "WHERE", "comparator": "No filter", "expressionType": "SIMPLE", "operator": "TEMPORAL_RANGE",
+  "subject": "Stichtag"}], "row_limit": 5000, "series_limit_metric": {"expressionType":
+  "SQL", "sqlExpression": "max(\"Kreis Bezeichnung\")\n-- workaround for sorting\n--
+  query does not like predefined metrics", "column": null, "aggregate": null, "datasourceWarning":
+  false, "hasCustomLabel": true, "label": "Kreis", "optionName": "metric_4diehbz491h_onhb18y4bgl"},
+  "order_desc": false, "aggregateFunction": "First", "rowTotals": false, "rowSubTotals":
+  false, "colTotals": false, "colSubTotals": false, "transposePivot": false, "combineMetric":
+  false, "valueFormat": "SMART_NUMBER", "date_format": "smart_date", "rowOrder": "key_a_to_z",
+  "colOrder": "key_a_to_z", "rowSubtotalPosition": false, "colSubtotalPosition": false,
+  "conditional_formatting": [], "allow_render_html": true, "extra_form_data": {},
+  "dashboards": [2], "force": false, "result_format": "json", "result_type": "full"},
+  "result_format": "json", "result_type": "full"}'
+cache_timeout: null
+uuid: 205503c7-ed22-4721-876b-eab38b6a129a
+version: 1.0.0
+dataset_uuid: 7897b033-461a-4314-b78e-cb67f8cc0e74
+tags: []

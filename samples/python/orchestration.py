@@ -1,20 +1,30 @@
 """
 Entrypoint to run the whole Content Package after installation
 
-see
-python ./python/orchestration.py --help
+
+Typical command:
+```
+uv run --project python ./python/orchestration.py run --env-file ./config/.env --omit download_seeds --select all
+```
+
+For help, see
+```
+uv run --project python ./python/orchestration.py --help
+```
 
 This example uses the following environment variables:
 
 LFGS_DUCKDB_DATAMART_PATH
+LFGS_DUCKDB_FRONTEND_PATH
 
 LFPY_LOG_LEVEL
 LFPY_LOG_FILE
 
-TODO: lets call this orchestration.sample.py and have copier optionally make a copy
+PYSTATIS_* (if downloading seeds from Gestatis)
 """
 
 import os
+import shutil
 import sys
 from pathlib import Path
 
@@ -40,7 +50,7 @@ def dbt_deps() -> StepResult:
 def list_versions(dbt_deps: StepResult) -> StepResult:
     """List versions of installed dependencies"""
 
-    msg = log_dbt_versions()
+    msg = log_dbt_versions(print_to_stdout=False)
     try:
         import pystatis
 
@@ -55,6 +65,8 @@ def list_versions(dbt_deps: StepResult) -> StepResult:
 
 def download_seeds(list_versions: StepResult) -> StepResult:
     """Use pystatis to (re-) download seeds"""
+    # Does not download fresh GeoJSON, this has to be done manually
+    # (but maps dont change often :P )
 
     # we want to use the same python runtime and launch a script that sits next to this
     python = sys.executable
@@ -113,7 +125,7 @@ def minimize_duckdb(dbt_run: StepResult, dbt_test: StepResult) -> StepResult:
         shrink_duckdb(
             input_file=input,
             output_file=output,
-            schemas=["plmart"],
+            schemas=["plmart_sup"],
         )
         return StepResult(
             "PASS",
@@ -122,6 +134,35 @@ def minimize_duckdb(dbt_run: StepResult, dbt_test: StepResult) -> StepResult:
     except Exception as e:
         log.error(e)
 
+        return StepResult("FAIL", str(e))
+
+
+def deploy_to_frontend(minimize_duckdb: StepResult) -> StepResult:
+    """Copy the duckdb into supersets data folder"""
+
+    input = Path(os.environ["LFGS_DUCKDB_DATAMART_PATH"])
+    mini = input.parent / f"{input.stem}_mini.db"
+
+    _output = os.getenv("LFGS_DUCKDB_FRONTEND_PATH")
+    if _output is None:
+        return StepResult(
+            "SKIP",
+            "Skipped copying. Set the env var LFGS_DUCKDB_FRONTEND_PATH to the "
+            "file path needed by superset. "
+            "Likely /coasti/products/superset_docker/data/linkfish_genesis_stats.duckdb",
+        )
+    output = Path(_output)
+
+    # if you want to auotmatically reload superset after copying the data:
+    # run_cli_command(
+    #     "cd /path/to/superset_docker/; "
+    #     "/path/to/superset_docker/scripts/reset_cache.sh"
+    # )
+
+    try:
+        shutil.copy(mini, output)
+        return StepResult("PASS", f"Copied duckdb to {str(output)}")
+    except Exception as e:
         return StepResult("FAIL", str(e))
 
 

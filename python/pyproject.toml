@@ -1,20 +1,23 @@
 [project]
 name = "linkfish-genesis-stats"
-version = "0.1.0"
+version = "1.0.0"
 description = "Python Projekt für Coasti Demo-Content-Paket: Statistik"
 readme = "README.md"
 authors = [
-    { name = "F. Paul Spitzner", email = "paul.spitzner@linkfish.eu" }
+    { name = "F. Paul Spitzner", email = "paul.spitzner@linkfish.eu" },
+    { name = "Florian Deutsch", email = "florian.deutsch@linkfish.eu" },
+    { name = "Jakob Bürgermeister", email = "jakob.buergermeister@linkfish.eu" },
 ]
 requires-python = ">=3.12,<3.13"
 dependencies = [
-    # ingestion for this example, can be other things in your package
-    "pystatis>=0.5.5",
+    "pystatis>=0.5.5", # Ingestion of source data from Gestatis
+    "pyproj>=3.7.0",   # GeoJSON transforms
+    "shapely>=2.1.2",  # GeoJSON transforms
 
-    # you have to ensure the .venv that is created provided the full runtime
-    # for your ETL -> here, this is DBT and comes with our stack
-    # along with tools needed for orchestration
-    "lf-py-stack @ git+https://github.com/linkFISH-Consulting/python-dbt-stack",
+    # you have to ensure the .venv that is created provides the full runtime
+    # for your ETL. Here, this is DBT, and it comes as part of our preconfigured stack
+    # along with tools needed for orchestration:
+    "lf-py-stack @ git+https://github.com/linkFISH-Consulting/python-dbt-stack@v1.0.1",
 ]
 
 # Tools for python code quality
@@ -33,7 +36,7 @@ test = ["pytest>=9.0.2", "pytest-cov>=7.0.0"]
 
 [tool.ruff]
 include = ["pyproject.toml", "src/**/*.py", "tests/**/*.py"]
-target-version = "py311"
+target-version = "py312"
 
 [tool.ruff.lint]
 select = [

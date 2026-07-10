@@ -91,7 +91,7 @@ columns:
       dbt: code_altersgruppe_18_65
 
     - api: Durchschnittsalter der Bevölkerung__Jahre
-      dbt: fact_alter_durchschnit
+      dbt: fact_alter_durchschnitt
       dtype: float
 
     - api: Medianalter__Jahre

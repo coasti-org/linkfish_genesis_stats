@@ -7,24 +7,32 @@ Beispiel eines Contentpakets für Coasti das Statistikdaten von Genesis nutzt
     - Bisher Fokus nur Kreisebene
 
 
-## Getting Started
 
-- Installation via
+## Installation
 
+- Requirements:
+    - [uv](https://docs.astral.sh/uv/)
+    - [coasti installer](https://github.com/coasti-org/coasti_installer)
+    - [superset_docker](https://github.com/coasti-org/superset_docker) (oder andere Superset Installation)
+- Installation via `coasti product add ...`
+    - Läd das Repo runter
+    - Erstellt Python `.venv` mit uv und läd Python Abhängigkeiten
+    - Erstellt Config Beispiele
+- TODO: Ausrollen der Frontend-Assets via `superset-io`
+
+
+## Ausführen
+
+One-liner, via uv:
 ```bash
-UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./python
+uv run --project python ./python/orchestration.py run --env-file ./config/.env --omit download_seeds --select all
 ```
 
-```powershell
-$env:UV_PROJECT_ENVIRONMENT="../.venv"; uv sync --project ./python
-```
-
-- Ausführen via
-
+Oder manuell, mit aktiviertem Environment:
 ```bash
 # activate environment
-source ./.venv/bin/activate # (linux)
-.\.venv\Scripts\activate # (Windows)
+source ./python/.venv/bin/activate # (linux)
+.\python\.venv\Scripts\activate # (Windows)
 
 # run everything in orchestration
 python ./python/orchestration.py run --env-file ./config/.env -s all

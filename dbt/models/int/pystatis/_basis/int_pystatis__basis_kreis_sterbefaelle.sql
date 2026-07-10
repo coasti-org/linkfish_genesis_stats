@@ -11,11 +11,11 @@ with
 
     final as (
         select
-            'Sterbefälle (Kreis)' as code_kennzahl,
+            'Sterbefälle' as code_kennzahl,
             code_kreis,
             code_stichtag,
             code_geschlecht,
-            null as code_altersgruppe,
+            null as code_altersgruppe_18_65,
             fact_count_gestorbene as fact_kennzahl
         from
             kreis_sterbefaelle

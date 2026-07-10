@@ -1,25 +1,35 @@
+# Coasti nutzt Copier zum installieren von Produkten
+# Für Details zum Erstellen von Copier-Templates, und den hier verwendeten Einstellungen:
+# https://copier.readthedocs.io/en/stable/
+
 
 _min_copier_version: 9.11.3
 
 _exclude_templates:
     - .env
-    - .git
     - .gitignore
     - .gitattributes
     - .gitkeep
+    - .git-blame-ignore-revs
+
+_exclude:
+    - .git
+    - .git/**
+    - coasti_install_questions.yml
     - copier.yml
 
-answers_file: config/install_answers.yml
+_answers_file: coasti_install_answers.yml
 
 # Updates sollten nicht bereits getroffene Einstellungen überschreiben.
 # V.a. da .env Dateien nie in der Versions-Kontrolle landen sollen!
-skip_if_exists:
+_skip_if_exists:
     - config/.env
 
 # Mache Inhalt von coasti.yml in copier verfügbar, siehe _message_after_copy
 _external_data:
     coasti: "coasti.yml"
 
+# Wird nach der fertigen Installation angezeigt (nach den Tasks weiter unten)
 _message_after_copy: |
 
     "{{_external_data.coasti.id}}" installiert nach "{{ _copier_conf.dst_path }}"
@@ -28,3 +38,13 @@ _message_after_copy: |
     ================
 
     - Kurzer Blick in die Readme :)
+
+# Tasks werden automatisch nach dem Kopieren des Repos ausgeführt
+# (Sowohl bei Installation als auch Updates)
+_tasks:
+
+    # Install Python dependencies
+    - command: 'uv --directory ./python sync'
+
+    # create config files from samples
+    - command: 'uv run --project python ./python/rollout.py'

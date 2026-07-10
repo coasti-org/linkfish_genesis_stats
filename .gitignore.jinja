@@ -1,0 +1,24 @@
+{# This gitignore is the one that gets deployed when installing this template
+via copier or coasti #}
+
+# dbt tracking, no way to avoid creation
+/config/.user.yml
+
+# In the deplyed repo, we want to track all configs, except sensitive information,
+# which live in .env files
+*.env
+
+/data
+/logs
+
+# Usual suspects
+dbt_packages/
+dbt/logs
+
+.venv
+.vscode
+__pycache__
+venv/
+*.egg-info/
+build/
+dist/

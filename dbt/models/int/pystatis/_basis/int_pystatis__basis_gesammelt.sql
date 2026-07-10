@@ -1,5 +1,19 @@
--- Hier ermitteln wir die Kennzahlen inklusive ihrer Vorjahreswerte
--- und ergänzen sie um die Stammdaten aus kreis_polygon
+{#
+
+Kombiniere alle Basis-Kennzahlen, und erstelle Vorjahres-Werte.
+
+# Notizen
+- Hier vorerst Kennzahlen, die ohne (komplexe) Berechnungen auskommen.
+- Kennzahlen sind hier noch sparse und als Dimension geführt.
+  Das erlaubt einfaches Kombinieren via `union all`
+- Um eine breite Darstellung zu erhalten, wo jede Kennzahl eine eigene Spalte hat,
+  wird dann später in der Presentation Layer (plmart) pivotisiert.
+- Für die union müssen immer die selben Spalten in den Source-Modellen vorhanden sein,
+  aber können Null enthalten.
+- Hier und in den anderen Inter-Modellen wird nicht mehr gecastet,
+  das passiert komplett im Staging.
+
+#}
 
 {% set models_to_combine = [
     "int_pystatis__basis_kreis_anzahl_einwohner",
@@ -11,10 +25,18 @@
     "int_pystatis__basis_kreis_wanderungen",
 ] %}
 
-{# Make 1 - N into CTEs #}
 
 with
-    {# 1. union alle basis kennzahlen #}
+    {# Wir haben Duplikate in code_altersgruppe_18_65, aber wollen ab hier unique  #}
+    altersgruppen as (
+        select
+            code_altersgruppe_18_65,
+            min(code_altersgruppe_grob) as code_altersgruppe_grob
+        from {{ ref("seed__altersgruppen") }}
+        group by code_altersgruppe_18_65
+    ),
+
+    {# 1. union aller Basis-Kennzahlen #}
     basis_union as (
         {% for model in models_to_combine %}
             select
@@ -22,7 +44,7 @@ with
                 code_kreis,
                 code_stichtag,
                 code_geschlecht,
-                code_altersgruppe,
+                code_altersgruppe_18_65,
                 fact_kennzahl
             from
                 {{ ref( model ) }}
@@ -34,8 +56,9 @@ with
 
 
 
-    {# 2. Für Superset müssen Zeitvergleiche vorberechnet werden.
-    Lag-Funktion sollte ausreichen, da wir wissen, dass alle jahre vorhanden sind.
+    {# 2. Für Superset müssen Zeitvergleiche oft vorberechnet werden.
+    Lag-Funktion sollte ausreichen, da wir wissen, dass pro Dimensions-Kombination
+    alle Jahre vorhanden sind.
     (Andernfalls kommt es zu Verschiebungen entlang der übrigen Dimensionen)
     Lag ist am linken Rand auch okay, da wird der Vorjahreswert dann null #}
     basis_lag as (
@@ -45,23 +68,22 @@ with
                     code_kennzahl,
                     code_kreis,
                     code_geschlecht,
-                    code_altersgruppe
+                    code_altersgruppe_18_65
                 order by
                     code_stichtag
             ) as fact_kennzahl_vorjahr
         from basis_union
     ),
 
-    {# 3. Altersgruppen konsistent schalten #}
+    {# 3. Altersgruppen ergänzen #}
     base_w_dimensions as (
         select
             basis_lag.*,
-            code_altersgruppe_1,
-            code_altersgruppe_2
+            altersgruppen.code_altersgruppe_grob
         from basis_lag
         left join
-            {{ ref("seed__altersgruppen") }} altersgruppen
-            on basis_lag.code_altersgruppe = altersgruppen.code_altersgruppe_statistik
+            altersgruppen
+            on basis_lag.code_altersgruppe_18_65 = altersgruppen.code_altersgruppe_18_65
     )
 
 select *

@@ -1,3 +1,7 @@
+// workspace that you can open in vscode to get work on the project quickly.
+// consider installing the dbt power user extension:
+// https://github.com/AltimateAI/vscode-dbt-power-user
+
 {
     "folders": [
         {
@@ -5,12 +9,13 @@
         }
     ],
     "settings": {
-        // tell dbt power user and python where the default .env file is
+        // tell dbt power user and vscode where the .env file lives,
+        // and which python interpreter to use
         "python.envFile": "${workspaceFolder}/config/.env",
-        // optionally, set default python interpreter
-        "python.defaultInterpreterPath": "${workspaceFolder}/.venv/Scripts/python",
+        "python.defaultInterpreterPath": "${workspaceFolder}/python/.venv/Scripts/python",
         "python.terminal.activateEnvironment": true,
         "python.terminal.activateEnvInCurrentTerminal": true,
+
         // some sensible dbt power user settings
         "dbt.queryLimit": 500,
         "dbt.enableNewLineagePanel": true,
@@ -18,8 +23,9 @@
         "dbt.enableCollaboration": false,
         "dbt.enableNotebooks": false,
         "dbt.installDepsOnProjectInitialization": false,
+
+        // general settings, opinionated defaults
         "editor.formatOnSave": false,
-        // you might want to copy the following to your user settings
         "files.associations": {
             ".env*": "env",
             ".credentials*": "env"

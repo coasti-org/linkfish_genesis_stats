@@ -11,6 +11,16 @@ Kurzfassung:
 - Minor Version: 0.1.0 (Neue Funktionen)
 - Major Version: 1.0.0 (Breaking Changes)
 
+## 1.0.0
+
+### Neu
+- Frontend-Content hinzugefügt
+- Seeds hinzugefügt, damit Downloads der Quelldaten optional sind
+- Installation via Copier und eigenem Rollout-Script (cross-plattform da python)
+
+### Geändert
+- Config Beispiele sind jetzt gesammelt unter `samples`, und werden beim Installieren kopiert. Das erlaubt Updates _und_ user-seitige Versionskontrolle der Configs.
+
 ## 0.1.0
 
 - Erstveröffentlichung

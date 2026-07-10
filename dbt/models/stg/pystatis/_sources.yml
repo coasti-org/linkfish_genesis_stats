@@ -2,5 +2,6 @@
 # An diesem Beispiel haben wir nur Seeds, daher wird in den Staging-Modellen direkt
 # referenziert.
 
-# DBT schlägt vor, die Modell Präfixe (wie hier auch gemacht) nach der Datenquelle
+# Hier gezeigt und von DBT vorgeschlagen: die Modell Präfixe (vor dem `__`)
+# werden nach der Ordnerstruktur und Datenquelle benannt (hier pystatis).
 
