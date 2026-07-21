@@ -53,7 +53,7 @@ An unserem Beispiel:
 
 - Das ID-Kürzel (`lfgs`) sollte möglichst kurz sein, und nur aus wenigen Buchstaben bestehen.
 - Taucht an folgenden Stellen auf:
-  - Als Präfix für Environemnt_variablen, z.b. `LFGS_DUCKDB_DATAMART_PATH` in `config/.env`
+  - Als Präfix für Environemnt_variablen, z.b. `LFGS_DUCKDB_ETL_PATH` in `config/.env`
   - Als Präfix für DBT Profile, z.b. `lfgs_duckdb` in `config/profiles.yml`
   - Im Schema der Seeds `seed_lfgs`
   - Ordnernamen für Software-spezifische Teile, z.b. `dbt` und `python` für unsere DBT und Python Codes. Obwohl diese Ordnername frei gewählt werden können, lohnt es sich diese nicht einfach `dbt` und `python` zu nennen (um Paket-Namenskonventionen zu folgen), und das ID-Kürzel zu nehmen, um die Namen kurz zu halten.

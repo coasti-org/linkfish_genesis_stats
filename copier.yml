@@ -3,7 +3,7 @@
 # https://copier.readthedocs.io/en/stable/
 
 
-_min_copier_version: 9.11.3
+_min_copier_version: 9.17.0
 
 _exclude_templates:
     - .env
@@ -19,6 +19,12 @@ _exclude:
     - coasti_install_questions.yml
     - copier.yml
 
+---
+
+!include coasti_install_questions.yml
+
+---
+
 _answers_file: coasti_install_answers.yml
 
 # Updates sollten nicht bereits getroffene Einstellungen überschreiben.
@@ -30,22 +36,56 @@ _skip_if_exists:
 _external_data:
     coasti: "coasti.yml"
 
-# Wird nach der fertigen Installation angezeigt (nach den Tasks weiter unten)
-_message_after_copy: |
-
-    "{{_external_data.coasti.id}}" installiert nach "{{ _copier_conf.dst_path }}"
-
-    Nächste Schritte
-    ================
-
-    - Kurzer Blick in die Readme :)
-
-# Tasks werden automatisch nach dem Kopieren des Repos ausgeführt
-# (Sowohl bei Installation als auch Updates)
 _tasks:
 
     # Install Python dependencies
     - command: 'uv --directory ./python sync'
+      when: "{{ create_venv }}"
 
     # create config files from samples
-    - command: 'uv run --project python ./python/rollout.py'
+    - command: '{{ _copier_python }} ./python/rollout.py'
+
+    # Here, we use copiers python, to keep this minimal.
+    # If you have harder depenendencies, you can use the venv.
+    # But this takes away the option to skip venv setup.
+    # - command: 'uv run --project ./python ./python/rollout.py'
+
+_message_before_copy: |
+
+    ========================================
+      Installation Genesis Statistik
+    ========================================
+
+    Zum Konfigurieren der Installation bitte folgende Fragen beantworten:
+
+_message_after_copy: |
+
+    ========================================
+      Installation abgeschlossen
+    ========================================
+
+    "{{_external_data.coasti.id}}" installiert nach "{{ _copier_conf.dst_path | realpath }}"
+
+    ========================================
+      Nächste Schritte
+    ========================================
+
+    - In den Produkt-Ordner wechseln:
+        cd {{ _copier_conf.dst_path }}
+
+    - Workspace in vscode öffnen:
+        code config/linkfish_genesis_stats.code_workspace
+
+    - Ggf. Anpassen folgender Beispiele in config/
+        - config/genesis_sources.yml
+        - config/profiles.yml
+
+    {% if not create_venv -%}
+    - Während der Installation wurde kein virtuelles Environment erstellt. Um anzufangen z.b.:
+        uv --directory ./python sync
+
+    {% endif -%}
+
+    - Orchestrierung starten (erster Aufruf dauert etwas):
+        uv run --project ./python ./python/orchestration.py --help
+        uv run --project ./python ./python/orchestration.py run --env-file ./config/.env --log-file ./logs/lfgs.log -s all

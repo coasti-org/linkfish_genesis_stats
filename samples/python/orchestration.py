@@ -14,7 +14,7 @@ uv run --project python ./python/orchestration.py --help
 
 This example uses the following environment variables:
 
-LFGS_DUCKDB_DATAMART_PATH
+LFGS_DUCKDB_ETL_PATH
 LFGS_DUCKDB_FRONTEND_PATH
 
 LFPY_LOG_LEVEL
@@ -120,7 +120,7 @@ def minimize_duckdb(dbt_run: StepResult, dbt_test: StepResult) -> StepResult:
         pass
 
     try:
-        input = Path(os.environ["LFGS_DUCKDB_DATAMART_PATH"])
+        input = Path(os.environ["LFGS_DUCKDB_ETL_PATH"])
         output = input.parent / f"{input.stem}_mini.db"
         shrink_duckdb(
             input_file=input,
@@ -140,7 +140,7 @@ def minimize_duckdb(dbt_run: StepResult, dbt_test: StepResult) -> StepResult:
 def deploy_to_frontend(minimize_duckdb: StepResult) -> StepResult:
     """Copy the duckdb into supersets data folder"""
 
-    input = Path(os.environ["LFGS_DUCKDB_DATAMART_PATH"])
+    input = Path(os.environ["LFGS_DUCKDB_ETL_PATH"])
     mini = input.parent / f"{input.stem}_mini.db"
 
     _output = os.getenv("LFGS_DUCKDB_FRONTEND_PATH")
