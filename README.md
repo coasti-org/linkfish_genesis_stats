@@ -1,4 +1,9 @@
 # Coasti Demo-Content-Paket: Statistik
+
+[![Documentation](https://app.readthedocs.org/projects/coasti/badge/?version=latest&style=flat)](https://coasti.readthedocs.io/en/latest/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![Copier](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/copier-org/copier/master/img/badge/badge-grayscale-inverted-border-orange.json)](https://github.com/copier-org/copier)
+
 Beispiel eines Contentpakets für Coasti das Statistikdaten von Genesis nutzt
 
 - Bisher essentiell eine abgespeckte Version von linkFISH Statistik+
@@ -17,8 +22,30 @@ Beispiel eines Contentpakets für Coasti das Statistikdaten von Genesis nutzt
     - Läd das Repo runter
     - Erstellt Python `.venv` mit uv und läd Python Abhängigkeiten
     - Erstellt Config Beispiele
-- TODO: Ausrollen der Frontend-Assets via `superset-io`
+- Ausrollen der Frontend-Assets via `superset-io`
+    - Läd die grafischen Elemente (z.b. Berichte) in die Superset-Instanz hoch
 
+
+```bash
+# uv installieren (macOS, Linux)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+# Windows
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+# coasti installieren
+uv tool install coasti
+
+# Neues coasti Projekt initialisieren
+coasti init /coasti
+cd /coasti
+
+# Superset und Content Paket hinzufügen
+coasti product add https://github.com/coasti-org/superset_docker.git
+coasti product add https://github.com/coasti-org/linkfish_genesis_stats.git
+
+# Frontend hochladen
+coasti superset-io upload /coasti/products/linkfish_genesis_stats/superset/frontend
+```
 
 ## Ausführen
 

@@ -1,41 +1,60 @@
 # Python Projekt für Coasti Demo-Content-Paket: Statistik
 
-
 ## Relevanz
 
-- Stellt DBT und Python runtime bereit
+- Stellt DBT und Python runtime bereit (via uv und lf-py-stack, siehe pyproject.toml)
 - Downloader für Statistik-Daten von Genesis
 - Erzeugen von Seeds für DBT aus den geladenen Genesis Daten und GeoJSON
 
+## Installation
 
-## Install
-
-- [ ] Noch zu entscheiden: wo das .venv hinlegen
-- PS 2026-07-10: derzeit tendiere ich zu Option 2.
-  Die extra env var verkompliziert das Setup und der symlink funktioniert okay.
-
-Option 1: ins project base dir
+- Jedes Coasti Content-Paket bekommt sein eigenes venv um Python-Abhängigkeiten zu gruppieren.
 
 ```bash
-UV_PROJECT_ENVIRONMENT=../.venv uv sync --project ./python
-# diese env var dann via .env setzen
+# Mit `uv sync` ein venv anlegen, das unter `./python` lebt
+uv --directory ./python sync
 
-# activate environment
-source ./.venv/bin/activate # (linux)
-.\.venv\Scripts\activate # (Windows)
+# Um trotzdem automatische Aktivierung z.b. in vscode und Mise zu bekommen:
+ln -s ./python/.venv ./.venv
 ```
 
-Option 2: in den python ordner `python`
+## Ausführen
+
+Es gibt drei Möglichkeiten:
+
+### One-liner via uv
+Wenn ein One-liner gewünscht ist, kann aus dem Repo directory uv verwendet werden um die Orchestrierung zu starten.
+Der Befehl nutzt das erzeugte venv, und übergibt Environment-Variblen aus der .env:
 
 ```bash
-cd python
-uv sync
-cd ..
+uv run --project ./python ./python/orchestration.py run --env-file ./config/.env --select all
+```
 
+### Orchestrierung mit aktiviertem Environment
 
-source ./python/.venv/bin/activate # (linux)
-.\python\.venv\Scripts\activate # (Windows)
+Anstatt uv zu nutzen, können wir auch manuell das venv aktivieren:
 
-#  Um trotzdem automatische Aktivierung z.b. in vscode und Mise zu bekommen:
-ln -s ./python/.venv ./.venv
+```bash
+# venv aktivieren (linux)
+source ./python/.venv/bin/activate
+
+python ./python/orchestration.py run --env-file ./config/.env --select all
+```
+
+### Full Manual
+
+Wenn wir DBT direkt ausführen wollen, z.b. zum Entwickeln, lohnt es sich das venv zu aktiveren und Environment-Variablen in die Shell zu laden:
+
+```bash
+# venv aktivieren (linux)
+source ./python/.venv/bin/activate
+
+# Variablen aus .env laden
+set -a; source ./config/.env; set +a
+
+# DBT nutzen
+dbt debug
+
+# Oder Orchestrierung, jetzt muss die .venv nicht mehr übergeben werden.
+python ./python/orchestration.py run --select all
 ```

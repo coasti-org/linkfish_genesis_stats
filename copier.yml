@@ -15,6 +15,7 @@ _exclude_templates:
 _exclude:
     - .git
     - .git/**
+    - .github
     - coasti_install_questions.yml
     - copier.yml
 
