@@ -1,0 +1,71 @@
+# Diese Datei wird in `copier.yml` eingebunden und bei der Installation ausgeführt.
+# Antworten werden in `coasti_install_answers.yml` gespeichert, um Updates zu ermöglichen.
+
+# Details zur Konfiguration von Fragen mit Copier:
+# https://copier.readthedocs.io
+
+dbt_profile:
+    type: str
+    help: Welches dbt-Profil soll standardmäßig verwendet werden?
+    choices:
+        - lfgs_duckdb
+    default: lfgs_duckdb
+
+
+duckdb_etl_path:
+    type: str
+    help: Wo soll die DuckDB erzeugt werden, die für ETL genutzt wird?
+    default: "{{ _copier_conf.dst_path | realpath }}/data/lfgs_etl.duckdb"
+    when: "{{ dbt_profile == 'lfgs_duckdb' }}"
+
+duckdb_frontend_path:
+    help: Wohin soll die verkleinerte DuckDB kopiert werden, die Superset lädt?
+    default: "{{ (_copier_conf.dst_path ~ '/..') | realpath}}/superset_docker/data/linkfish_genesis_stats.duckdb"
+    when: "{{ dbt_profile == 'lfgs_duckdb' }}"
+
+
+create_venv:
+    help: |
+        Soll die benötigte Umgebung erstellt werden (python/.venv)?
+    type: bool
+    default: true
+
+
+configure_pystatis_download:
+    help: |
+        Soll der Daten-Download von Gestatis konfiguriert werden?
+             Benötigt zwei Accounts:
+             https://genesis.destatis.de/datenbank/online
+             https://www.regionalstatistik.de/genesis/online
+    type: bool
+    default: false
+
+
+pystatis_genesis_api_username:
+    type: str
+    # TODO: confirm whether pystatis supports API Keys as username, like genesis does.
+    help: Genesis API - Nutzername
+    when: "{{ configure_pystatis_download }}"
+
+pystatis_genesis_api_password:
+    type: str
+    help: Genesis API - Passwort
+    default: ""
+    placeholder: "strong-password"
+    secret: true
+    when: "{{ configure_pystatis_download }}"
+
+pystatis_regio_api_username:
+    type: str
+    help: Regionalstatistik API - Nutzername
+    when: "{{ configure_pystatis_download }}"
+
+pystatis_regio_api_password:
+    type: str
+    help: Regionalstatistik API - Passwort
+    default: ""
+    placeholder: "strong-password"
+    secret: true
+    when: "{{ configure_pystatis_download }}"
+
+

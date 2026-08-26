@@ -1,0 +1,39 @@
+name: Check Version Consistency
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-versions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Validate version parity across metadata files
+        run: |
+            coasti_version=$(awk -F': *' '/^[[:space:]]*version:[[:space:]]*/{
+              value=$2
+              sub(/[[:space:]]*#.*/, "", value)  # Remove inline comments to avoid false mismatches.
+              gsub(/["'\''[:space:]]/, "", value)
+              print value
+              exit
+            }' coasti.yml)
+
+            pyproject_version=$(awk -F'=' '/^[[:space:]]*version[[:space:]]*=/{
+              value=$2
+              sub(/[[:space:]]*#.*/, "", value)  # Keep behavior consistent if comments are ever added.
+              gsub(/["'\''[:space:]]/, "", value)
+              print value
+              exit
+            }' python/pyproject.toml)
+
+            dbt_version=$(awk -F': *' '/^[[:space:]]*version:[[:space:]]*/{
+              value=$2
+              sub(/[[:space:]]*#.*/, "", value)  # DBT file currently has inline comment on version line.
+              gsub(/["'\''[:space:]]/, "", value)
+              print value
+              exit
+            }' dbt/dbt_project.yml)

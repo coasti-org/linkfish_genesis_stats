@@ -11,3 +11,8 @@
   - Es geht nicht um Struktur, daher z.b. keine UTIs. IDs können einfache Strings sein. Wir wollen nur, dass Produkte eindeutig sind.
   - Daher: begrenzen wir uns auf Aspekte die in Python- und dbt-Projekten erlaubt sind, und geben eine Empfehlung.
   - dbt- und Python-Module leiten sich davon ab und ersetzen `_` bei Bedarf durch `-`.
+
+- [x] Platzhalter für Missing Dimensions in One-big-Table für Superset:
+    - Null im Backend, und falls im Frontend nötig, ganz am Ende ersetzen, via Variable
+
+- Coasti Assumes one Database per Produkt (because DuckDB)

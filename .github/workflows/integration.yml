@@ -1,0 +1,74 @@
+name: Check Install and Orchestration Run
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+
+    - name: Install uv
+      uses: astral-sh/setup-uv@v7
+
+    - name: Install dependencies
+      run: uv tool install copier
+
+    - name: Install from our repo via copier
+      env:
+        LKAL_S3_ACCESS_KEY: ${{ secrets.LKAL_S3_ACCESS_KEY }}
+        LKAL_S3_ACCESS_SECRET: ${{ secrets.LKAL_S3_ACCESS_SECRET }}
+      run: |
+        copier copy \
+          --trust \
+          --defaults \
+          . \
+          "${{ runner.temp }}//lfgs"
+
+    - name: Dbt deps
+      working-directory: "${{ runner.temp }}//lfgs"
+      run: |
+          source ./python/.venv/bin/activate
+          set -a; source ./config/.env; set +a
+          dbt deps
+
+    - name: Dbt debug
+      working-directory: "${{ runner.temp }}//lfgs"
+      run: |
+          source ./python/.venv/bin/activate
+          set -a; source ./config/.env; set +a
+          dbt debug
+
+    - name: Test orchestration
+      working-directory: "${{ runner.temp }}//lfgs"
+      run: |
+        source ./python/.venv/bin/activate
+        python ./python/orchestration.py run \
+          --env-file ./config/.env \
+          --quiet \
+          -s list_versions
+
+    - name: Run orchestration
+      working-directory: "${{ runner.temp }}//lfgs"
+      run: |
+        source ./python/.venv/bin/activate
+        python ./python/orchestration.py run \
+          --env-file ./config/.env \
+          -s list_versions \
+          -s dbt_seed \
+          -s dbt_run \
+          -s minimize_duckdb
+
+    - name: Dbt test
+      if: always()
+      working-directory: "${{ runner.temp }}//lfgs"
+      run: |
+        source ./python/.venv/bin/activate
+        python ./python/orchestration.py run \
+          --env-file ./config/.env \
+          --quiet \
+          -s dbt_test
