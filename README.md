@@ -11,6 +11,10 @@ Beispiel eines Contentpakets für Coasti das Statistikdaten von Genesis nutzt
     - Dafür konsistentes Model-Prefix an den DBT Modellen, Seeds etc
     - Bisher Fokus nur Kreisebene
 
+> [!NOTE]
+> Die Kartenfunktion auf der Startseite des Pakets nutzt Supersets GeoJSON Feature,
+> welches derzeit nicht alle Kreise anzeigt (Bug in Superset v6.1).
+> Unser entsprechender PR ist bereits in Superset gemergt und sollte mit der nächsten Version wirksam werden.
 
 ## Installation
 
